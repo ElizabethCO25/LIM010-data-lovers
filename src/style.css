@@ -1,112 +1,92 @@
 body{
-  background-image:url("../imagenes/fondo1.jpg");
-  background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
-
-.contenedor1{
-  width: 90%;
-  max-width: 1000px;
-  margin: 20px auto;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(3,auto);
+.fondo1{
+    background-image: url(img/fondo.jpg);
+    display: flex;
 }
-
-.contenedor1 > aside{
-  position: absolute;
-left: 26.25%;
-right: 26.25%;
-top: 14.06%;
-bottom: 18.26%;
-background: #F7F7F7;
-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
-}
-
-/*.contenedor{
-position: absolute;
-left: 26.25%;
-right: 26.25%;
-top: 14.06%;
-bottom: 18.26%;
-background: #F7F7F7;
-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
-}
-
 .componentes{
-  width: 449px;
-  height: 268px;
-  left: 496px;
-  top: 338px;
-  }
-
-.fontLogin{
-  font-family: Open Sans;
-  font-style: normal;
-  color: #000000;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vh;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }
-
+ .registro{
+    width: 280px;
+    height: 210px;
+    left: 20px;
+    top: 155px;
+}
 .label1{
-  display: flex;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 65.42%;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: normal;
-  align-items: center;
+    left: 0%;
+    right: 0%;
+    top: 45.12%;
+    bottom: 0%;
 }
-
 .label2{
-  width: 448px;
-  height: 22px;
-  left: 496px;
-  top: 584px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1px;
+    display: flex;
+    justify-content: flex-end;
 }
-
-.label3{
-  width: 448px;
-height: 22px;
-left: 496px;
-top: 730px;
-font-size: 16px;
-line-height: 1px;
-
+.a{
+    color: #003569;
+    text-decoration: none;
 }
-
+.componentes label{
+    font-family: Open Sans;
+    font-style: normal;
+    color: #000000;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
+    margin-right: 20px;
+}
+.campo1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    width: 280px;
+    left: 20px;
+    top: 155px;
+    height: 82px;
+}
+.campo2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    width: 280px;
+    height: 82px;
+    left: 20px;
+    top: 249px;
+}
 .inputs{
-  left: 0%;
-  right: 0.22%;
-  top: 34.58%;
-  bottom: 0%;
-  background: #FFFFFF;
-  border-radius: 2px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    padding: 12px 0px;
+    border:none;
 }
-
+.campo4{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    text-align: center;
+}
+.button{
+    background: #3897F0;
+    border-radius: 5px;
+    width: 280px;
+    height: 50px;
+    left: 20px;
+    top: 413px;  
+    border:none;
+}
 .imagen{
-  width: 199px;
-  height: 58px;
-  left: 621px;
-  top: 232px;
+    position: absolute;
+    width: 177px;
+    height: 43px;
+    left: 83px;
+    top: 79px;
 }
-
-/*Pantalla de Bloqueo*/
-.titulo{
-  font-family: Open Sans;
-  font-style: normal;
-  color: #000000;
-  font-size: 20px;
-  text-align: center;
-}
-
-.ocultar{
-  display:none;
-}
-
