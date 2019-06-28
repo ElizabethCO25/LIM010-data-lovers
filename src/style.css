@@ -7,7 +7,6 @@ body{
     background-image: url(img/fondo.jpg);
     display: flex;
 }
-
 .componentes{
     display: flex;
     flex-flow: column wrap;
@@ -27,16 +26,15 @@ body{
     right: 0%;
     top: 45.12%;
     bottom: 0%;
-
 }
 .label2{
-    left: 0%;
-    right: 0%;
-    top: 45.12%;
-    bottom: 0%;
-
+    display: flex;
+    justify-content: flex-end;
 }
-
+.a{
+    color: #003569;
+    text-decoration: none;
+}
 .componentes label{
     font-family: Open Sans;
     font-style: normal;
@@ -46,17 +44,14 @@ body{
     font-weight: normal;
     margin-right: 20px;
 }
-
 .campo1{
     display: flex;
     flex-wrap: wrap;
     flex-flow: column;
     width: 280px;
-    /* height: 82px; */
     left: 20px;
     top: 155px;
     height: 82px;
-
 }
 .campo2{
     display: flex;
@@ -71,8 +66,8 @@ body{
     background: #FFFFFF;
     border-radius: 2px;
     padding: 12px 0px;
+    border:none;
 }
-
 .campo4{
     display: flex;
     flex-wrap: wrap;
@@ -86,6 +81,7 @@ body{
     height: 50px;
     left: 20px;
     top: 413px;  
+    border:none;
 }
 .imagen{
     position: absolute;
