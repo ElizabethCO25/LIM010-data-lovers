@@ -10,6 +10,7 @@
 
 <body class="fondo1">
   <header>
+
   </header>
 
   <main>
@@ -17,10 +18,10 @@
     <section id="pantalla-login">
       <form class="componentes">
         <div class="registro">
-          <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
+          <img class="imagen" src="img/imglogo.png" alt="logo-pokemonbel">
           <div class="campo1">
             <label class="label" for="">Correo electrónico:</label>
-            <input class="inputs" required>
+            <input class="inputs" required id="usuario">
           </div>
           <div class="campo2">
             <label class="label" for="">Contraseña</label>
@@ -40,8 +41,44 @@
 
     <!-- Pantalla 2:-->
     <section id="pantalla-inicio" class="ocultar">
-      <h1> Bienvenido!!! </h1>
-      <img class="imagen" src="../imagenes/bienvenido.png" alt="logopokemonbel-bienvenida">
+
+      <!-- Menú de navegación:-->
+      <nav class="navegacion">
+        <ul class="menu">
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">POKEDEX</a></li>
+          <li><a href="#">ORDENAR</a>
+            <ul class="submenu">
+              <li><a href="#">De A-Z</a></li>
+              <li><a href="#">De Z-A</a></li>
+              <li><a href="#">Spawn ascendente</a></li>
+              <li><a href="#">Spawn descendente</a></li>
+            </ul>
+          </li>
+          <li><a href="#">FILTRAR</a>
+            <ul class="submenu">
+              <li><a href="#">Tipo</a>
+                <ul>
+                  <li><a href="#">Tierra</a></li>
+                  <li><a href="#">Aire</a></li>
+                  <li><a href="#">Agua</a></li>
+                  <li><a href="#">Fuego</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Debilidad</a>
+                <ul>
+                  <li><a href="#">Tierra</a></li>
+                  <li><a href="#">Aire</a></li>
+                  <li><a href="#">Agua</a></li>
+                  <li><a href="#">Fuego</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          <li><a href="#">INCUBADORA</a></li>
+        </ul>
+      </nav>
 
     </section>
 
@@ -50,16 +87,14 @@
       <section id="pantalla-inicio" class="">
         <h1> Lo sentimos agotaste tus intentos. </h1>
         <img class="imagen" src="../imagenes/triste.webp" alt="logopokemonbel-bienvenida">
-
       </section>
-
-    </section>
   </main>
   <footer></footer>
-  <!-- <script src="./data/lol/lol.js"></script> -->
-  <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-  <!-- <script src="./data/worldbank/worldbank.js"></script> -->
+
+  <script src="./data/pokemon/pokemon.js"></script>
+
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>
