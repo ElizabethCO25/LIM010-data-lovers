@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="fondo1">
+  <header>
+
+    <!-- Primera Pantalla:-->
+    <section  id="pantalla1">
+      <form class="componentes">
+        <div class="registro">
+          <img class="imagen" src="img/imglogo.png">
+           <div class="campo1">
+            <label class="label" for="">Correo electrónico:</label>
+            <input class="inputs" required id="input-usuario">
+           </div>
+            <div class="campo2">
+                <label class="label" for="">Contraseña</label>
+                <input class="inputs" type="password" maxlength="11" required id="contraseña" placeholder="&#128272">
+           </div>
+                <div class="campo3">
+                <label class="label2" for=""><strong>¿Olvidaste tu contraseña?</strong></label>
+            </div>
+        </div>
+        <div class="campo4">
+          <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
+          <label class="label3">¿No tienes una cuenta?<strong>Regístrate </strong> </label>
+        </div>
+      </form>
+    </section>
+
+  </header>
+  <main></main>
+  <footer></footer>
+  <!-- <script src="./data/lol/lol.js"></script> -->
+  <!-- <script src="./data/pokemon/pokemon.js"></script> -->
+  <!-- <script src="./data/worldbank/worldbank.js"></script> -->
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
