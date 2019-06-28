@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-</html>
-<html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="fondo1">
   <header>
+  </header>
+
+  <main>
     <!-- Primera Pantalla:-->
-    <section >
+    <section id="pantalla-login">
       <form class="componentes">
         <div class="registro">
           <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
           <div class="campo1">
             <label class="label" for="">Correo electrónico:</label>
-            <input  class="inputs" required >
+            <input class="inputs" required>
           </div>
           <div class="campo2">
             <label class="label" for="">Contraseña</label>
-            <input  class="inputs" type="password" maxlength="11" required id="contraseña"
-              placeholder="&#128272">
+            <input class="inputs" type="password" maxlength="11" required id="input-contraseña">
           </div>
-          <div ></div>
+          <div></div>
           <div class="campo3">
             <a class="label2" href="http//..." for="">¿Olvidaste tu contraseña?</a>
           </div>
         </div>
         <div class="campo4">
-          <button type="button" class="button" > INGRESA </button>
+          <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
           <p>¿No tienes una cuenta?<a href="http//..." class="label3">Regístrate</a> </p>
         </div>
       </form>
     </section>
-  </header>
-  <main></main>
+
+    <!-- Pantalla 2:-->
+    <section id="pantalla-inicio" class="ocultar">
+      <h1> Bienvenido!!! </h1>
+      <img class="imagen" src="../imagenes/bienvenido.png" alt="logopokemonbel-bienvenida">
+
+    </section>
+
+    <!-- Pantalla 3:-->
+    <section id="pantalla-bloqueo" class="ocultar">
+      <section id="pantalla-inicio" class="">
+        <h1> Lo sentimos agotaste tus intentos. </h1>
+        <img class="imagen" src="../imagenes/triste.webp" alt="logopokemonbel-bienvenida">
+
+      </section>
+
+    </section>
+  </main>
   <footer></footer>
   <!-- <script src="./data/lol/lol.js"></script> -->
   <!-- <script src="./data/pokemon/pokemon.js"></script> -->
