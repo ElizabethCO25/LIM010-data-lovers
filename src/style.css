@@ -1,92 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
+    background-image: url(img/fondo.jpg);
     background-size: cover;
     background-position:center;
     background-repeat:no-repeat;
+    height: 95vh;
 }
-.fondo1{
-    background-image: url(img/fondo.jpg);
-    display: flex;
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+/* Se define la cant de columnas y filasl con la parte con la q la quiero ocupar*/
+	grid-template-areas: "header header header"
+						 "sidebar-1 contenido sidebar-2"
+                         "sidebar-1 contenido sidebar-2"
+						 "footer footer footer";
 }
-.componentes{
-    display: flex;
-    flex-flow: column wrap;
-    height: 100vh;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
+.contenedor .header {
+    grid-area: header; 
 }
- .registro{
-    width: 280px;
-    height: 210px;
-    left: 20px;
-    top: 155px;
+
+.contenedor .contenido{
+    grid-area: contenido;
+}
+
+.contenedor .sidebar-1 {
+  grid-area: sidebar-1;
+}
+
+.contenedor .sidebar-2 {
+    grid-area: sidebar-2;
+}
+
+.contenedor .footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+.labels{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin: 10PX;
 }
 .label1{
-    left: 0%;
-    right: 0%;
-    top: 45.12%;
-    bottom: 0%;
+    display: flex;
+    justify-content: flex-start;
 }
+
 .label2{
     display: flex;
     justify-content: flex-end;
 }
-.a{
-    color: #003569;
-    text-decoration: none;
+
+.label3{
+    text-align: center;
 }
-.componentes label{
-    font-family: Open Sans;
-    font-style: normal;
-    color: #000000;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: normal;
-    margin-right: 20px;
-}
-.campo1{
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: column;
-    width: 280px;
-    left: 20px;
-    top: 155px;
-    height: 82px;
-}
-.campo2{
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: column;
-    width: 280px;
-    height: 82px;
-    left: 20px;
-    top: 249px;
-}
+
 .inputs{
     background: #FFFFFF;
     border-radius: 2px;
     padding: 12px 0px;
+    width: 300px;
     border:none;
+    margin: 10PX;
 }
-.campo4{
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: column;
-    text-align: center;
-}
+
 .button{
     background: #3897F0;
     border-radius: 5px;
-    width: 280px;
-    height: 50px;
-    left: 20px;
-    top: 413px;  
+    width: 300px;
+    height: 10%;
+    
     border:none;
+    margin: 10PX;
 }
 .imagen{
-    position: absolute;
-    width: 177px;
-    height: 43px;
-    left: 83px;
-    top: 79px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
+}
+
+.ocultar{
+    display: none;
+}
+
+/*Pantalla 2:*/
+/*Menú de Navegación:*/
+.navegacion{
+	width: 1000px;
+	margin: 30px auto;
+	background: #fff;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #353535;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: #CE7D35;
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #333333;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
 }
