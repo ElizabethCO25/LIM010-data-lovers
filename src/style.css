@@ -9,6 +9,18 @@ body{
     background-position:center;
     background-repeat:no-repeat;
     height: 95vh;
+    display: grid;
+	grid-gap: 20px;
+}
+
+.header {
+    grid-column: 1/1;
+    text-align: center;
+}
+
+.footer {
+    grid-column: -1/-1;
+    text-align: center;
 }
 
 .contenedor {
@@ -18,15 +30,11 @@ body{
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, auto);
-/* Se define la cant de columnas y filasl con la parte con la q la quiero ocupar*/
-	grid-template-areas: "header header header"
-						 "sidebar-1 contenido sidebar-2"
-                         "sidebar-1 contenido sidebar-2"
-						 "footer footer footer";
-}
-.contenedor .header {
-    grid-area: header; 
+	grid-template-rows: repeat(2, auto);
+/* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
+	grid-template-areas: "sidebar-1 contenido sidebar-2"
+                         "sidebar-1 contenido sidebar-2";
+						 
 }
 
 .contenedor .contenido{
@@ -40,12 +48,6 @@ body{
 .contenedor .sidebar-2 {
     grid-area: sidebar-2;
 }
-
-.contenedor .footer {
-  grid-area: footer;
-  text-align: center;
-}
-
 .labels{
     margin-top: 5%;
     margin-bottom: 5%;
@@ -88,6 +90,7 @@ body{
     margin-bottom: 5%;
     margin-left: 15%;
 }
+
 
 .ocultar{
     display: none;
