@@ -17,13 +17,13 @@
           <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
           <div class="campo1">
             <label class="label" for="">Correo electrónico:</label>
-            <input class="inputs" required>
+            <input class="inputs" maxlength="11" required id="usuario">
           </div>
           <div class="campo2">
             <label class="label" for="">Contraseña</label>
             <input class="inputs" type="password" maxlength="11" required id="input-contraseña">
           </div>
-          <div></div>
+          <div id="incorrecto"></div>
           <div class="campo3">
             <a class="label2" href="http//..." for="">¿Olvidaste tu contraseña?</a>
           </div>
@@ -43,7 +43,7 @@
     <section id="pantalla-bloqueo" class="ocultar">
       <section id="pantalla-inicio" class="">
         <h1> Lo sentimos agotaste tus intentos.</h1>
-        <img class="fondo1" src="../imagenes/triste.webp" alt="logopokemonbel-bienvenida">
+        <img class="fondo1" src="img/triste.jpg" >
       </section>
     </section>
 </main>

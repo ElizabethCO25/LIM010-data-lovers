@@ -2,21 +2,23 @@
 //Login:
 const obtenerClick = document.getElementById("boton-ingresar");
 const capturarContraseña = document.getElementById("input-contraseña");
-let cuenta = 2;
+const capturarUsuario = document.getElementById("usuario");
+let intentos = 0;
+
 obtenerClick.addEventListener("click", () => {
- if (capturarContraseña.value === "LABORATORIA") {
-   alert("Contraseña Correcta");
+  if (capturarContraseña.value === "LABORATORIA" && capturarUsuario.value ==="LABORATORIA") {
    document.getElementById("pantalla-inicio").classList.remove("ocultar");
    document.getElementById("pantalla-login").classList.add("ocultar");
-   capturarContraseña.value = "";
- } else if (cuenta === 0) {
-   alert("Agotaste tus intentos de ingreso");
-   document.getElementById("pantalla-bloqueo").classList.remove("ocultar");
-   document.getElementById("pantalla-login").classList.add("ocultar");
-   capturarContraseña.value = "";
- } else {
-   alert("Vuelve a intentarlo");
-   capturarContraseña.value = "";
-   cuenta--;
- }
+  } else  {
+        if(capturarContraseña != "LABORATORIA" && intentos ==2){
+          document.getElementById("pantalla-bloqueo").classList.remove("ocultar");
+          document.getElementById("pantalla-login").classList.add("ocultar");
+  }else {
+
+    document.getElementById("incorrecto").innerHTML="datos erròneos, intenta otra vez";
+    capturarContraseña.value="";
+    intentos++;
+  }
+};
 });
+
