@@ -5,7 +5,7 @@ const capturarContraseña = document.getElementById("input-contraseña");
 const capturarUsuario = document.getElementById("input-usuario");
 let cuenta = 2;
 obtenerClick.addEventListener("click", () => {
-  if (capturarContraseña.value === "LABORATORIA" && capturarUsuario.value === "LABORATORIA") {
+  if (capturarContraseña.value === "1" && capturarUsuario.value === "1") {
     alert("Contraseña y usuario correcto!");
     document.getElementById("pantalla-inicio").classList.remove("ocultar");
     document.getElementById("pantalla-login").classList.add("ocultar");
@@ -31,3 +31,20 @@ enterIniciar.addEventListener("keyup", (event) => {
     document.getElementById("boton-ingresar").click();
   }
 });
+
+//mostrar pokemones
+const pokemonNuevo = dataPoker(); // constante con una funcion 
+const mostrarData = (pokemon) => { //paràmetro
+  let muestra = ' ';
+  for (let i = 0; i < pokemon.length; i++) {
+    let llamar = `
+    <div>
+      <img src ="${pokemon[i].img}"/>    
+      <p>nombre =${pokemon[i].name}</p>
+    </div>`;
+    muestra += llamar;
+  }
+  return muestra;
+};
+contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
+

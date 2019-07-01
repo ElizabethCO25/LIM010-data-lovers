@@ -3,8 +3,14 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
-const example = () => {
-  return 'example';
+const dataPoker = () => {
+  const vacio = []; //arreglo vacìo
+  for (let i = 0; i < POKEMON.pokemon.length; i++) { 
+    vacio.push({
+      'img': POKEMON.pokemon[i].img,
+      'name': POKEMON.pokemon[i].name,
+    });
+  }
+  return vacio;
 };
-
-window.example = example;
+window.dataPoker = dataPoker; //
