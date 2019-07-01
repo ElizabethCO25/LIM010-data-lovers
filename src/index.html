@@ -3,56 +3,93 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="img/fondo.jpg">
-  <title>Data Lovers</title>
+  <title>PókemonBel</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="fondo1">
-    <header></header>
-    <main>
-    <!-- Primera Pantalla:-->
-    <section id="pantalla-login">
-      <form class="componentes">
-        <div class="registro">
-          <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
-          <div class="campo1">
-            <label class="label" for="">Correo electrónico:</label>
-            <input class="inputs" maxlength="11" required id="usuario">
-          </div>
-          <div class="campo2">
-            <label class="label" for="">Contraseña</label>
-            <input class="inputs" type="password" maxlength="11" required id="input-contraseña">
-          </div>
-          <div id="incorrecto"></div>
-          <div class="campo3">
-            <a class="label2" href="http//..." for="">¿Olvidaste tu contraseña?</a>
-          </div>
-        </div>
-        <div class="campo4">
-          <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
-          <p>¿No tienes una cuenta?<a href="http//..." class="label3">Regístrate</a> </p>
-        </div>
-      </form>
-    </section>
-    <!-- Pantalla 2:-->
-    <section id="pantalla-inicio" class="ocultar">
-      <h1> Bienvenido!!!  </h1>
-      <img class="fondo1" src="../imagenes/bienvenido.png" alt="logopokemonbel-bienvenida">
-    </section>
-    <!-- Pantalla 2:-->
-    <section id="pantalla-bloqueo" class="ocultar">
-      <section id="pantalla-inicio" class="">
-        <h1> Lo sentimos agotaste tus intentos.</h1>
-        <img class="fondo1" src="img/triste.jpg" >
-      </section>
-    </section>
-</main>
-  <footer></footer>
-  <!-- <script src="./data/lol/lol.js"></script> -->
-  <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-  <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+<body>
+  <!-- Primera Pantalla:-->
+  <div class="contenedor" id="pantalla-login">
+    <header class="header">
+      <br></br>
+    </header>
+
+    <main class="contenido">
+      <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
+      <label class="labels label1" required>Correo electrónico:</label>
+      <input class="inputs" maxlength="11" id="input-usuario">
+      <label class="labels label1">Contraseña</label>
+      <input class="inputs" type="password" maxlength="11" required id="input-contraseña">
+      <a class="labels label2" href="http//...">¿Olvidaste tu contraseña?</a>
+      <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
+      <p class="labels label3">¿No tienes una cuenta?<a href="http//...">Regístrate</a> </p>
+    </main>
+   
+    <aside class="sidebar-1">
+    </aside>
+   
+    <aside class="sidebar-2">
+    </aside>
+   
+    <footer class="footer">
+      <p>Copyright © Laboratoria 2019. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <!-- Pantalla 2:-->
+  <section id="pantalla-inicio" class="ocultar">
+    <!-- Menú de navegación:-->
+    <nav class="navegacion">
+      <ul class="menu">
+        <li><a href="#">INICIO</a></li>
+        <li><a href="#">POKEDEX</a></li>
+        <li><a href="#">ORDENAR</a>
+          <ul class="submenu">
+            <li><a href="#">De A-Z</a></li>
+            <li><a href="#">De Z-A</a></li>
+            <li><a href="#">Spawn ascendente</a></li>
+            <li><a href="#">Spawn descendente</a></li>
+          </ul>
+        </li>
+        <li><a href="#">FILTRAR</a>
+          <ul class="submenu">
+            <li><a href="#">Tipo</a>
+              <ul>
+                <li><a href="#">Tierra</a></li>
+                <li><a href="#">Aire</a></li>
+                <li><a href="#">Agua</a></li>
+                <li><a href="#">Fuego</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Debilidad</a>
+              <ul>
+                <li><a href="#">Tierra</a></li>
+                <li><a href="#">Aire</a></li>
+                <li><a href="#">Agua</a></li>
+                <li><a href="#">Fuego</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+        <li><a href="#">INCUBADORA</a></li>
+      </ul>
+    </nav>
+
+  </section>
+
+  <!-- Pantalla 3:-->
+  <section id="pantalla-bloqueo" class="ocultar">
+      <h1> Lo sentimos agotaste tus intentos. </h1>
+      <img class="imagen" src="../imagenes/triste.webp" alt="logopokemonbel-bienvenida">
+  </section>
 </body>
+
+
+
+<script src="./data/pokemon/pokemon.js"></script>
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+
 </html>
