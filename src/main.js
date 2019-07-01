@@ -23,9 +23,6 @@ obtenerClick.addEventListener("click", () => {
   }
 });
 
-
-
-
 //Función ENTER:
 let enterIniciar = document.getElementById("input-contraseña");
 enterIniciar.addEventListener("keyup", (event) => {
