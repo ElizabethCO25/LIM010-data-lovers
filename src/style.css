@@ -221,3 +221,12 @@ body{
     justify-content: center;
     font-family: Arial;
 }
+#contenedorPokemon{
+    display: flex;
+    flex-wrap: wrap; 
+    text-align: center;
+    font-size: 21px;
+    background: #CE7D35;
+}
+
+

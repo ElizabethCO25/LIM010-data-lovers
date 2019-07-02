@@ -15,7 +15,7 @@ obtenerClick.addEventListener("click", () => {
     document.getElementById("pantalla-login").classList.add("ocultar");
     capturarContraseña.value = "";
   } else {
-    document.getElementById("incorrecto").innerHTML="Contraseña o usuario incorrecto,intenta otra vez";
+    document.getElementById("incorrecto").innerHTML = "Contraseña o usuario incorrecto,intenta otra vez";
     capturarContraseña.value = "";
     cuenta--;
   }
@@ -37,8 +37,9 @@ const mostrarData = (pokemon) => { //paràmetro
   for (let i = 0; i < pokemon.length; i++) {
     let llamar = `
     <div>
-      <img src ="${pokemon[i].img}"/>    
-      <p>nombre =${pokemon[i].name}</p>
+      <img src ="${pokemon[i].img}"/>   
+      <p>${pokemon[i].name}</p>
+      <p>${pokemon[i].multipliers}<
     </div>`;
     muestra += llamar;
   }
