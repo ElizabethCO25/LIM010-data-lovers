@@ -9,6 +9,7 @@ const dataPoker = () => {
     vacio.push({
       'img': POKEMON.pokemon[i].img,
       'name': POKEMON.pokemon[i].name,
+      'multipliers': POKEMON.pokemon[i].multipliers,
     });
   }
   return vacio;
