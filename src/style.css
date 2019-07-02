@@ -149,3 +149,8 @@ body{
 	visibility: visible;
 	opacity: 1;
 }
+.pokemontriste{
+    display:flex;
+    justify-content: center;
+    font-family: Arial;
+}
