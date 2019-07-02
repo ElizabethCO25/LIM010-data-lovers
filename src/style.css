@@ -194,7 +194,13 @@ body{
     flex-wrap: wrap; 
     text-align: center;
     font-size: 21px;
-    background: #CE7D35;
+    background: rgb(243, 136, 43);
 }
-
+.fondopoke{
+    background-color:rgb(350, 350, 350,.5);
+    padding: 28px;
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+}
 
