@@ -15,7 +15,7 @@ obtenerClick.addEventListener("click", () => {
     document.getElementById("pantalla-login").classList.add("ocultar");
     capturarContraseña.value = "";
   } else {
-    document.getElementById("incorrecto").innerHTML="Contraseña o usuario incorrecto,intenta otra vez";
+    document.getElementById("incorrecto").innerHTML = "Contraseña o usuario incorrecto,intenta otra vez";
     capturarContraseña.value = "";
     cuenta--;
   }

@@ -5,7 +5,7 @@
 
 const dataPoker = () => {
   const vacio = []; //arreglo vacìo
-  for (let i = 0; i < POKEMON.pokemon.length; i++) { 
+  for (let i = 0; i < POKEMON.pokemon.length; i++) {
     vacio.push({
       'img': POKEMON.pokemon[i].img,
       'name': POKEMON.pokemon[i].name,
