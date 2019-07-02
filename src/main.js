@@ -6,18 +6,16 @@ const capturarUsuario = document.getElementById("input-usuario");
 let cuenta = 2;
 obtenerClick.addEventListener("click", () => {
   if (capturarContraseña.value === "1" && capturarUsuario.value === "1") {
-    alert("Contraseña y usuario correcto!");
     document.getElementById("pantalla-inicio").classList.remove("ocultar");
     document.getElementById("pantalla-login").classList.add("ocultar");
     capturarContraseña.value = "";
     capturarUsuario.value = "";
   } else if (cuenta === 0) {
-    alert("Agotaste tus intentos de ingreso");
     document.getElementById("pantalla-bloqueo").classList.remove("ocultar");
     document.getElementById("pantalla-login").classList.add("ocultar");
     capturarContraseña.value = "";
   } else {
-    alert("Contraseña o Usuario incorrecto");
+    document.getElementById("incorrecto").innerHTML="Contraseña o usuario incorrecto,intenta otra vez";
     capturarContraseña.value = "";
     cuenta--;
   }
