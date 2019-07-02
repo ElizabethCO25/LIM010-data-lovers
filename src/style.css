@@ -10,16 +10,19 @@ body{
     background-repeat:no-repeat;
     height: 95vh;
     display: grid;
-	grid-gap: 20px;
-}
+    grid-gap: 20px;
 
+}
+.imagen-header{
+    width: 100%;
+}
 .header {
-    grid-column: 1/1;
-    text-align: center;
+    grid-column: 1/-1;
+  
 }
 
 .footer {
-    grid-column: -1/-1;
+    grid-column: 1/-1;
     text-align: center;
 }
 
@@ -99,9 +102,9 @@ body{
 /*Pantalla 2:*/
 /*Menú de Navegación:*/
 .navegacion{
-	width: 1000px;
-	margin: 30px auto;
-	background: #fff;
+	width: 100%;
+	margin: auto;
+	background: rgb(14, 13, 13);
 }
 
 .navegacion ul{
@@ -115,8 +118,8 @@ body{
 
 .menu > li > a{
 	display: block;
-	padding: 15px 20px;
-	color: #353535;
+	padding: 5px 45px;
+	color: #ffffff;
 	font-family: 'Open sans';
 	text-decoration: none;
 }
@@ -130,16 +133,15 @@ body{
 
 .submenu{
 	position: absolute;
-	background: #333333;
+	background: #333333ce;
 	width: 120%;
 	visibility: hidden;
-	opacity: 0;
 	transition: opacity 1.5s;
 }
 
 .submenu li a{
 	display: block;
-	padding: 15px;
+	padding: 20%;
 	color: #fff;
 	font-family: 'Open sans';
 	text-decoration: none;
@@ -149,6 +151,37 @@ body{
 	visibility: visible;
 	opacity: 1;
 }
+
+.imagenMenu{
+    margin-left:35%;
+    margin-top: 5%;
+}
+
+/*Grillas para la Segunda Página:*/
+.contenerdorPag2{
+    width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
+/* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
+	grid-template-areas: "desplegable desplegable desplegable"
+                         "sidebar-3 contenidoPag2 contenidoPag2"
+                         "sidebar-3 contenidoPag2 contenidoPag2";
+}
+
+.contenerdorPag2.contenidoPag2{
+    grid-area: contenido;
+}
+
+.contenerdorPag2.sidebar-3 {
+  grid-area: sidebar-3;
+}
+
+.contenerdorPag2.desplegable{
+    grid-area: desplegable;
 .pokemontriste{
     display:flex;
     justify-content: center;
