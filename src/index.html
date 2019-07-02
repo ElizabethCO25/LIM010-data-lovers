@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,10 @@
 
 <body>
   <header class="header">
-      <img class="imagen-header" src="../Imagenes/Header PkBel.png" alt="cabecera-pokemonBel" >
+    <img class="imagen-header" src="../Imagenes/Header PkBel.png" alt="cabecera-pokemonBel">
   </header>
-  <!-- Primera Pantalla:-->
+  <!-- Pantalla 1 (Pantalla Login):-->
   <section class="contenedor" id="pantalla-login">
-  
     <main class="contenido">
       <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
       <label class="labels label1" required>Correo electrónico:</label>
@@ -24,24 +24,20 @@
       <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
       <p class="labels label3">¿No tienes una cuenta?<a href="http//...">Regístrate</a> </p>
     </main>
-   
     <aside class="sidebar-1">
     </aside>
-   
     <aside class="sidebar-2">
     </aside>
   </section>
-
-  
 
   <!-- Pantalla 2:-->
   <section id="pantalla-inicio" class="ocultar">
     <!-- Menú de navegación:-->
     <nav class="navegacion">
       <ul class="menu">
-        <li><a href="#">INICIO</a></li>
-        <li><a href="#">POKEDEX</a></li>
-        <li><a href="#">ORDENAR</a>
+        <li> <img class="imagenMenu" src="../Imagenes/home.png" alt="Casa-sobre-opción-inicio"><a href="#">INICIO</a></li>
+        <li> <img class="imagenMenu" src="../Imagenes/PKBol.png" alt="Pokebola-sobre-opción-pokedex"> <a href="#">POKEDEX</a></li>
+        <li> <img class="imagenMenu" src="../Imagenes/ordenar.png" alt="Flechas-sobre-opción-ordenar"> <a href="#">ORDENAR</a>
           <ul class="submenu">
             <li><a href="#">De A-Z</a></li>
             <li><a href="#">De Z-A</a></li>
@@ -49,9 +45,9 @@
             <li><a href="#">Spawn descendente</a></li>
           </ul>
         </li>
-        <li><a href="#">FILTRAR</a>
+        <li> <img class="imagenMenu" src="../Imagenes/filtrar.png" alt="Filtr-sobre-opción-filtrar"> <a href="#">FILTRAR</a>
           <ul class="submenu">
-            <li><a href="#">Tipo</a>
+            <li><a href="#"><strong>TIPO</strong></a>
               <ul>
                 <li><a href="#">Tierra</a></li>
                 <li><a href="#">Aire</a></li>
@@ -59,7 +55,7 @@
                 <li><a href="#">Fuego</a></li>
               </ul>
             </li>
-            <li><a href="#">Debilidad</a>
+            <li><a href="#"><strong>DEBILIDAD</strong></a>
               <ul>
                 <li><a href="#">Tierra</a></li>
                 <li><a href="#">Aire</a></li>
@@ -70,7 +66,7 @@
 
           </ul>
         </li>
-        <li><a href="#">INCUBADORA</a></li>
+        <li> <img class="imagenMenu" src="../Imagenes/incubadora.png" alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a></li>
       </ul>
     </nav>
 
@@ -78,13 +74,13 @@
 
   <!-- Pantalla 3:-->
   <section id="pantalla-bloqueo" class="ocultar">
-      <h1> Lo sentimos agotaste tus intentos. </h1>
-      <img class="imagen" src="../imagenes/triste.webp" alt="logopokemonbel-bienvenida">
+    <h1> Lo sentimos agotaste tus intentos. </h1>
+    <img class="imagen" src="../imagenes/triste.webp" alt="logopokemonbel-bienvenida">
   </section>
 
   <footer class="footer">
     <p>Copyright © Laboratoria 2019. Todos los derechos reservados.</p>
-</footer>
+  </footer>
 
 </body>
 
