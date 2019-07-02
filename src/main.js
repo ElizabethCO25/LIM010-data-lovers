@@ -38,7 +38,7 @@ const mostrarData = (pokemon) => { //paràmetro
     let llamar = `
     <div>
       <img src ="${pokemon[i].img}"/>    
-      <p>nombre =${pokemon[i].name}</p>
+      <p>${pokemon[i].name}</p>
     </div>`;
     muestra += llamar;
   }

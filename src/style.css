@@ -182,8 +182,17 @@ body{
 
 .contenerdorPag2.desplegable{
     grid-area: desplegable;
+}
+
 .pokemontriste{
     display:flex;
     justify-content: center;
     font-family: Arial;
 }
+#contenedorPokemon{
+    display: flex;
+    flex-wrap: wrap; 
+    text-align: center;
+    font-size: 21px; 
+}
+
