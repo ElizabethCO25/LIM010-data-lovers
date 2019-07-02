@@ -182,4 +182,8 @@ body{
 
 .contenerdorPag2.desplegable{
     grid-area: desplegable;
+.pokemontriste{
+    display:flex;
+    justify-content: center;
+    font-family: Arial;
 }
