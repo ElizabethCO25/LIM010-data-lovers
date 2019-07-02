@@ -10,22 +10,21 @@ body{
     background-repeat:no-repeat;
     height: 95vh;
     display: grid;
-    grid-gap: 20px;
-
+    grid-gap: 0px;
 }
 .imagen-header{
     width: 100%;
 }
 .header {
-    grid-column: 1/-1;
-  
+    grid-column: 1/1;
 }
 
 .footer {
-    grid-column: 1/-1;
+    grid-column: -1/-1;
     text-align: center;
 }
 
+/*Pantalla 1:*/
 .contenedor {
 	width: 90%;
 	max-width: 1000px;
@@ -94,7 +93,6 @@ body{
     margin-left: 15%;
 }
 
-
 .ocultar{
     display: none;
 }
@@ -158,30 +156,64 @@ body{
 }
 
 /*Grillas para la Segunda Página:*/
-.contenerdorPag2{
+.contenedor2{
     width: 90%;
 	max-width: 1000px;
-	margin: 20px auto;
+	margin: auto;
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, auto);
 /* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
-	grid-template-areas: "desplegable desplegable desplegable"
-                         "sidebar-3 contenidoPag2 contenidoPag2"
-                         "sidebar-3 contenidoPag2 contenidoPag2";
+	grid-template-areas: "navegacion navegacion navegacion"
+                         "sidebar-3 contenido2 contenido2"
+                         "sidebar-3 contenido2 contenido2";
 }
-
-.contenerdorPag2.contenidoPag2{
-    grid-area: contenido;
+.contenedor2 .contenido2{
+    grid-area: contenido2;
 }
-
-.contenerdorPag2.sidebar-3 {
+.contenedor2 .sidebar-3{
   grid-area: sidebar-3;
+  background-color: #fff;
+  color: #080808ce
+}
+.contenedor2 .navegacion{
+    grid-area: navegacion;
 }
 
-.contenerdorPag2.desplegable{
-    grid-area: desplegable;
+@media screen and (max-width: 760px){
+    .contenedor2 {
+        grid-template-areas: "navegacion navegacion navegacion"
+                         "sidebar-3 sidebar-3 sidebar-3"
+                         "contenido2 contenido2 contenido2"
+                         "contenido2 contenido2 contenido2";
+    }
+    #navegacion{
+        transform: scale(0.8);
+    }
+    /*.navegacion{
+        background-size: 40%;
+        background: rgb(14, 13, 13);
+        
+    }
+    
+    .menu > li{
+        display: inline
+    }
+    .menu > li > a{
+        margin-left:0%;
+        display: block;
+        padding: 5px 5px;
+        color: #ffffff;
+        font-family: 'Open sans';
+        text-decoration: none;
+    }
+
+    .imagenMenu{
+        margin-left:0%;
+        margin-top: 5%;
+    }*/
+
 }
 
 .pokemontriste{
