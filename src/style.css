@@ -162,20 +162,18 @@ body{
 	margin: auto;
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(3, auto);
 /* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
-	grid-template-areas: "navegacion navegacion navegacion"
-                         "sidebar-3 contenido2 contenido2"
-                         "sidebar-3 contenido2 contenido2";
+	grid-template-areas: "navegacion navegacion navegacion navegacion navegacion"
+                         "sidebar-3 contenido2 contenido2 contenido2 contenido2"
+                         "sidebar-3 contenido2 contenido2 contenido2 contenido2";
 }
 .contenedor2 .contenido2{
     grid-area: contenido2;
 }
 .contenedor2 .sidebar-3{
   grid-area: sidebar-3;
-  background-color: #fff;
-  color: #080808ce
 }
 .contenedor2 .navegacion{
     grid-area: navegacion;
@@ -190,6 +188,9 @@ body{
     }
     #navegacion{
         transform: scale(0.8);
+    }
+    #contenedorPokemon{
+        transform: scale(0.6);
     }
     /*.navegacion{
         background-size: 40%;
@@ -214,6 +215,13 @@ body{
         margin-top: 5%;
     }*/
 
+}
+
+.centrar{
+    text-align: center;
+	display: flex;
+	align-items: center;
+    justify-content: center;
 }
 .pokemontriste{
     display:flex;
