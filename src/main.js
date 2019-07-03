@@ -37,9 +37,10 @@ const mostrarData = (pokemon) => { //paràmetro
   for (let i = 0; i < pokemon.length; i++) {
     let llamar = `
     <div>
-      <img src ="${pokemon[i].img}"/>   
-      <p>${pokemon[i].name}</p>
-      <p>${pokemon[i].multipliers}<
+      <img  class= "fondo-poke" src ="${pokemon[i].img}"/>   
+      <p class = "nombre-poke">${pokemon[i].name}</p>
+      <p>${pokemon[i].id}</p>
+      <p>${pokemon[i].multipliers}</p>
     </div>`;
     muestra += llamar;
   }
@@ -47,3 +48,11 @@ const mostrarData = (pokemon) => { //paràmetro
 };
 contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
 
+
+const contadorAtrapado = document.getElementById('pokemon-atrapado');
+
+if(POKEMON.pokemon[0].multipliers == null){contadorAtrapado= "pokemon atrapado" }
+else if (POKEMON.pokemon[0].multipliers !== null){
+  contadorAtrapado= "Te falta atrapar"
+};
+console-log(contadorAtrapado);
