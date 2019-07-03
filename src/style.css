@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     background-image: url(img/fondo.jpg);
+    background-attachment: fixed;
     background-size: cover;
     background-position:center;
     background-repeat:no-repeat;
-    height: 95vh;
+    height: 100vh; 
     display: grid;
     grid-gap: 0px;
 }
@@ -216,7 +216,6 @@ body{
     }*/
 
 }
-
 .centrar{
     text-align: center;
 	display: flex;
@@ -232,14 +231,15 @@ body{
     display: flex;
     flex-wrap: wrap; 
     text-align: center;
+    justify-content: space-around;
     font-size: 21px;
     background: rgba(255, 149, 60, 0.98);
 }
 .fondo-poke{
     background-color: rgb(300, 300, 300, .2);
-    padding: 28px;
-    width: 50%;
-    height: 50%;
+    padding: 25px;
+    width: auto;
+    height: auto;
     border-radius: 15px;
 }
 .nombre-poke{
@@ -253,4 +253,5 @@ body{
 }
 .zoom:hover{
     transform: scale(1.5);
+    background-color: rgb(252, 196, 150);
 }
