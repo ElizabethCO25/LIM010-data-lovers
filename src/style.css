@@ -215,7 +215,6 @@ body{
     }*/
 
 }
-
 .pokemontriste{
     display:flex;
     justify-content: center;
@@ -226,13 +225,22 @@ body{
     flex-wrap: wrap; 
     text-align: center;
     font-size: 21px;
-    background: rgb(243, 136, 43);
+    background: rgba(255, 149, 60, 0.98);
 }
-.fondopoke{
-    background-color:rgb(350, 350, 350,.5);
+.fondo-poke{
+    background-color: rgb(300, 300, 300, .2);
     padding: 28px;
     width: 50%;
     height: 50%;
     border-radius: 15px;
+}
+.nombre-poke{
+    font-weight: bold;
+    font-family: Cambria;
+    font-size: 20px;
+}
+.texto-atrapados{
+    font-weight: bold;
+    font-size: 30px;
 }
 
