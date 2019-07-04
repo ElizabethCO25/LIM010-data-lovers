@@ -27,6 +27,7 @@ body{
 
 /*Pantalla 1:*/
 .contenedor {
+    background-image: url(img/fondo.jpg);
 	width: 90%;
 	max-width: 1000px;
 	margin: 20px auto;

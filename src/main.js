@@ -31,7 +31,7 @@ enterIniciar.addEventListener("keyup", (event) => {
 });
 
 //Pantalla 2:
-// Configuración de botonoes dle menú desplegable:
+// Configuración de botones dle menú desplegable:
 // Botón INICIO:
 const clickInicio = document.getElementById("inicio");
 clickInicio.addEventListener("click", () => {
