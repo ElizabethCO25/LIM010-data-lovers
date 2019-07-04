@@ -37,10 +37,12 @@ const mostrarData = (pokemon) => { //paràmetro
   for (let i = 0; i < pokemon.length; i++) {
     let llamar = `
     <div>
-      <img  class= "fondo-poke" src ="${pokemon[i].img}"/>   
-      <p class = "nombre-poke">${pokemon[i].name}</p>
-      <p>${pokemon[i].id}</p>
-      <p>${pokemon[i].multipliers}</p>
+      <article class= "fondo-poke zoom" >
+        <img  src ="${pokemon[i].img}"/>   
+        <p class = "nombre-poke">${pokemon[i].name}</p>
+        <p>${pokemon[i].id}</p>
+        <p>${pokemon[i].multipliers}</p>
+      </article>
     </div>`;
     muestra += llamar;
   }
@@ -48,11 +50,51 @@ const mostrarData = (pokemon) => { //paràmetro
 };
 contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
 
+//Identificar pokemones No atrapados
 
-const contadorAtrapado = document.getElementById('pokemon-atrapado');
 
-if(POKEMON.pokemon[0].multipliers == null){contadorAtrapado= "pokemon atrapado" }
-else if (POKEMON.pokemon[0].multipliers !== null){
-  contadorAtrapado= "Te falta atrapar"
-};
-console-log(contadorAtrapado);
+let contadorNoatrapado = 0;
+let contadorAtrapado = 0;
+//recorriendo todo el array
+for (let i = 0; i < POKEMON.pokemon.length; i++) {
+  if (POKEMON.pokemon[i].multipliers == null) {
+    contadorNoatrapado++
+  } else {
+    contadorAtrapado++
+  }
+}
+document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
+document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
+let mostrarNoatrapados = contadorNoatrapado;
+let mostrarAtrapados = contadorAtrapado;
+for (let i = 0; i < POKEMON.pokemon.length; i++) {
+  if (POKEMON.pokemon[i].multipliers == null) {
+    let mostrar = `
+    <div>
+    <article class= "fondo-no zoom" >
+        <img src ="${POKEMON.pokemon[i].img}"/>   
+        <p >${POKEMON.pokemon[i].name}</p>
+        <p>${POKEMON.pokemon[i].id}</p>
+        </article>
+    </div>`;
+    mostrarNoatrapados += mostrar;
+  } else {
+    for (let i = 0; i < POKEMON.pokemon.length; i++) {
+      if (POKEMON.pokemon[i].multipliers !== null) {
+        let mostrar = `
+       <div>
+       <article class= "fondo-si  zoom" >
+           <img src ="${POKEMON.pokemon[i].img}"/>   
+           <p >${POKEMON.pokemon[i].name}</p>
+           <p>${POKEMON.pokemon[i].id}</p>
+           </article>
+       </div>`;
+        mostrarAtrapados += mostrar;
+      }
+    }
+    document.getElementById('atrapados').innerHTML = mostrarAtrapados;
+  }
+}
+document.getElementById('No-atrapados').innerHTML = mostrarNoatrapados;
+
+
