@@ -60,9 +60,9 @@ clickOrdenar.addEventListener("click", () => {
 //Botòn volver:
 const clickVolver = document.getElementById("volver");
 clickVolver.addEventListener("click", () => {
-    document.getElementById("pantalla-pokedex").classList.add("ocultar");
-    document.getElementById("pantalla-inicio").classList.remove("ocultar");
-  });
+  document.getElementById("pantalla-pokedex").classList.add("ocultar");
+  document.getElementById("pantalla-inicio").classList.remove("ocultar");
+});
 
 //mostrar pokemones
 const pokemonNuevo = dataPoker(); // constante con una funcion 
@@ -103,9 +103,9 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
     let mostrar = `
     <div>
     <article class= "fondo-no zoom" >
-        <img src ="${POKEMON.pokemon[i].img}"/>   
-        <p >${POKEMON.pokemon[i].name}</p>
-        <p>${POKEMON.pokemon[i].id}</p>
+        <img src ="${POKEMON.pokemon[i].img}"/> 
+        <p>${POKEMON.pokemon[i].num}</p>  
+        <p class="name">${POKEMON.pokemon[i].name}</p>
         </article>
     </div>`;
     mostrarNoatrapados += mostrar;
@@ -115,10 +115,10 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
         let mostrar = `
        <div>
        <article class= "fondo-si  zoom" >
-           <img src ="${POKEMON.pokemon[i].img}"/>   
-           <p class ="name">${POKEMON.pokemon[i].name}</p>
-           <p>${POKEMON.pokemon[i].id}</p>
-           </article>
+       <img src ="${POKEMON.pokemon[i].img}"/> 
+       <p>${POKEMON.pokemon[i].num}</p>  
+       <p>${POKEMON.pokemon[i].name}</p>
+       </article>
        </div>`;
         mostrarAtrapados += mostrar;
       }

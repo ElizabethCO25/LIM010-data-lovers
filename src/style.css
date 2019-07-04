@@ -200,8 +200,6 @@ body{
 	align-items: center;
     justify-content: center;
 }
-
-
 .pokemontriste{
     display:flex;
     justify-content: center;
@@ -236,7 +234,7 @@ body{
     font-size: 21px;
 }
 #No-atrapados{
-    /*! display: flex; */
+     display: flex; 
     flex-wrap: wrap; 
     text-align: center;
     justify-content: space-around;
@@ -247,7 +245,6 @@ body{
     font-family: 'Times New Roman';
 }
 .zoom:hover{
-    transform:scale(1.5);
     background-color: rgb(226, 212, 199);
 }
 .fondo-no{
@@ -260,9 +257,10 @@ body{
 }
 .fondo-si{
     background-color: rgb(300, 300, 300, .2);
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 25px;
     width: auto;
     height: auto;
     border-radius: 28px;
 }
+
