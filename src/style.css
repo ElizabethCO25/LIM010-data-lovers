@@ -161,7 +161,7 @@ body{
     width: 100%;
 	margin: auto;
 	display: grid;
-	grid-gap: 20px;
+	grid-gap: 20px; 
 	grid-template-columns: repeat(7, 1fr);
 	grid-template-rows: repeat(2, auto);
 /* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
@@ -176,6 +176,11 @@ body{
 }
 .contenedor2 .sidebar-3{
     grid-area: sidebar-3;
+}
+
+.sidebar-3{
+    background: rgba(124, 122, 122, 0.774);
+    border-radius: 15px;
 }
 
 @media screen and (max-width: 760px){
