@@ -243,6 +243,10 @@ body{
     justify-content: space-around;
     font-size: 21px;
 }
+.name{
+    font-weight: bold;
+    font-family: 'Times New Roman';
+}
 .zoom:hover{
     transform:scale(1.5);
     background-color: rgb(226, 212, 199);

@@ -49,10 +49,7 @@ const mostrarData = (pokemon) => { //paràmetro
   return muestra;
 };
 contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
-
 //Identificar pokemones No atrapados
-
-
 let contadorNoatrapado = 0;
 let contadorAtrapado = 0;
 //recorriendo todo el array
@@ -63,7 +60,7 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
     contadorAtrapado++
   }
 }
-document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " +contadorNoatrapado;
+document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
 let mostrarNoatrapados = contadorNoatrapado;
 let mostrarAtrapados = contadorAtrapado;
@@ -85,7 +82,7 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
        <div>
        <article class= "fondo-si  zoom" >
            <img src ="${POKEMON.pokemon[i].img}"/>   
-           <p >${POKEMON.pokemon[i].name}</p>
+           <p class ="name">${POKEMON.pokemon[i].name}</p>
            <p>${POKEMON.pokemon[i].id}</p>
            </article>
        </div>`;
