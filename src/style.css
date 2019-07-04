@@ -158,36 +158,33 @@ body{
 
 /*Grillas para la Segunda Página:*/
 .contenedor2{
-    width: 90%;
-	max-width: 1000px;
+    width: 100%;
 	margin: auto;
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(3, auto);
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(2, auto);
 /* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
-	grid-template-areas: "navegacion navegacion navegacion navegacion navegacion"
-                         "sidebar-3 contenido2 contenido2 contenido2 contenido2"
-                         "sidebar-3 contenido2 contenido2 contenido2 contenido2";
+	grid-template-areas: "navegacion navegacion navegacion navegacion navegacion navegacion usuario"
+                         "contenido2 contenido2 contenido2 contenido2 contenido2 contenido2 contenido2";
 }
 .contenedor2 .contenido2{
     grid-area: contenido2;
 }
-.contenedor2 .sidebar-3{
-  grid-area: sidebar-3;
-}
 .contenedor2 .navegacion{
     grid-area: navegacion;
+}
+.contenedor2 .sidebar-3{
+    grid-area: usuario;
 }
 
 @media screen and (max-width: 760px){
     .contenedor2 {
-        grid-template-areas: "navegacion navegacion navegacion navegacion navegacion"
-                         "sidebar-3 sidebar-3 sidebar-3 sidebar-3 sidebar-3"
-                         "contenido2 contenido2 contenido2 contenido2 contenido2"
-                         "contenido2 contenido2 contenido2 contenido2 contenido2";
+        grid-template-areas: "navegacion navegacion navegacion navegacion"
+                         "contenido2 contenido2 contenido2 contenido2";
     }
-    #navegacion{
+
+    /*#navegacion{
         transform: scale(0.8);
     }
     #contenedorPokemon{
@@ -195,7 +192,7 @@ body{
     }
     .sidebar-3{
         transform: scale(0.6);
-    }
+    }*/
 }
 .centrar{
     text-align: center;
@@ -203,6 +200,8 @@ body{
 	align-items: center;
     justify-content: center;
 }
+
+
 .pokemontriste{
     display:flex;
     justify-content: center;
@@ -237,7 +236,7 @@ body{
     font-size: 21px;
 }
 #No-atrapados{
-    display: flex;
+    /*! display: flex; */
     flex-wrap: wrap; 
     text-align: center;
     justify-content: space-around;
