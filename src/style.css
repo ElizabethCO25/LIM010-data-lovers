@@ -245,7 +245,6 @@ body{
     font-family: 'Times New Roman';
 }
 .zoom:hover{
-    transform:scale(1.5);
     background-color: rgb(226, 212, 199);
 }
 .fondo-no{
@@ -264,3 +263,4 @@ body{
     height: auto;
     border-radius: 28px;
 }
+
