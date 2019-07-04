@@ -65,19 +65,33 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
 }
 document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
-
-
-let mostrarNoatrapados =  contadorNoatrapado;
-
-for(let i = 0; i< POKEMON.pokemon.length; i++){
-   if(POKEMON.pokemon[i].multipliers == null){
-   let mostrar = `
+let mostrarNoatrapados = contadorNoatrapado;
+let mostrarAtrapados = contadorAtrapado;
+for (let i = 0; i < POKEMON.pokemon.length; i++) {
+  if (POKEMON.pokemon[i].multipliers == null) {
+    let mostrar = `
     <div>
         <img src ="${POKEMON.pokemon[i].img}"/>   
         <p >${POKEMON.pokemon[i].name}</p>
         <p>${POKEMON.pokemon[i].id}</p>
     </div>`;
     mostrarNoatrapados += mostrar;
+  } else {
+    for (let i = 0; i < POKEMON.pokemon.length; i++) {
+      if (POKEMON.pokemon[i].multipliers !== null) {
+        let mostrar = `
+       <div>
+           <img src ="${POKEMON.pokemon[i].img}"/>   
+           <p >${POKEMON.pokemon[i].name}</p>
+           <p>${POKEMON.pokemon[i].id}</p>
+       </div>`;
+        mostrarAtrapados += mostrar;
+      }
+    }
+    document.getElementById('atrapados').innerHTML = mostrarAtrapados;
+
   }
 }
-  document.getElementById('No-atrapados').innerHTML =mostrarNoatrapados;
+document.getElementById('No-atrapados').innerHTML = mostrarNoatrapados;
+
+
