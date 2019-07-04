@@ -245,7 +245,7 @@ body{
 }
 .zoom:hover{
     transform:scale(1.5);
-    background-color: rgb(252, 196, 150);
+    background-color: rgb(226, 212, 199);
 }
 .fondo-no{
     background-color: rgb(71, 63, 63);

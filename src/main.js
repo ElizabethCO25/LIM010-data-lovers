@@ -63,7 +63,7 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
     contadorAtrapado++
   }
 }
-document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
+document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " +contadorNoatrapado;
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
 let mostrarNoatrapados = contadorNoatrapado;
 let mostrarAtrapados = contadorAtrapado;
