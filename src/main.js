@@ -71,9 +71,11 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
   if (POKEMON.pokemon[i].multipliers == null) {
     let mostrar = `
     <div>
+    <article class= "fondo-no zoom" >
         <img src ="${POKEMON.pokemon[i].img}"/>   
         <p >${POKEMON.pokemon[i].name}</p>
         <p>${POKEMON.pokemon[i].id}</p>
+        </article>
     </div>`;
     mostrarNoatrapados += mostrar;
   } else {
@@ -81,15 +83,16 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
       if (POKEMON.pokemon[i].multipliers !== null) {
         let mostrar = `
        <div>
+       <article class= "fondo-si  zoom" >
            <img src ="${POKEMON.pokemon[i].img}"/>   
            <p >${POKEMON.pokemon[i].name}</p>
            <p>${POKEMON.pokemon[i].id}</p>
+           </article>
        </div>`;
         mostrarAtrapados += mostrar;
       }
     }
     document.getElementById('atrapados').innerHTML = mostrarAtrapados;
-
   }
 }
 document.getElementById('No-atrapados').innerHTML = mostrarNoatrapados;

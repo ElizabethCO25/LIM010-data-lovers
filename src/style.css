@@ -248,21 +248,37 @@ body{
     font-size: 20px;
     transition: height 0.2s ease-out;
 }
-.texto-atrapados{
-    background-color: rgb(252, 196, 150);
-    font-weight: bold;
-    font-size: 30px;
-    justify-content: flex-start;
+#atrapados{
+    display: flex;
+    flex-wrap: wrap; 
+    text-align: center;
+    justify-content: space-around;
+    font-size: 21px;
 }
-
-.texto-Noatrapados{
-    background-color: rgb(252, 196, 150);
-    font-weight: bold;
-    color: red;
-    font-size: 30px;
-    justify-content: flex-start;
+#No-atrapados{
+    display: flex;
+    flex-wrap: wrap; 
+    text-align: center;
+    justify-content: space-around;
+    font-size: 21px;
 }
 .zoom:hover{
     transform:scale(1.5);
     background-color: rgb(252, 196, 150);
+}
+.fondo-no{
+    background-color: rgb(71, 63, 63);
+    margin-top: 15px;
+    padding: 25px;
+    width: auto;
+    height: auto;
+    border-radius: 28px;
+}
+.fondo-si{
+    background-color: rgb(300, 300, 300, .2);
+    margin-top: 15px;
+    padding: 25px;
+    width: auto;
+    height: auto;
+    border-radius: 28px;
 }
