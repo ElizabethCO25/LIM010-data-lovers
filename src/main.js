@@ -50,17 +50,34 @@ const mostrarData = (pokemon) => { //paràmetro
 };
 contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
 
+//Identificar pokemones No atrapados
 
-let contadorNoatrapado= 0;
+
+let contadorNoatrapado = 0;
 let contadorAtrapado = 0;
 //recorriendo todo el array
-for(let i = 0; i< POKEMON.pokemon.length; i++){
-   if(POKEMON.pokemon[i].multipliers == null){
-   contadorNoatrapado ++
-  }else{
- contadorAtrapado ++
- }
-} 
-
+for (let i = 0; i < POKEMON.pokemon.length; i++) {
+  if (POKEMON.pokemon[i].multipliers == null) {
+    contadorNoatrapado++
+  } else {
+    contadorAtrapado++
+  }
+}
 document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
+
+
+let mostrarNoatrapados =  contadorNoatrapado;
+
+for(let i = 0; i< POKEMON.pokemon.length; i++){
+   if(POKEMON.pokemon[i].multipliers == null){
+   let mostrar = `
+    <div>
+        <img src ="${POKEMON.pokemon[i].img}"/>   
+        <p >${POKEMON.pokemon[i].name}</p>
+        <p>${POKEMON.pokemon[i].id}</p>
+    </div>`;
+    mostrarNoatrapados += mostrar;
+  }
+}
+  document.getElementById('No-atrapados').innerHTML =mostrarNoatrapados;
