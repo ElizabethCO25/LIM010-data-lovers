@@ -31,11 +31,32 @@ enterIniciar.addEventListener("keyup", (event) => {
 });
 
 //Pantalla 2:
+// Configuración de botonoes dle menú desplegable:
+// Botón INICIO:
+const clickInicio = document.getElementById("inicio");
+clickInicio.addEventListener("click", () => {
+    document.getElementById("pantalla-pokedex").classList.add("ocultar");
+    document.getElementById("pantalla-inicio").classList.remove("ocultar");
+  });
+// Botón POKEDEX:
 const clickPokedex = document.getElementById("pokedex");
 clickPokedex.addEventListener("click", () => {
     document.getElementById("pantalla-pokedex").classList.remove("ocultar");
     document.getElementById("pantalla-inicio").classList.add("ocultar");
   });
+// Botón ORDENAR:
+const clickOrdenar = document.getElementById("ordenar");
+clickOrdenar.addEventListener("click", () => {
+    document.getElementById("pantalla-pokedex").classList.add("ocultar");
+    document.getElementById("pantalla-inicio").classList.remove("ocultar");
+  });
+// Botón FILTRAR:
+const clickFiltrar = document.getElementById("filtrar");
+clickOrdenar.addEventListener("click", () => {
+    document.getElementById("pantalla-pokedex").classList.add("ocultar");
+    document.getElementById("pantalla-inicio").classList.remove("ocultar");
+  });
+
 //Botòn volver:
 const clickVolver = document.getElementById("volver");
 clickVolver.addEventListener("click", () => {
