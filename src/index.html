@@ -10,6 +10,28 @@
 
 <body>
   <header class="header">
+    <img class="imagen-header" src="../Imagenes/Header PkBel.png" alt="cabecera-pokemonBel">
+  </header>
+  <!-- Pantalla 1 (Pantalla Login):-->
+  <section class="contenedor" id="pantalla-login">
+    <main class="contenido">
+      <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
+      <label class="labels label1" required>Correo electrónico:</label>
+      <input class="inputs" maxlength="11" id="input-usuario">
+      <label class="labels label1">Contraseña</label>
+      <input class="inputs" type="password" maxlength="11" required id="input-contraseña">
+      <a class="labels label2" href="http//...">¿Olvidaste tu contraseña?</a>
+      <div id="incorrecto"></div>
+      <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
+      <p class="labels label3">¿No tienes una cuenta?<a href="http//...">Regístrate</a> </p>
+    </main>
+    <aside class="sidebar-1">
+    </aside>
+    <aside class="sidebar-2">
+    </aside>
+  </section>
+  <!-- Pantalla 2:-->
+  <section class="ocultar" id="pantalla-pokedex">
     <div class="contenedor2">
       <!-- Menú de navegación:-->
       <nav class="navegacion" id="navegacion">
@@ -70,14 +92,14 @@
 
                     </ul>
                   </li>
-                  
+
                 </ul>
               </li>
             </ul>
-            <li id="incubadora"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
+          <li id="incubadora"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
               alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a>
-            </li>
-          </ul>
+          </li>
+        </ul>
       </nav>
   </header>
   <!-- Pantalla 1 (Pantalla Login):-->
@@ -125,11 +147,12 @@
   </section>
 
   <footer class="footer">
-    <p>Copyright © Laboratoria 2019. Todos los derechos reservados.</p>
+    <p>Copyright ©Elizabeth&Betsy2019. Todos los derechos reservados.</p>
   </footer>
 
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>

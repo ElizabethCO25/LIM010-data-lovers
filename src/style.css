@@ -219,7 +219,7 @@ body{
 }
 .fondo-poke{
     background-color: rgb(300, 300, 300, .2);
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 25px;
     width: auto;
     height: auto;
@@ -253,7 +253,7 @@ body{
     background-color: rgb(226, 212, 199);
 }
 .fondo-no{
-    background-color: rgb(71, 63, 63);
+    background-color: rgb(117, 112, 112);
     margin-top: 15px;
     padding: 25px;
     width: auto;
