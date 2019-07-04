@@ -40,7 +40,7 @@
         <ul class="menu">
           <li> <img class="imagenMenu" src="../Imagenes/home.png" alt="Casa-sobre-opción-inicio"><a href="#">INICIO</a>
           </li>
-          <li> <img class="imagenMenu" src="../Imagenes/PKBol.png" alt="Pokebola-sobre-opción-pokedex"> <a
+          <li> <img class="imagenMenu" src="../Imagenes/PKBol.png" alt="Pokebola-sobre-opción-pokedex"> <a id="pokedex"
               href="#">POKEDEX</a></li>
           <li> <img class="imagenMenu" src="../Imagenes/ordenar.png" alt="Flechas-sobre-opción-ordenar"> <a
               href="#">ORDENAR</a>
@@ -95,24 +95,28 @@
               <li> <img class="imagenMenu" src="../Imagenes/incubadora.png"
                   alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a></li>
             </ul>
+            
       </nav>
 
       <main class="contenido2">
         <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
         <p class="atrapados" id="atrapados" >Pokemones Atrapados</p>
         <p class="no-atrapados" id="No-atrapados" >Pokemones  No Atrapados</p>
-        <div id="contenedorPokemon">
-        </div>
       </main>
       <aside class="sidebar-3">
-        <img class="centrar" src="../Imagenes/Usuario.png" alt="Logo-de-usuario">
-        <p>USUARIO: LABORATORIA</p>
+          <img src="../Imagenes/Usuario.png" alt="Logo-de-usuario">
+            <p> USUARIO : LABORATORIA </p>
       </aside>
-
-
   </section>
   </div>
   <!-- Pantalla 3:-->
+  <section id="pantalla-pokedex" class="ocultar">
+      <div id="contenedorPokemon">
+      <button id="volver">VOLVER</button>
+      </div>
+  </section>
+
+  <!-- Pantalla de Bloqueo:-->
   <section id="pantalla-bloqueo" class="ocultar">
     <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
     <img class="imagen" src="img/pokemontriste.gif" alt="pokemonpikachullorando">

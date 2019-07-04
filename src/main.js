@@ -30,6 +30,19 @@ enterIniciar.addEventListener("keyup", (event) => {
   }
 });
 
+//Pantalla 2:
+const clickPokedex = document.getElementById("pokedex");
+clickPokedex.addEventListener("click", () => {
+    document.getElementById("pantalla-pokedex").classList.remove("ocultar");
+    document.getElementById("pantalla-inicio").classList.add("ocultar");
+  });
+//Botòn volver:
+const clickVolver = document.getElementById("volver");
+clickVolver.addEventListener("click", () => {
+    document.getElementById("pantalla-pokedex").classList.add("ocultar");
+    document.getElementById("pantalla-inicio").classList.remove("ocultar");
+  });
+
 //mostrar pokemones
 const pokemonNuevo = dataPoker(); // constante con una funcion 
 const mostrarData = (pokemon) => { //paràmetro
