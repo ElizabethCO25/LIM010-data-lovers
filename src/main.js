@@ -32,7 +32,7 @@ enterIniciar.addEventListener("keyup", (event) => {
 });
 
 //Pantalla 2:
-// Configuración de botonoes dle menú desplegable:
+// Configuración de botones dle menú desplegable:
 // Botón INICIO:
 const clickInicio = document.getElementById("inicio");
 clickInicio.addEventListener("click", () => {
@@ -82,6 +82,7 @@ const mostrarData = (pokemon) => { //paràmetro
   return muestra;
 };
 contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
+
 //Identificar pokemones No atrapados
 let contadorNoatrapado = 0;
 let contadorAtrapado = 0;
@@ -93,38 +94,9 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
     contadorAtrapado++
   }
 }
-document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
-let mostrarNoatrapados = contadorNoatrapado;
-let mostrarAtrapados = contadorAtrapado;
-for (let i = 0; i < POKEMON.pokemon.length; i++) {
-  if (POKEMON.pokemon[i].multipliers == null) {
-    let mostrar = `
-    <div>
-    <article class= "fondo-no zoom" >
-        <img src ="${POKEMON.pokemon[i].img}"/> 
-        <p>${POKEMON.pokemon[i].num}</p>  
-        <p class="name">${POKEMON.pokemon[i].name}</p>
-        </article>
-    </div>`;
-    mostrarNoatrapados += mostrar;
-  } else {
-    for (let i = 0; i < POKEMON.pokemon.length; i++) {
-      if (POKEMON.pokemon[i].multipliers !== null) {
-        let mostrar = `
-       <div>
-       <article class= "fondo-si  zoom" >
-       <img src ="${POKEMON.pokemon[i].img}"/> 
-       <p>${POKEMON.pokemon[i].num}</p>  
-       <p>${POKEMON.pokemon[i].name}</p>
-       </article>
-       </div>`;
-        mostrarAtrapados += mostrar;
-      }
-    }
-    document.getElementById('atrapados').innerHTML = mostrarAtrapados;
-  }
-}
-document.getElementById('No-atrapados').innerHTML = mostrarNoatrapados;
+document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
+
+
 
 
