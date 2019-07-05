@@ -8,6 +8,7 @@ obtenerClick.addEventListener("click", () => {
   if (capturarContraseña.value === "1" && capturarUsuario.value === "1") {
     document.getElementById("pantalla-inicio").classList.remove("ocultar");
     document.getElementById("pantalla-login").classList.add("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
     capturarContraseña.value = "";
     capturarUsuario.value = "";
   } else if (cuenta === 0) {
@@ -37,32 +38,30 @@ const clickInicio = document.getElementById("inicio");
 clickInicio.addEventListener("click", () => {
     document.getElementById("pantalla-pokedex").classList.add("ocultar");
     document.getElementById("pantalla-inicio").classList.remove("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
   });
 // Botón POKEDEX:
 const clickPokedex = document.getElementById("pokedex");
 clickPokedex.addEventListener("click", () => {
     document.getElementById("pantalla-pokedex").classList.remove("ocultar");
     document.getElementById("pantalla-inicio").classList.add("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
   });
 // Botón ORDENAR:
 const clickOrdenar = document.getElementById("ordenar");
 clickOrdenar.addEventListener("click", () => {
-    document.getElementById("pantalla-pokedex").classList.add("ocultar");
-    document.getElementById("pantalla-inicio").classList.remove("ocultar");
+    document.getElementById("pantalla-pokedex").classList.remove("ocultar");
+    document.getElementById("pantalla-inicio").classList.add("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
   });
 // Botón FILTRAR:
 const clickFiltrar = document.getElementById("filtrar");
 clickOrdenar.addEventListener("click", () => {
-    document.getElementById("pantalla-pokedex").classList.add("ocultar");
-    document.getElementById("pantalla-inicio").classList.remove("ocultar");
+    document.getElementById("pantalla-pokedex").classList.remove("ocultar");
+    document.getElementById("pantalla-inicio").classList.add("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
   });
 
-//Botòn volver:
-const clickVolver = document.getElementById("volver");
-clickVolver.addEventListener("click", () => {
-  document.getElementById("pantalla-pokedex").classList.add("ocultar");
-  document.getElementById("pantalla-inicio").classList.remove("ocultar");
-});
 
 //mostrar pokemones
 const pokemonNuevo = dataPoker(); // constante con una funcion 
@@ -83,6 +82,7 @@ const mostrarData = (pokemon) => { //paràmetro
   return muestra;
 };
 contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
+
 //Identificar pokemones No atrapados
 let contadorNoatrapado = 0;
 let contadorAtrapado = 0;
@@ -94,38 +94,9 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
     contadorAtrapado++
   }
 }
-document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
-let mostrarNoatrapados = contadorNoatrapado;
-let mostrarAtrapados = contadorAtrapado;
-for (let i = 0; i < POKEMON.pokemon.length; i++) {
-  if (POKEMON.pokemon[i].multipliers == null) {
-    let mostrar = `
-    <div>
-    <article class= "fondo-no zoom" >
-        <img src ="${POKEMON.pokemon[i].img}"/> 
-        <p>${POKEMON.pokemon[i].num}</p>  
-        <p class="name">${POKEMON.pokemon[i].name}</p>
-        </article>
-    </div>`;
-    mostrarNoatrapados += mostrar;
-  } else {
-    for (let i = 0; i < POKEMON.pokemon.length; i++) {
-      if (POKEMON.pokemon[i].multipliers !== null) {
-        let mostrar = `
-       <div>
-       <article class= "fondo-si  zoom" >
-       <img src ="${POKEMON.pokemon[i].img}"/> 
-       <p>${POKEMON.pokemon[i].num}</p>  
-       <p>${POKEMON.pokemon[i].name}</p>
-       </article>
-       </div>`;
-        mostrarAtrapados += mostrar;
-      }
-    }
-    document.getElementById('atrapados').innerHTML = mostrarAtrapados;
-  }
-}
-document.getElementById('No-atrapados').innerHTML = mostrarNoatrapados;
+document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
+
+
 
 

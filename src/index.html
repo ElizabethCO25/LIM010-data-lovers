@@ -9,7 +9,8 @@
 </head>
 
 <body>
-  <header class="header">
+  <header id="header" class="header ocultar">
+    <!-- Menú de navegación:-->
     <nav class="navegacion" id="navegacion">
       <ul class="menu">
         <li id="inicio">
@@ -75,9 +76,13 @@
         <li id="incubadora"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
             alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a>
         </li>
+        <li class="usuario"> <img class="imagenMenu" src="../Imagenes/Usuario.png" alt="Imagen-de-usuario"> <a>LABORATORIA</a>
+        </li>
       </ul>
+
     </nav>
   </header>
+
   <!-- Pantalla 1 (Pantalla Login):-->
   <section class="contenedor" id="pantalla-login">
     <main class="contenido">
@@ -96,41 +101,57 @@
     <aside class="sidebar-2">
     </aside>
   </section>
-  <!-- Pantalla 2:-->
-  <section class="ocultar inicio" id="pantalla-inicio">
-    <h1>TE DAMOS LA BIENVENIDA A POKEMONBEL</h1>
-    <img class="imagen" src="img/pokemones.png" alt="pokemones">
 
-    <p>Usa  el menú de navegación  para acceder a más información sobre Pokémon en tu región. </p>
-    <p>Cada  enlace te redirigirá a  pantallas  donde podrás  visualizar caracterìsticas de tus pokemon,ordenar ,filtrar por tipo, debilidades, etc.  </p>
+
+  <!-- Pantalla 2:-->
+  <section class="ocultar" id="pantalla-inicio">
+    <div class="contenedor2">
+      <main class="contenido2 centrarTexto">
+        <h1>TE DAMOS LA BIENVENIDA A POKEMONBEL</h1>
+        <br> </br>
+        <p>Usa el menú de navegación para acceder a más información sobre Pokémon en tu región. </p>
+        <br> </br>
+        <p>Cada enlace te redirigirá a pantallas donde podrás visualizar caracterìsticas de tus pokemon,ordenar ,filtrar
+          por tipo, debilidades, etc. </p>
+      </main>
+      <aside class="sidebar-4">
+        <img src="img/pokemones.png" alt="pokemones">
+      </aside>
+    </div>
   </section>
+
+
+
   <!-- Pantalla 3:-->
-  <div class="contenedor2">
-    <section id="pantalla-pokedex" class="ocultar">
-      <main class="contenido2">
+  <section class="ocultar" id="pantalla-pokedex">
+    <div class="contenedor3">
+      <main class="contenido3">
         <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
         <p class="atrapados" id="atrapados"></p>
         <p class="no-atrapados" id="No-atrapados"></p>
+        <div id="contenedorPokemon"></div>
       </main>
-      <div id="contenedorPokemon">
-        <button id="volver">VOLVER</button>
-      </div>
-  </div>
+    </div>
   </section>
 
   <!-- Pantalla de Bloqueo:-->
   <section id="pantalla-bloqueo" class="ocultar">
-    <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
-    <img class="imagen" src="img/pokemontriste.gif" alt="pokemonpikachullorando">
+    <div class="contenedorBloqueo">
+      <main class="contenido4">
+        <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
+        <img class="imagen" src="img/pokemontriste.gif" alt="pokemonpikachullorando">
+      </main>
+      <aside class="sidebar-6">
+      </aside>
+    </div>
   </section>
 
   <footer class="footer">
-    <p>Copyright ©Elizabeth&Betsy2019. Todos los derechos reservados.</p>
+    <p>Copyright © Elizabeth&Betsy 2019. Todos los derechos reservados.</p>
   </footer>
 
    <!-- <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script> -->
 </body>
-
 </html>
