@@ -3,19 +3,17 @@
     padding: 0;
 }
 body{
-    background-image: url(img/fondo.jpg);
+    background-image: url(../Imagenes/fondo2paisaje.jpg);
     background-attachment: fixed;
     background-size: cover;
-    background-position:center;
-    background-repeat:no-repeat;
+        -moz-backgroung-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size:cover;
     height: 100vh; 
     display: grid;
-    grid-gap: 0px;
-    background-attachment: fixed
+	grid-gap: 20px;
 }
-.imagen-header{
-    width: 100%;
-}
+
 .header {
     grid-column: 1/1;
 }
@@ -35,13 +33,18 @@ body{
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, auto);
 /* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
-	grid-template-areas: "sidebar-1 contenido sidebar-2"
+    grid-template-areas: 
+                         "sidebar-1 contenido sidebar-2"
                          "sidebar-1 contenido sidebar-2";
 						 
 }
 
+
 .contenedor .contenido{
     grid-area: contenido;
+    background: #b5c0c2ad;
+    
+    
 }
 
 .contenedor .sidebar-1 {
@@ -98,7 +101,7 @@ body{
     display: none;
 }
 
-/*Pantalla 2:*/
+/*HEADER:*/
 /*Menú de Navegación:*/
 .navegacion{
 	width: 100%;
@@ -156,35 +159,70 @@ body{
     margin-top: 5%;
 }
 
-/*Grillas para la Segunda Página:*/
+/*Pantalla 2:*/
+/*Grillas para la Segunda Pantalla:*/
 .contenedor2{
     width: 100%;
 	margin: auto;
 	display: grid;
 	grid-gap: 20px; 
-	grid-template-columns: repeat(7, 1fr);
-	grid-template-rows: repeat(2, auto);
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(, auto);
 /* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
-	grid-template-areas: "navegacion navegacion navegacion navegacion navegacion navegacion sidebar-3"
-                         "contenido2 contenido2 contenido2 contenido2 contenido2 contenido2 contenido2";
+    grid-template-areas: 
+                        "contenido2 contenido2 sidebar-4";
 }
 .contenedor2 .contenido2{
     grid-area: contenido2;
+    background: #b5c0c2ad;
+    border-radius: 15px;
 }
-.contenedor2 .navegacion{
-    grid-area: navegacion;
+.contenedor2 .sidebar-4{
+    grid-area: sidebar-4;
 }
-.contenedor2 .sidebar-3{
-    grid-area: sidebar-3;
-}
-
 .sidebar-3{
     background: rgba(124, 122, 122, 0.774);
-    border-radius: 15px;
 }
 
 @media screen and (max-width: 760px){
     .contenedor2 {
+        grid-template-areas: "navegacion navegacion navegacion navegacion"
+                         "contenido2 contenido2 contenido2 contenido2";
+    }
+
+    /*#navegacion{
+        transform: scale(0.8);
+    }
+    #contenedorPokemon{
+        transform: scale(0.6);
+    }
+    .sidebar-3{
+        transform: scale(0.6);
+    }*/
+}
+.white{
+    color: #FFFFFF;
+}
+
+
+/*Pantalla 3:*/
+/*Grillas para la Tercera Pantalla:*/
+.contenedor3{
+    width: 100%;
+	margin: auto;
+	display: grid;
+	grid-gap: 20px; 
+	grid-template-columns: repeat(7, 1fr);
+/* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
+	grid-template-areas: "contenido3 contenido3 contenido3 contenido3 contenido3 contenido3 contenido3";
+}
+.contenedor3 .contenido3{
+    grid-area: contenido3;
+}
+
+
+@media screen and (max-width: 760px){
+    .contenedor3 {
         grid-template-areas: "navegacion navegacion navegacion navegacion"
                          "contenido2 contenido2 contenido2 contenido2";
     }
@@ -204,6 +242,11 @@ body{
 	display: flex;
 	align-items: center;
     justify-content: center;
+}
+.centrarTexto{
+    text-align: center;
+    margin-top: 10%;
+    font-size: 20px;
 }
 .pokemontriste{
     display:flex;
@@ -269,3 +312,33 @@ body{
     border-radius: 28px;
 }
 
+
+/*Pantalla Bloqueo:*/
+.contenedorBloqueo {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+/* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
+    grid-template-areas: 
+                         "sidebar-6 contenido sidebar-6"
+                         "sidebar-6 contenido sidebar-6";
+						 
+}
+
+
+.contenedorBloqueo .contenido4{
+    grid-area: contenido;
+}
+.contenedorBloqueo .sidebar-6{
+    grid-area: sidebar-6;
+}
+
+
+.usuario{
+    margin-left: 280px;
+    
+}

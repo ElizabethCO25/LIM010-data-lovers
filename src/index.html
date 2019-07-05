@@ -9,9 +9,80 @@
 </head>
 
 <body>
-  <header class="header">
-    <img class="imagen-header" src="../Imagenes/Header PkBel.png" alt="cabecera-pokemonBel">
+  <header id="header" class="header ocultar">
+    <!-- Menú de navegación:-->
+    <nav class="navegacion" id="navegacion">
+      <ul class="menu">
+        <li id="inicio">
+          <img class="imagenMenu" src="../Imagenes/home.png" alt="Casa-sobre-opción-inicio"><a href="#">INICIO</a>
+        </li>
+        <li id="pokedex">
+          <img class="imagenMenu" src="../Imagenes/PKBol.png" alt="Pokebola-sobre-opción-pokedex"> <a
+            href="#">POKEDEX</a>
+        </li>
+        <li id="ordenar">
+          <img class="imagenMenu" src="../Imagenes/ordenar.png" alt="Flechas-sobre-opción-ordenar"> <a
+            href="#">ORDENAR</a>
+          <ul class="submenu">
+            <li><a href="#">De A-Z</a></li>
+            <li><a href="#">De Z-A</a></li>
+            <li><a href="#">Spawn ascendente</a></li>
+            <li><a href="#">Spawn descendente</a></li>
+          </ul>
+        </li>
+        <li id="ordenar">
+          <img class="imagenMenu" src="../Imagenes/filtrar.png" alt="Filtr-sobre-opción-filtrar"> <a
+            href="#">FILTRAR</a>
+          <ul class="submenu">
+            <li><a href="#"><strong>TIPO</strong></a>
+              <ul>
+                <li><a href="#">Tierra</a></li>
+                <li><a href="#">Aire</a></li>
+                <li><a href="#">Agua</a></li>
+                <li><a href="#">Fuego</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><strong>DEBILIDAD</strong></a>
+              <ul>
+                <li><a href="#">Tierra</a></li>
+                <li><a href="#">Aire</a></li>
+                <li><a href="#">Agua</a></li>
+                <li><a href="#">Fuego</a></li>
+                <li><a href="#">FILTRAR</a>
+                  <ul class="submenu">
+                    <li><a href="#">Tipo</a>
+                      <ul>
+                        <li><a href="#">Tierra</a></li>
+                        <li><a href="#">Aire</a></li>
+                        <li><a href="#">Agua</a></li>
+                        <li><a href="#">Fuego</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Debilidad</a>
+                      <ul>
+                        <li><a href="#">Tierra</a></li>
+                        <li><a href="#">Aire</a></li>
+                        <li><a href="#">Agua</a></li>
+                        <li><a href="#">Fuego</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+
+              </ul>
+            </li>
+          </ul>
+        <li id="incubadora"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
+            alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a>
+        </li>
+        <li class="usuario"> <img class="imagenMenu" src="../Imagenes/Usuario.png" alt="Imagen-de-usuario"> <a>LABORATORIA</a>
+        </li>
+      </ul>
+
+    </nav>
   </header>
+
   <!-- Pantalla 1 (Pantalla Login):-->
   <section class="contenedor" id="pantalla-login">
     <main class="contenido">
@@ -30,124 +101,53 @@
     <aside class="sidebar-2">
     </aside>
   </section>
-  <!-- Pantalla 2:-->
-  <section class="ocultar" id="pantalla-pokedex">
-    <div class="contenedor2">
-      <!-- Menú de navegación:-->
-      <nav class="navegacion" id="navegacion">
-        <ul class="menu">
-          <li id="inicio">
-            <img class="imagenMenu" src="../Imagenes/home.png" alt="Casa-sobre-opción-inicio"><a href="#">INICIO</a>
-          </li>
-          <li id="pokedex">
-            <img class="imagenMenu" src="../Imagenes/PKBol.png" alt="Pokebola-sobre-opción-pokedex"> <a
-              href="#">POKEDEX</a>
-          </li>
-          <li id="ordenar">
-            <img class="imagenMenu" src="../Imagenes/ordenar.png" alt="Flechas-sobre-opción-ordenar"> <a
-              href="#">ORDENAR</a>
-            <ul class="submenu">
-              <li><a href="#">De A-Z</a></li>
-              <li><a href="#">De Z-A</a></li>
-              <li><a href="#">Spawn ascendente</a></li>
-              <li><a href="#">Spawn descendente</a></li>
-            </ul>
-          </li>
-          <li id="ordenar">
-            <img class="imagenMenu" src="../Imagenes/filtrar.png" alt="Filtr-sobre-opción-filtrar"> <a
-              href="#">FILTRAR</a>
-            <ul class="submenu">
-              <li><a href="#"><strong>TIPO</strong></a>
-                <ul>
-                  <li><a href="#">Tierra</a></li>
-                  <li><a href="#">Aire</a></li>
-                  <li><a href="#">Agua</a></li>
-                  <li><a href="#">Fuego</a></li>
-                </ul>
-              </li>
-              <li><a href="#"><strong>DEBILIDAD</strong></a>
-                <ul>
-                  <li><a href="#">Tierra</a></li>
-                  <li><a href="#">Aire</a></li>
-                  <li><a href="#">Agua</a></li>
-                  <li><a href="#">Fuego</a></li>
-                  <li><a href="#">FILTRAR</a>
-                    <ul class="submenu">
-                      <li><a href="#">Tipo</a>
-                        <ul>
-                          <li><a href="#">Tierra</a></li>
-                          <li><a href="#">Aire</a></li>
-                          <li><a href="#">Agua</a></li>
-                          <li><a href="#">Fuego</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Debilidad</a>
-                        <ul>
-                          <li><a href="#">Tierra</a></li>
-                          <li><a href="#">Aire</a></li>
-                          <li><a href="#">Agua</a></li>
-                          <li><a href="#">Fuego</a></li>
-                        </ul>
-                      </li>
 
-                    </ul>
-                  </li>
-
-                </ul>
-              </li>
-            </ul>
-          <li id="incubadora"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
-              alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a>
-          </li>
-        </ul>
-      </nav>
-  </header>
-  <!-- Pantalla 1 (Pantalla Login):-->
-  <section class="contenedor" id="pantalla-login">
-    <main class="contenido">
-      <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
-      <label class="labels label1" required>Correo electrónico:</label>
-      <input class="inputs" maxlength="11" id="input-usuario">
-      <label class="labels label1">Contraseña</label>
-      <input class="inputs" type="password" maxlength="11" required id="input-contraseña">
-      <a class="labels label2" href="http//...">¿Olvidaste tu contraseña?</a>
-      <div id="incorrecto"></div>
-      <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
-      <p class="labels label3">¿No tienes una cuenta?<a href="http//...">Regístrate</a> </p>
-    </main>
-    <aside class="sidebar-1">
-    </aside>
-    <aside class="sidebar-2">
-    </aside>
-  </section>
 
   <!-- Pantalla 2:-->
   <section class="ocultar" id="pantalla-inicio">
-    
-     
-  
-  </section>
-  </div>
-  <!-- Pantalla 3:-->
-  <section id="pantalla-pokedex" class="ocultar">
-      <main class="contenido2">
-          <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
-          <p class="atrapados" id="atrapados"></p>
-          <p class="no-atrapados" id="No-atrapados"></p>
+    <div class="contenedor2">
+      <main class="contenido2 centrarTexto">
+        <h1>TE DAMOS LA BIENVENIDA A POKEMONBEL</h1>
+        <br> </br>
+        <p>Usa el menú de navegación para acceder a más información sobre Pokémon en tu región. </p>
+        <br> </br>
+        <p>Cada enlace te redirigirá a pantallas donde podrás visualizar caracterìsticas de tus pokemon,ordenar ,filtrar
+          por tipo, debilidades, etc. </p>
       </main>
-    <div id="contenedorPokemon">
-      <button id="volver">VOLVER</button>
+      <aside class="sidebar-4">
+        <img src="img/pokemones.png" alt="pokemones">
+      </aside>
+    </div>
+  </section>
+
+
+
+  <!-- Pantalla 3:-->
+  <section class="ocultar" id="pantalla-pokedex">
+    <div class="contenedor3">
+      <main class="contenido3">
+        <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
+        <p class="atrapados" id="atrapados"></p>
+        <p class="no-atrapados" id="No-atrapados"></p>
+        <!--<div id="contenedorPokemon"></div>-->
+      </main>
     </div>
   </section>
 
   <!-- Pantalla de Bloqueo:-->
   <section id="pantalla-bloqueo" class="ocultar">
-    <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
-    <img class="imagen" src="img/pokemontriste.gif" alt="pokemonpikachullorando">
+    <div class="contenedorBloqueo">
+      <main class="contenido4">
+        <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
+        <img class="imagen" src="img/pokemontriste.gif" alt="pokemonpikachullorando">
+      </main>
+      <aside class="sidebar-6">
+      </aside>
+    </div>
   </section>
 
   <footer class="footer">
-    <p>Copyright ©Elizabeth&Betsy2019. Todos los derechos reservados.</p>
+    <p>Copyright © Elizabeth&Betsy 2019. Todos los derechos reservados.</p>
   </footer>
 
   <script src="./data/pokemon/pokemon.js"></script>

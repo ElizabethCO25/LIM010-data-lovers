@@ -8,6 +8,7 @@ obtenerClick.addEventListener("click", () => {
   if (capturarContraseña.value === "1" && capturarUsuario.value === "1") {
     document.getElementById("pantalla-inicio").classList.remove("ocultar");
     document.getElementById("pantalla-login").classList.add("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
     capturarContraseña.value = "";
     capturarUsuario.value = "";
   } else if (cuenta === 0) {
@@ -37,32 +38,30 @@ const clickInicio = document.getElementById("inicio");
 clickInicio.addEventListener("click", () => {
     document.getElementById("pantalla-pokedex").classList.add("ocultar");
     document.getElementById("pantalla-inicio").classList.remove("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
   });
 // Botón POKEDEX:
 const clickPokedex = document.getElementById("pokedex");
 clickPokedex.addEventListener("click", () => {
     document.getElementById("pantalla-pokedex").classList.remove("ocultar");
     document.getElementById("pantalla-inicio").classList.add("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
   });
 // Botón ORDENAR:
 const clickOrdenar = document.getElementById("ordenar");
 clickOrdenar.addEventListener("click", () => {
-    document.getElementById("pantalla-pokedex").classList.add("ocultar");
-    document.getElementById("pantalla-inicio").classList.remove("ocultar");
+    document.getElementById("pantalla-pokedex").classList.remove("ocultar");
+    document.getElementById("pantalla-inicio").classList.add("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
   });
 // Botón FILTRAR:
 const clickFiltrar = document.getElementById("filtrar");
 clickOrdenar.addEventListener("click", () => {
-    document.getElementById("pantalla-pokedex").classList.add("ocultar");
-    document.getElementById("pantalla-inicio").classList.remove("ocultar");
+    document.getElementById("pantalla-pokedex").classList.remove("ocultar");
+    document.getElementById("pantalla-inicio").classList.add("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
   });
 
-//Botòn volver:
-const clickVolver = document.getElementById("volver");
-clickVolver.addEventListener("click", () => {
-  document.getElementById("pantalla-pokedex").classList.add("ocultar");
-  document.getElementById("pantalla-inicio").classList.remove("ocultar");
-});
 
 //mostrar pokemones
 const pokemonNuevo = dataPoker(); // constante con una funcion 
