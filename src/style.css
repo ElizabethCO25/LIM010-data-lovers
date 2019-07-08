@@ -25,8 +25,7 @@ body{
 
 /*Pantalla 1:*/
 .contenedor {
-	width: 90%;
-	max-width: 1000px;
+	width: 100%;
 	margin: 20px auto;
 	display: grid;
 	grid-gap: 20px;
@@ -42,9 +41,7 @@ body{
 
 .contenedor .contenido{
     grid-area: contenido;
-    background: #b5c0c2ad;
-    
-    
+    background: #b5c0c2ad;   
 }
 
 .contenedor .sidebar-1 {
@@ -167,10 +164,9 @@ body{
 	display: grid;
 	grid-gap: 20px; 
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(, auto);
+	grid-template-rows: repeat(1, auto);
 /* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
-    grid-template-areas: 
-                        "contenido2 contenido2 sidebar-4";
+    grid-template-areas:"contenido2 contenido2 sidebar-4";                       
 }
 .contenedor2 .contenido2{
     grid-area: contenido2;
@@ -323,22 +319,20 @@ body{
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, auto);
 /* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
-    grid-template-areas: 
-                         "sidebar-6 contenido sidebar-6"
-                         "sidebar-6 contenido sidebar-6";
-						 
+    grid-template-areas:  "sidebar-6 contenido4 sidebar-7"
+                          "sidebar-6 contenido4 sidebar-7";						 
 }
 
 
 .contenedorBloqueo .contenido4{
-    grid-area: contenido;
+    grid-area: contenido4;
 }
 .contenedorBloqueo .sidebar-6{
     grid-area: sidebar-6;
 }
-
-
+.contenedorBloqueo .sidebar-7{
+    grid-area: sidebar-7;
+}
 .usuario{
     margin-left: 280px;
-    
 }

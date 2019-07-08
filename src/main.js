@@ -80,7 +80,7 @@ const mostrarData = (pokemon) => { //paràmetro
     muestra += llamar;
   }
   return muestra;
-};
+}
 contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
 
 //Identificar pokemones No atrapados
