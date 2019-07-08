@@ -24,7 +24,7 @@
           <img class="imagenMenu" src="../Imagenes/ordenar.png" alt="Flechas-sobre-opción-ordenar"> <a
             href="#">ORDENAR</a>
           <ul class="submenu">
-            <li><a href="#">De A-Z</a></li>
+            <li id="ordenar-az"><a href="#">De A-Z</a></li>
             <li><a href="#">De Z-A</a></li>
             <li><a href="#">Spawn ascendente</a></li>
             <li><a href="#">Spawn descendente</a></li>
@@ -76,7 +76,8 @@
         <li id="incubadora"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
             alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a>
         </li>
-        <li class="usuario"> <img class="imagenMenu" src="../Imagenes/Usuario.png" alt="Imagen-de-usuario"> <a>LABORATORIA</a>
+        <li class="usuario"> <img class="imagenMenu" src="../Imagenes/Usuario.png" alt="Imagen-de-usuario">
+          <a>LABORATORIA</a>
         </li>
       </ul>
 
@@ -102,7 +103,6 @@
     </aside>
   </section>
 
-
   <!-- Pantalla 2:-->
   <section class="ocultar" id="pantalla-inicio">
     <div class="contenedor2">
@@ -120,8 +120,6 @@
     </div>
   </section>
 
-
-
   <!-- Pantalla 3:-->
   <section class="ocultar" id="pantalla-pokedex">
     <div class="contenedor3">
@@ -130,6 +128,13 @@
         <p class="atrapados" id="atrapados"></p>
         <p class="no-atrapados" id="No-atrapados"></p>
         <div id="contenedorPokemon"></div>
+        <div id="contenedor-modal">
+            <div id ="mi-modal" class="modal"></div>
+            <div class="contenido-modal">
+              <span class ="cerrar">&</span>
+              <p>texto del modal</p>
+            </div>
+        </div>
       </main>
     </div>
   </section>
@@ -139,7 +144,7 @@
     <div class="contenedorBloqueo">
       <main class="contenido4">
         <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
-        <img class="imagen" src="img/pokemontriste.gif" alt="pokemonpikachullorando">
+        <img class="imagen" src="img/admiracion.jpg" alt="signo-de-admiración">
       </main>
       <aside class="sidebar-6">
       </aside>
@@ -150,8 +155,9 @@
     <p>Copyright © Elizabeth&Betsy 2019. Todos los derechos reservados.</p>
   </footer>
 
-   <!-- <script src="./data/pokemon/pokemon.js"></script>
+  <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
-  <script src="main.js"></script> -->
+  <script src="main.js"></script>
 </body>
+
 </html>

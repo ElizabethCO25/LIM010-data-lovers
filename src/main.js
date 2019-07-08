@@ -36,31 +36,31 @@ enterIniciar.addEventListener("keyup", (event) => {
 // Botón INICIO:
 const clickInicio = document.getElementById("inicio");
 clickInicio.addEventListener("click", () => {
-    document.getElementById("pantalla-pokedex").classList.add("ocultar");
-    document.getElementById("pantalla-inicio").classList.remove("ocultar");
-    document.getElementById("header").classList.remove("ocultar");
-  });
+  document.getElementById("pantalla-pokedex").classList.add("ocultar");
+  document.getElementById("pantalla-inicio").classList.remove("ocultar");
+  document.getElementById("header").classList.remove("ocultar");
+});
 // Botón POKEDEX:
 const clickPokedex = document.getElementById("pokedex");
 clickPokedex.addEventListener("click", () => {
-    document.getElementById("pantalla-pokedex").classList.remove("ocultar");
-    document.getElementById("pantalla-inicio").classList.add("ocultar");
-    document.getElementById("header").classList.remove("ocultar");
-  });
+  document.getElementById("pantalla-pokedex").classList.remove("ocultar");
+  document.getElementById("pantalla-inicio").classList.add("ocultar");
+  document.getElementById("header").classList.remove("ocultar");
+});
 // Botón ORDENAR:
 const clickOrdenar = document.getElementById("ordenar");
 clickOrdenar.addEventListener("click", () => {
-    document.getElementById("pantalla-pokedex").classList.remove("ocultar");
-    document.getElementById("pantalla-inicio").classList.add("ocultar");
-    document.getElementById("header").classList.remove("ocultar");
-  });
+  document.getElementById("pantalla-pokedex").classList.remove("ocultar");
+  document.getElementById("pantalla-inicio").classList.add("ocultar");
+  document.getElementById("header").classList.remove("ocultar");
+});
 // Botón FILTRAR:
 const clickFiltrar = document.getElementById("filtrar");
 clickOrdenar.addEventListener("click", () => {
-    document.getElementById("pantalla-pokedex").classList.remove("ocultar");
-    document.getElementById("pantalla-inicio").classList.add("ocultar");
-    document.getElementById("header").classList.remove("ocultar");
-  });
+  document.getElementById("pantalla-pokedex").classList.remove("ocultar");
+  document.getElementById("pantalla-inicio").classList.add("ocultar");
+  document.getElementById("header").classList.remove("ocultar");
+});
 
 
 //mostrar pokemones
@@ -71,16 +71,15 @@ const mostrarData = (pokemon) => { //paràmetro
     let llamar = `
     <div>
       <article class= "fondo-poke zoom" >
-        <img  src ="${pokemon[i].img}"/>   
+        <img  src ="${pokemon[i].img}"/>
+        <p class = "num-poke">${pokemon[i].num}</p>   
         <p class = "nombre-poke">${pokemon[i].name}</p>
-        <p>${pokemon[i].id}</p>
-        <p>${pokemon[i].multipliers}</p>
       </article>
     </div>`;
     muestra += llamar;
   }
   return muestra;
-};
+}
 contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
 
 //Identificar pokemones No atrapados
@@ -97,6 +96,35 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
 document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
 
+//modal
+const modal= document.getElementById('mi-modal');
+const btn = document.getElementById('mi-boton');
+const span = document.getElementById('cerrar');
 
+btn.addEventListener('click', ()=>{
+modal.style.display ='block';
+});
+span.addEventListener('click', ()=>{
+  modal.style.display ='none';
+  });
+// Cuando el usuario haga clic en cualquier lugar fuera del modal, ciérrelo
+window.addEventListener('click', ()=>{
+if(event.target == modal){
+  modal.style.display ='none';
+}
+ });
+  
 
-
+/*ordenar de A-Z
+const ordenar = () => {
+  const namepoke = [];
+  const dataAZ = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  for (let i = 0; i < dataAZ.length; i++) {
+    for (let x = 0; i < POKEMON.pokemon.length; x++) {
+      if (dataAZ[i] === POKEMON.pokemon[x].name[0]) {
+        namepoke.push(POKEMON.pokemon[x]);
+      }
+    }
+  }
+  return namepoke;
+}; */
