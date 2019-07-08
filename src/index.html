@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header id="header" class="header ocultar">
+  <header id="header" class="ocultar">
     <!-- Menú de navegación:-->
     <nav class="navegacion" id="navegacion">
       <ul class="menu">
@@ -83,72 +83,60 @@
 
     </nav>
   </header>
-  <!-- Pantalla 1 (Pantalla Login):-->
-  <section class="contenedor" id="pantalla-login">
-    <main class="contenido">
-      <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
-      <label class="labels label1" required>Correo electrónico:</label>
-      <input class="inputs" maxlength="11" id="input-usuario">
-      <label class="labels label1">Contraseña</label>
-      <input class="inputs" type="password" maxlength="11" required id="input-contraseña">
-      <a class="labels label2" href="http//...">¿Olvidaste tu contraseña?</a>
-      <div id="incorrecto"></div>
-      <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
-      <p class="labels label3">¿No tienes una cuenta?<a href="http//...">Regístrate</a> </p>
-    </main>
-    <aside class="sidebar-1">
-    </aside>
-    <aside class="sidebar-2">
-    </aside>
-  </section>
+  <main>
+    <!-- Pantalla 1 (Pantalla Login):-->
+    <section class="contenedor" id="pantalla-login">
+      <div class="contenido espaciado">
+        <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
+        <label class="labels label1" required>Correo electrónico:</label>
+        <input class="inputs" maxlength="11" id="input-usuario">
+        <label class="labels label1">Contraseña</label>
+        <input class="inputs" type="password" maxlength="11" required id="input-contraseña">
+        <a class="labels label2" href="http//...">¿Olvidaste tu contraseña?</a>
+        <div id="incorrecto"></div>
+        <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
+        <p class="labels label3">¿No tienes una cuenta?<a href="http//...">Regístrate</a> </p>
+      </div>
+    </section>
 
-  <!-- Pantalla 2:-->
-  <section class="ocultar" id="pantalla-inicio">
-    <div class="contenedor2">
-      <main class="contenido2 centrarTexto">
+    <!-- Pantalla 2 (Inicio):-->
+    <section class="ocultar" id="pantalla-inicio">
+      <div class="centrarTexto">
         <h1>TE DAMOS LA BIENVENIDA A POKEMONBEL</h1>
         <br> </br>
         <p>Usa el menú de navegación para acceder a más información sobre Pokémon en tu región. </p>
         <br> </br>
         <p>Cada enlace te redirigirá a pantallas donde podrás visualizar caracterìsticas de tus pokemon,ordenar ,filtrar
           por tipo, debilidades, etc. </p>
-      </main>
-      <aside class="sidebar-4">
-        <img src="img/pokemones.png" alt="pokemones">
-      </aside>
-    </div>
-  </section>
+      </div>
+      <img src="img/pokemones.png" alt="pokemones">
+    </section>
 
-  <!-- Pantalla 3:-->
-  <section class="ocultar" id="pantalla-pokedex">
-    <div class="contenedor3">
-      <main class="contenido3">
+    <!-- Pantalla 3 (Pokedex):-->
+    <section class="ocultar" id="pantalla-pokedex">
+      <div>
         <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
         <p class="atrapados" id="atrapados"></p>
         <p class="no-atrapados" id="No-atrapados"></p>
         <div id="contenedorPokemon"></div>
         <div id="contenedor-modal">
-            <div id ="mi-modal" class="modal"></div>
-            <div class="contenido-modal">
-              <span class ="cerrar">&</span>
-              <p>texto del modal</p>
-            </div>
+          <div id="mi-modal" class="modal"></div>
+          <div class="contenido-modal">
+            <span class="cerrar">&</span>
+            <p>texto del modal</p>
+          </div>
         </div>
-      </main>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Pantalla de Bloqueo:-->
-  <section id="pantalla-bloqueo" class="ocultar">
-    <div class="contenedorBloqueo">
-      <main class="contenido4">
+    <!-- Pantalla de Bloqueo:-->
+    <section id="pantalla-bloqueo" class="ocultar">
+      <div class="contenido4">
         <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
         <img class="imagen" src="img/admiracion.jpg" alt="signo-de-admiración">
-      </main>
-      <aside class="sidebar-6">
-      </aside>
-    </div>
-  </section>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <p>Copyright © Elizabeth&Betsy 2019. Todos los derechos reservados.</p>
