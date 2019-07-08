@@ -3,80 +3,10 @@
     padding: 0;
 }
 
-/*Pantalla 1:*/
-.contenedor {
-	width: 100%;
-	margin: 20px auto;
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, auto);
-/* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
-    grid-template-areas: 
-                         "sidebar-1 contenido sidebar-2"
-                         "sidebar-1 contenido sidebar-2";
-						 
-}
-
-
-.contenedor .contenido{
-    grid-area: contenido;
-    background: #b5c0c2ad;   
-}
-
-.contenedor .sidebar-1 {
-  grid-area: sidebar-1;
-}
-
-.contenedor .sidebar-2 {
-    grid-area: sidebar-2;
-}
-.labels{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin: 10PX;
-}
-.label1{
-    display: flex;
-    justify-content: flex-start;
-}
-
-.label2{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.label3{
+.footer {
     text-align: center;
 }
 
-.inputs{
-    background: #FFFFFF;
-    border-radius: 2px;
-    padding: 12px 0px;
-    width: 300px;
-    border:none;
-    margin: 10PX;
-}
-
-.button{
-    background: #3897F0;
-    border-radius: 5px;
-    width: 300px;
-    height: 10%;
-    
-    border:none;
-    margin: 10PX;
-}
-.imagen{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 15%;
-}
-
-.ocultar{
-    display: none;
-}
 
 /*HEADER:*/
 /*Menú de Navegación:*/
@@ -136,83 +66,72 @@
     margin-top: 5%;
 }
 
-/*Pantalla 2:*/
-/*Grillas para la Segunda Pantalla:*/
-.contenedor2{
-    width: 100%;
-	margin: auto;
-	display: grid;
-	grid-gap: 20px; 
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(1, auto);
-/* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
-    grid-template-areas:"contenido2 contenido2 sidebar-4";                       
-}
-.contenedor2 .contenido2{
-    grid-area: contenido2;
-    background: #b5c0c2ad;
-    border-radius: 15px;
-}
-.contenedor2 .sidebar-4{
-    grid-area: sidebar-4;
-}
-.sidebar-3{
-    background: rgba(124, 122, 122, 0.774);
+.usuario{
+    margin-left: 280px;
 }
 
-@media screen and (max-width: 760px){
-    .contenedor2 {
-        grid-template-areas: "navegacion navegacion navegacion navegacion"
-                         "contenido2 contenido2 contenido2 contenido2";
-    }
 
-    /*#navegacion{
-        transform: scale(0.8);
-    }
-    #contenedorPokemon{
-        transform: scale(0.6);
-    }
-    .sidebar-3{
-        transform: scale(0.6);
-    }*/
+/*PANTALLA 1:*/
+
+.contenido{
+    background: #b5c0c2ad;   
 }
-.white{
-    color: #FFFFFF;
+/*Objetos de la pantalla login*/
+.labels{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin: 10PX;
 }
+.label1{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.label2{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.label3{
+    text-align: center;
+}
+
+.inputs{
+    background: #FFFFFF;
+    border-radius: 2px;
+    padding: 12px 0px;
+    width: 300px;
+    border:none;
+    margin: 10PX;
+}
+
+.button{
+    background: #3897F0;
+    border-radius: 5px;
+    width: 300px;
+    height: 10%;
+    
+    border:none;
+    margin: 10PX;
+}
+.imagen{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
+}
+
+.ocultar{
+    display: none;
+}
+
+/*PANTALLA 2:*/
+
+
+
 
 
 /*Pantalla 3:*/
-/*Grillas para la Tercera Pantalla:*/
-.contenedor3{
-    width: 100%;
-	margin: auto;
-	display: grid;
-	grid-gap: 20px; 
-	grid-template-columns: repeat(7, 1fr);
-/* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
-	grid-template-areas: "contenido3 contenido3 contenido3 contenido3 contenido3 contenido3 contenido3";
-}
-.contenedor3 .contenido3{
-    grid-area: contenido3;
-}
 
-
-@media screen and (max-width: 760px){
-    .contenedor3 {
-        grid-template-areas: "navegacion navegacion navegacion navegacion"
-                         "contenido2 contenido2 contenido2 contenido2";
-    }
-
-    /*#navegacion{
-        transform: scale(0.8);
-    }
-    #contenedorPokemon{
-        transform: scale(0.6);
-    }
-    .sidebar-3{
-        transform: scale(0.6);
-    }*/
-}
 .centrar{
     text-align: center;
 	display: flex;
@@ -303,28 +222,3 @@
     cursor: pointer;
   }
 
-/*Pantalla Bloqueo:
-.contenedorBloqueo {
-	width: 90%;
-	max-width: 1000px;
-	margin: 20px auto;
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, auto);
-//Se define la cant de columnas y filas con la parte con la q la quiero ocupar
-    grid-template-areas:  "sidebar-6 contenido4 sidebar-7"
-                          "sidebar-6 contenido4 sidebar-7";						 
-}
-.contenedorBloqueo .contenido4{
-    grid-area: contenido4;
-}
-.contenedorBloqueo .sidebar-6{
-    grid-area: sidebar-6;
-}
-.contenedorBloqueo .sidebar-7{
-    grid-area: sidebar-7;
-}
-.usuario{
-    margin-left: 280px;
-} */

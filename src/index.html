@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <header id="header" class="header ocultar">
+  <header id="header" class="ocultar">
     <!-- Menú de navegación:-->
     <nav class="navegacion" id="navegacion">
       <ul class="menu">
@@ -85,8 +85,8 @@
   </header>
   <main>
     <!-- Pantalla 1 (Pantalla Login):-->
-    <div class="contenedor" id="pantalla-login">
-      <div class="contenido">
+    <section class="contenedor" id="pantalla-login">
+      <div class="contenido espaciado">
         <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
         <label class="labels label1" required>Correo electrónico:</label>
         <input class="inputs" maxlength="11" id="input-usuario">
@@ -97,54 +97,44 @@
         <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
         <p class="labels label3">¿No tienes una cuenta?<a href="http//...">Regístrate</a> </p>
       </div>
-      <aside class="sidebar-1">
-      </aside>
-      <aside class="sidebar-2">
-      </aside>
-    </div>
-    <!-- Pantalla 2:-->
-    <div class="ocultar" id="pantalla-inicio">
-      <div class="contenedor2">
+    </section>
+
+    <!-- Pantalla 2 (Inicio):-->
+    <section class="ocultar" id="pantalla-inicio">
+      <div class="centrarTexto">
         <h1>TE DAMOS LA BIENVENIDA A POKEMONBEL</h1>
         <p>Usa el menú de navegación para acceder a más información sobre Pokémon en tu región. </p>
         <p>Cada enlace te redirigirá a pantallas donde podrás visualizar caracterìsticas de tus pokemon,ordenar
           ,filtrar
           por tipo, debilidades, etc. </p>
-        <aside class="sidebar-4">
-          <img src="img/pokemones.png" alt="pokemones">
-        </aside>
       </div>
-    </div>
+      <img src="img/pokemones.png" alt="pokemones">
+    </section>
+
+
     <!-- Pantalla 3:-->
-    <div class="ocultar" id="pantalla-pokedex">
-      <div class="contenedor3">
-        <div class="contenido3">
-          <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
-          <p class="atrapados" id="atrapados"></p>
-          <p class="no-atrapados" id="No-atrapados"></p>
-          <div id="contenedorPokemon">
-          </div>
-          <!-- The Modal -->
-          <div id="my-modal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span id="close" class="close">&times;</span>
-              <p id="Caracteristicas">CARACTERÍSTICAS</p>
-            </div>
-          </div>
+    <section class="ocultar" id="pantalla-pokedex">
+      <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
+      <p class="atrapados" id="atrapados"></p>
+      <p class="no-atrapados" id="No-atrapados"></p>
+      <div id="contenedorPokemon">
+      </div>
+      <!-- The Modal -->
+      <div id="my-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span id="close" class="close">&times;</span>
+          <p id="Caracteristicas">CARACTERÍSTICAS</p>
         </div>
       </div>
-    </div>
+    </section>
+
+
     <!-- Pantalla de Bloqueo:-->
-    <div id="pantalla-bloqueo" class="ocultar">
-      <div class="contenedorBloqueo">
-        <div class="contenido4">
-          <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
-          <img class="imagen" src="img/admiracion.jpg" alt="signo-de-admiración">
-          <aside class="sidebar-6">
-          </aside>
-        </div>
-      </div>
+    <section id="pantalla-bloqueo" class="ocultar">
+      <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
+      <img class="imagen" src="img/admiracion.jpg" alt="signo-de-admiración">
+    </section>
   </main>
   <footer class="footer">
     <p>Copyright © Elizabeth&Betsy 2019. Todos los derechos reservados.</p>
