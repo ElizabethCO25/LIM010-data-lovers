@@ -264,7 +264,13 @@ body{
     height: auto;
     border-radius: 28px;
 }
-.nombre-poke{
+.nombre-poke {
+    font-weight: bold;
+    font-family: Cambria;
+    font-size: 20px;
+    transition: height 0.2s ease-out;
+}
+.num-poke{
     font-weight: bold;
     font-family: Cambria;
     font-size: 20px;
@@ -322,8 +328,6 @@ body{
     grid-template-areas:  "sidebar-6 contenido4 sidebar-7"
                           "sidebar-6 contenido4 sidebar-7";						 
 }
-
-
 .contenedorBloqueo .contenido4{
     grid-area: contenido4;
 }
