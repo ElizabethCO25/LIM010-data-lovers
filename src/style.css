@@ -2,26 +2,6 @@
     margin: 0;
     padding: 0;
 }
-body{
-    background-image: url(../Imagenes/fondo1.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-        -moz-backgroung-size: cover;
-        -webkit-background-size: cover;
-        -o-background-size:cover;
-    height: 100vh; 
-    display: grid;
-	grid-gap: 20px;
-}
-
-.header {
-    grid-column: 1/1;
-}
-
-.footer {
-    grid-column: -1/-1;
-    text-align: center;
-}
 
 /*Pantalla 1:*/
 .contenedor {
@@ -276,20 +256,7 @@ body{
     font-size: 20px;
     transition: height 0.2s ease-out;
 }
-#atrapados{
-    display: flex;
-    flex-wrap: wrap; 
-    text-align: center;
-    justify-content: space-around;
-    font-size: 21px;
-}
-#No-atrapados{
-     display: flex; 
-    flex-wrap: wrap; 
-    text-align: center;
-    justify-content: space-around;
-    font-size: 21px;
-}
+
 .name{
     font-weight: bold;
     font-family: 'Times New Roman';
@@ -297,25 +264,46 @@ body{
 .zoom:hover{
     background-color: rgb(226, 212, 199);
 }
-.fondo-no{
-    background-color: rgb(117, 112, 112);
-    margin-top: 15px;
-    padding: 25px;
-    width: auto;
-    height: auto;
-    border-radius: 28px;
-}
-.fondo-si{
-    background-color: rgb(300, 300, 300, .2);
-    margin-top: 20px;
-    padding: 25px;
-    width: auto;
-    height: auto;
-    border-radius: 28px;
-}
 
+/* The Modal  */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 30%; /* Full width */
+    height: 30%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /*cerrar modal */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-/*Pantalla Bloqueo:*/
+/*Pantalla Bloqueo:
 .contenedorBloqueo {
 	width: 90%;
 	max-width: 1000px;
@@ -324,7 +312,7 @@ body{
 	grid-gap: 20px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, auto);
-/* Se define la cant de columnas y filas con la parte con la q la quiero ocupar*/
+//Se define la cant de columnas y filas con la parte con la q la quiero ocupar
     grid-template-areas:  "sidebar-6 contenido4 sidebar-7"
                           "sidebar-6 contenido4 sidebar-7";						 
 }
@@ -339,4 +327,4 @@ body{
 }
 .usuario{
     margin-left: 280px;
-}
+} */

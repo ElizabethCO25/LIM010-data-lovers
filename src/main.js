@@ -96,34 +96,23 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
 document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
 
-//modal
-const modal= document.getElementById('mi-modal');
-const span = document.getElementById('cerrar');
+// el modal
+const modal = document.getElementById("my-modal");
+const btn = document.getElementById("contenedorPokemon");
 
-btn.addEventListener('click', ()=>{
-modal.style.display ='block';
-});
-span.addEventListener('click', ()=>{
-  modal.style.display ='none';
-  });
-// Cuando el usuario haga clic en cualquier lugar fuera del modal, ciérrelo
-window.addEventListener('click', ()=>{
-if(event.target == modal){
-  modal.style.display ='none';
-}
- });
-  
-
-/*ordenar de A-Z
-const ordenar = () => {
-  const namepoke = [];
-  const dataAZ = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-  for (let i = 0; i < dataAZ.length; i++) {
-    for (let x = 0; i < POKEMON.pokemon.length; x++) {
-      if (dataAZ[i] === POKEMON.pokemon[x].name[0]) {
-        namepoke.push(POKEMON.pokemon[x]);
-      }
-    }
+btn.addEventListener('click', () => {
+  const numero = parseInt(event.target.parentElement.id) - 1;
+  if (event.target.parentElement.getAttribute('name') === 'pokemon') {
+    modal.classList.remove('hide');
+    document.getElementById('modal-content').innerHTML = `
+    <img class="imagenModal" src="${POKEMON.pokemon[numero].img}"/>
+    <p> Nombre:"${POKEMON.pokemon[numero].name}"</p>
+    <p>Peso:${POKEMON.pokemon[numero].weight}</p>
+    <p>Altura: ${POKEMON.pokemon[numero].height}</p>
+    <p>Tipo: ${POKEMON.pokemon[numero].type}</p> `;
   }
-  return namepoke;
-}; */
+});
+// cerrar Modal 
+document.getElementById('close').addEventListener('click', () => {
+  document.getElementById('my-modal').classList.add('hide');
+});
