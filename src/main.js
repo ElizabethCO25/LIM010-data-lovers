@@ -98,7 +98,6 @@ document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" +
 
 //modal
 const modal= document.getElementById('mi-modal');
-const btn = document.getElementById('mi-boton');
 const span = document.getElementById('cerrar');
 
 btn.addEventListener('click', ()=>{
