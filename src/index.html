@@ -103,41 +103,39 @@
     <section class="ocultar" id="pantalla-inicio">
       <div class="centrarTexto">
         <h1>TE DAMOS LA BIENVENIDA A POKEMONBEL</h1>
-        <br> </br>
         <p>Usa el menú de navegación para acceder a más información sobre Pokémon en tu región. </p>
-        <br> </br>
-        <p>Cada enlace te redirigirá a pantallas donde podrás visualizar caracterìsticas de tus pokemon,ordenar ,filtrar
+        <p>Cada enlace te redirigirá a pantallas donde podrás visualizar caracterìsticas de tus pokemon,ordenar
+          ,filtrar
           por tipo, debilidades, etc. </p>
       </div>
       <img src="img/pokemones.png" alt="pokemones">
     </section>
 
-    <!-- Pantalla 3 (Pokedex):-->
+
+    <!-- Pantalla 3:-->
     <section class="ocultar" id="pantalla-pokedex">
-      <div>
-        <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
-        <p class="atrapados" id="atrapados"></p>
-        <p class="no-atrapados" id="No-atrapados"></p>
-        <div id="contenedorPokemon"></div>
-        <div id="contenedor-modal">
-          <div id="mi-modal" class="modal"></div>
-          <div class="contenido-modal">
-            <span class="cerrar">&</span>
-            <p>texto del modal</p>
-          </div>
+      <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
+      <p class="atrapados" id="atrapados"></p>
+      <p class="no-atrapados" id="No-atrapados"></p>
+      <div id="contenedorPokemon">
+      </div>
+      <!-- The Modal -->
+      <div id="my-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span id="close" class="close">&times;</span>
+          <p id="Caracteristicas">CARACTERÍSTICAS</p>
         </div>
       </div>
     </section>
 
+
     <!-- Pantalla de Bloqueo:-->
     <section id="pantalla-bloqueo" class="ocultar">
-      <div class="contenido4">
-        <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
-        <img class="imagen" src="img/admiracion.jpg" alt="signo-de-admiración">
-      </div>
+      <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
+      <img class="imagen" src="img/admiracion.jpg" alt="signo-de-admiración">
     </section>
   </main>
-
   <footer class="footer">
     <p>Copyright © Elizabeth&Betsy 2019. Todos los derechos reservados.</p>
   </footer>
