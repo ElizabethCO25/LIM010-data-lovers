@@ -2,12 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
-.footer {
-    text-align: center;
-}
-
-
 /*HEADER:*/
 /*Menú de Navegación:*/
 .navegacion{
@@ -133,16 +127,26 @@
     align-self: center;
 }
 
+
+
+/*PANTALLA 2:*/
+.inicio{
+    background-image: url(img/fondoinicio.jpg);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh; 
+    color: white;
+    /*display:flex*/
+}
+.inicio>h1{
+    display: flex;
+    justify-content: center;
+    top:10%;
+}
 .ocultar{
     display: none;
 }
-
-/*PANTALLA 2:*/
-
-
-
-
-
 /*Pantalla 3:*/
 
 .centrar{
@@ -235,3 +239,13 @@
     cursor: pointer;
   }
 
+  .footer {
+    background-size: cover;
+    background-color: black;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    width: auto;
+    height: auto;
+    text-align: center;
+    color:white;
+}
