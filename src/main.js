@@ -98,24 +98,24 @@ document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" +
 
 const contenedorPokecito = document.getElementById('contenedorPokemon');
 /* al contenedor le agrego un evento clik*/
-contenedorPokecito.addEventListener('click',()=>{
-  const pokecito= event.target.parentElement.id-1;
+contenedorPokecito.addEventListener('click', () => {
+  const pokecito = event.target.parentElement.id - 1;
   console.log(pokecito);
-/* Pongo condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
-if (event.target.parentElement.getAttribute('name') === 'pokemon') {
-/* Muestra modal*/
-document.getElementById('my-modal').classList.remove('ocultar');
-/* Insertar info de pokemon en Modal*/
- document.getElementById('caracteristicas').innerHTML = `
+  /* Pongo condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
+  if (event.target.parentElement.getAttribute('name') === 'pokemon') {
+    /* Muestra modal*/
+    document.getElementById('my-modal').classList.remove('ocultar');
+    /* Insertar info de pokemon en Modal*/
+    document.getElementById('caracteristicas').innerHTML = `
 <img class="imagenModal" src="${POKEMON.pokemon[pokecito].img}"/>
 <p> Nombre:  ${POKEMON.pokemon[pokecito].name}</p>
- <p>Peso: ${POKEMON.pokemon[pokecito].weight}   </p> 
+<p>Peso: ${POKEMON.pokemon[pokecito].weight}</p> 
 <p>Altura: ${POKEMON.pokemon[pokecito].height}</p>    
 <p>Tipo: ${POKEMON.pokemon[pokecito].type}</p> `;
-}
+  }
 });
 
 /* cerrarndo Modal */
 document.getElementById('close').addEventListener('click', () => {
   document.getElementById('my-modal').classList.add('ocultar');
- });
+});
