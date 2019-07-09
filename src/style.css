@@ -283,8 +283,8 @@
     background-color: rgb(226, 212, 199);
 }
 
-/* The Modal  */
-.modal {
+    /* El Modal  */
+    .modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -293,56 +293,46 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
-  }
+    }
   
-  /* Modal Content */
-  .modal-content {
+     /* Contenido de modal */
+    .modal-content {
     background-color: black;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     height: 35%;
     width: 35%;
-    display: flex;
     color: white;
-    border-radius: 15px;
+    display: flex;
+    border-radius: 17px;
     font-weight: bold;
     font-size: 16px;
     justify-content: center;
     text-align: center;
- }   
-  .imageModal{
+    }   
+    .imageModal{
       height: 80%;
       width: 80%;
-  }
-  
-  /*cerrar modal */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+    }
+    /*cerrar modal */
+    .close {
+    display:flex;
+    font-size: 35px;
+    }
+    .close:hover,
+    .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-
-  /*PANTALLA DE BLOQUEO:*/
-  .imagen-bloqueo{
+    }
+    /*PANTALLA DE BLOQUEO:*/
+    .imagen-bloqueo{
       width: 50%;
       height: auto;
-  }
-
-
-
-
-
-/*FOOTER:*/
-  .footer {
+    }
+    /*FOOTER:*/
+    .footer {
     background-size: cover;
     background-color: black;
     background-repeat:no-repeat;
@@ -353,5 +343,5 @@
     text-align: center;
     color:white;
     padding: 7px;
-}
+    }
 
