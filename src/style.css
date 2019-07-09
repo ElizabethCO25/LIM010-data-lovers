@@ -226,9 +226,7 @@
     margin: 3%;
    }
 }
-.ocultar{
-    display: none;
-}
+
 /*Pantalla 3:*/
 .filtro-atrapado{
     font-size: 20px;
@@ -243,9 +241,7 @@
     font-family: Cambria;
     font-size: 50%;
 }
-.ocultar{
-    display: none; 
-}
+
 #contenedorPokemon{
     background: rgb(181, 233, 224);
     display: flex;
@@ -345,3 +341,6 @@
     padding: 7px;
     }
 
+    .ocultar{
+        display: none; 
+    }
