@@ -116,3 +116,5 @@ btn.addEventListener('click', () => {
 document.getElementById('close').addEventListener('click', () => {
   document.getElementById('my-modal').classList.add('hide');
 });
+
+

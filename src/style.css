@@ -74,22 +74,37 @@
 /*PANTALLA 1:*/
 
 .contenido{
-    background: #b5c0c2ad;   
+    display: flex;
+    flex-direction: column;
+    
 }
+
+.contenedor{
+    background: #b5c0c2ad;
+    padding: auto;
+    margin-top: 3%;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 3% 
+}
+
 /*Objetos de la pantalla login*/
 .labels{
     margin-top: 5%;
     margin-bottom: 5%;
-    margin: 10PX;
+    
 }
 .label1{
     display: flex;
     justify-content: flex-start;
+    margin: 4%;
+ 
 }
 
 .label2{
     display: flex;
     justify-content: flex-end;
+    margin: 4%;
 }
 
 .label3{
@@ -100,24 +115,22 @@
     background: #FFFFFF;
     border-radius: 2px;
     padding: 12px 0px;
-    width: 300px;
+    width: auto;
     border:none;
-    margin: 10PX;
+    margin: 4%;
 }
 
 .button{
     background: #3897F0;
     border-radius: 5px;
-    width: 300px;
-    height: 10%;
-    
+    width: auto;
+    height: 40px;
     border:none;
-    margin: 10PX;
+    margin: 4%;
 }
 .imagen{
     margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 15%;
+    align-self: center;
 }
 
 .ocultar{
