@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body >
+<body>
   <header id="header" class="ocultar">
     <!-- Menú de navegación:-->
     <nav class="navegacion" id="navegacion">
@@ -49,27 +49,7 @@
                 <li><a href="#">Agua</a></li>
                 <li><a href="#">Fuego</a></li>
                 <li><a href="#">FILTRAR</a>
-                  <ul class="submenu">
-                    <li><a href="#">Tipo</a>
-                      <ul>
-                        <li><a href="#">Tierra</a></li>
-                        <li><a href="#">Aire</a></li>
-                        <li><a href="#">Agua</a></li>
-                        <li><a href="#">Fuego</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Debilidad</a>
-                      <ul>
-                        <li><a href="#">Tierra</a></li>
-                        <li><a href="#">Aire</a></li>
-                        <li><a href="#">Agua</a></li>
-                        <li><a href="#">Fuego</a></li>
-                      </ul>
-                    </li>
-
-                  </ul>
                 </li>
-
               </ul>
             </li>
           </ul>
@@ -113,8 +93,8 @@
     <!-- Pantalla 3:-->
     <section class="ocultar" id="pantalla-pokedex">
       <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
-      <p class="atrapados" id="atrapados"></p>
-      <p class="no-atrapados" id="No-atrapados"></p>
+      <p class="atrapados filtro-atrapado" id="atrapados"></p>
+      <p class="no-atrapados filtro-atrapado" id="No-atrapados"></p>
       <div id="contenedorPokemon">
       </div>
       <!-- The Modal -->
@@ -129,10 +109,11 @@
 
 
     <!-- Pantalla de Bloqueo:-->
-    <div id="pantalla-bloqueo" class="ocultar bloqueo">
-      <h1 class="mensaje"> "Lo sentimos agotaste tus intentos". </h1>
-      <img class="imagen-ad" src="img/admiracion.jpg" alt="signo-de-admiración">
+    <div id="pantalla-bloqueo" class="ocultar">
+      <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
+      <img class="imagen-bloqueo" src="img/admiracion.jpg" alt="signo-de-admiración">
     </div>
+
   </main>
   <footer class="footer">
     <p>Copyright © Elizabeth&Betsy 2019. Todos los derechos reservados.</p>

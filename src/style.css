@@ -5,15 +5,12 @@
 /*HEADER:*/
 /*Menú de Navegación:*/
 .navegacion{
-	width: 100%;
-	margin: auto;
 	background: rgb(14, 13, 13);
 }
 
 .navegacion ul{
 	list-style: none;
 }
-
 .menu > li{
 	position: relative;
 	display: inline-block;
@@ -21,7 +18,7 @@
 
 .menu > li > a{
 	display: block;
-	padding: 5px 45px;
+	padding: 5px 30px;
 	color: #ffffff;
 	font-family: 'Open sans';
 	text-decoration: none;
@@ -36,7 +33,7 @@
 
 .submenu{
 	position: absolute;
-	background: #333333ce;
+	background: #1b1b1adc;
 	width: 120%;
 	visibility: hidden;
 	transition: opacity 1.5s;
@@ -44,10 +41,15 @@
 
 .submenu li a{
 	display: block;
-	padding: 20%;
+	padding: 110%;
 	color: #fff;
 	font-family: 'Open sans';
 	text-decoration: none;
+}
+
+.menu li{
+    width: 12%;
+    height: auto;
 }
 
 .menu li:hover .submenu{
@@ -56,37 +58,37 @@
 }
 
 .imagenMenu{
-    margin-left:35%;
+    margin-left:25%;
     margin-top: 5%;
 }
 
 .usuario{
-    margin-left: 280px;
+    margin-left: 20%
 }
 
 
 /*PANTALLA 1:*/
-
-.contenido{
+.contenedor{
+    background-image: url(../Imagenes/fondoPrueba.jpg);
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    
 }
 
-.contenedor{
+.contenido{
     background: #b5c0c2ad;
-    padding: auto;
+    height: 80vh;
     margin-top: 3%;
     margin-left: 35%;
     margin-right: 35%;
-    margin-bottom: 3% 
+    margin-bottom: 5%;
+    
 }
 
 /*Objetos de la pantalla login*/
 .labels{
     margin-top: 5%;
     margin-bottom: 5%;
-    
 }
 .label1{
     display: flex;
@@ -98,7 +100,7 @@
 .label2{
     display: flex;
     justify-content: flex-end;
-    margin: 4%;
+    margin: 5%;
 }
 
 .label3{
@@ -109,41 +111,122 @@
     background: #FFFFFF;
     border-radius: 2px;
     padding: 12px 0px;
-    width: auto;
+    width: 90%;
     border:none;
-    margin: 4%;
+    margin-left: 4%;
+    margin-left: 4%;
 }
 
 .button{
     background: #3897F0;
     border-radius: 5px;
-    width: auto;
-    height: 40px;
+    width: 90%;
+    height: 10%;
     border:none;
     margin: 4%;
 }
 .imagen{
-    margin-top: 5%;
-    align-self: center;
+    margin-top: 10%;
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+    margin-bottom: 5%;
 }
 
-/*pantalla de inicio*/
+@media screen and (max-width: 600px) {
+ .contenido{
+    background: #b5c0c2ad;
+    height: 80vh;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;    
+  }
+  .contenedor{
+    margin-top: 3%;
+    margin:0;
+  }
+  .button{
+    height: 6%;
+  }
+}
+
+/*PANTALLA 2:*/
 .inicio{
     background-image: url(img/fondoinicio.jpg);
-    background-repeat:no-repeat;
-    background-attachment: fixed;
     background-size: cover;
-    height: 100vh; 
-    color:black;
+    color: white;
+    display: flex;
+    height: 82vh;
 }
-/*pantalla de bloqueo*/
 
-.bloqueo{
-    height: 100vh;
-    background-color:white;
-    background-attachment: fixed;
-    display: flex;;
-    align-items: center;
+.imagen-inicio{
+    padding: 40px;
+}
+
+.inicio>h1{
+    display: flex;
+    justify-content: center;
+    top:10%;
+}
+.titulo{
+    font-size: 40px;
+    text-align: center;
+    margin: 5%;
+}
+
+.texto-inicial{
+    font-size: 20px;
+    text-align: center;
+    margin: 5%;
+}
+
+@media screen and (max-width: 600px) {
+.menu > li{
+	transform: scale(0.6);
+}
+.imagenMenu{
+    margin-left:60%;
+    margin-top: 5%;
+}
+.usuario{
+    margin-left: 5%
+}
+ .imagen-inicio{
+   width: 70%;
+   height:70%;
+   margin-left: 5%;
+ }
+ .inicio{
+   flex-direction: column;
+ }
+ .inicio>h1{
+    display: flex;
+    justify-content: center;
+  }
+  .titulo{
+    font-size: 25px;
+    text-align: center;
+    margin: 2%;
+   }
+   .texto-inicial{
+    font-size: 15px;
+    text-align: center;
+    margin: 3%;
+   }
+}
+.ocultar{
+    display: none;
+}
+/*Pantalla 3:*/
+.filtro-atrapado{
+    font-size: 20px;
+    text-align: center;
+}
+.centrar{
+    text-align: center;
+	display: flex;
+	align-items: center;
     justify-content: center;
     font-weight: bold;
     font-family: Cambria;
@@ -237,13 +320,25 @@
     cursor: pointer;
   }
 
+  /*PANTALLA DE BLOQUEO:*/
+  .imagen-bloqueo{
+      width: 50%;
+      height: auto;
+  }
+
+
+
+
+
+/*FOOTER:*/
   .footer {
     background-size: cover;
     background-color: black;
     background-repeat:no-repeat;
     background-attachment: fixed;
+    padding: 2px;
     width: auto;
-    height: auto;
+    height: 100%;
     text-align: center;
     color:white;
     padding: 7px;
