@@ -69,7 +69,7 @@ const mostrarData = (pokemon) => { //paràmetro
   let muestra = ' ';
   for (let i = 0; i < pokemon.length; i++) {
     let llamar = `
-    <div>
+    <div name='pokemon' id="${pokemon[i].id}">
       <article class= "fondo-poke zoom" >
         <img  src ="${pokemon[i].img}"/>
         <p class = "num-poke">${pokemon[i].num}</p>   
@@ -96,27 +96,26 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
 document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
 
-// el modal
-const modal = document.getElementById("my-modal");
-const btn = document.getElementById("contenedorPokemon");
-
-btn.addEventListener('click', () => {
-  const numero = parseInt(event.target.parentElement.id) - 1;
-  if (event.target.parentElement.getAttribute('name') === 'pokemon') {
-    modal.classList.remove('hide');
-    document.getElementById('modal-content').innerHTML = `
-    <img class="imagenModal" src="${POKEMON.pokemon[numero].img}"/>
-    <p> Nombre:"${POKEMON.pokemon[numero].name}"</p>
-    <p>Peso:${POKEMON.pokemon[numero].weight}</p>
-    <p>Altura: ${POKEMON.pokemon[numero].height}</p>
-    <p>Tipo: ${POKEMON.pokemon[numero].type}</p> `;
-  }
+const contenedorPokecito = document.getElementById('contenedorPokemon');
+/* al contenedor le agrego un evento clik*/
+contenedorPokecito.addEventListener('click',()=>{
+  const pokecito= event.target.parentElement.id-1;
+  console.log(pokecito);
+/* Pongo condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
+if (event.target.parentElement.getAttribute('name') === 'pokemon') {
+/* Muestra modal*/
+document.getElementById('my-modal').classList.remove('ocultar');
+/* Insertar info de pokemon en Modal*/
+ document.getElementById('caracteristicas').innerHTML = `
+<img class="imagenModal" src="${POKEMON.pokemon[pokecito].img}"/>
+<p> Nombre:  ${POKEMON.pokemon[pokecito].name}</p>
+ <p>Peso: ${POKEMON.pokemon[pokecito].weight}   </p> 
+<p>Altura: ${POKEMON.pokemon[pokecito].height}</p>    
+<p>Tipo: ${POKEMON.pokemon[pokecito].type}</p> `;
+}
 });
-// cerrar Modal 
+
+/* cerrarndo Modal */
 document.getElementById('close').addEventListener('click', () => {
-  document.getElementById('my-modal').classList.add('hide');
-});
-
-
-
-
+  document.getElementById('my-modal').classList.add('ocultar');
+ });

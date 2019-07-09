@@ -8,6 +8,7 @@ const dataPoker = () => {
   for (let i = 0; i < POKEMON.pokemon.length; i++) {
     vacio.push({
       'img': POKEMON.pokemon[i].img,
+      'id': POKEMON.pokemon[i].id,
       'name': POKEMON.pokemon[i].name,
       'num': POKEMON.pokemon[i].num,
     });
