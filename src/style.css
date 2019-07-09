@@ -152,22 +152,28 @@
 }
 
 /*PANTALLA 2:*/
-.inicio{
-    background-image: url(img/fondoinicio.jpg);
+#pantalla-inicio{
+    background-image: url(../Imagenes/fondoinicio.jpg);
     background-size: cover;
     color: white;
     display: flex;
     height: 82vh;
 }
 
+.inicio{
+    flex-direction: column;
+}
+
 .imagen-inicio{
     padding: 40px;
+    
 }
 
 .inicio>h1{
     display: flex;
     justify-content: center;
     top:10%;
+    
 }
 .titulo{
     font-size: 40px;
@@ -179,6 +185,7 @@
     font-size: 20px;
     text-align: center;
     margin: 5%;
+    
 }
 
 @media screen and (max-width: 600px) {
@@ -193,13 +200,17 @@
     margin-left: 5%
 }
  .imagen-inicio{
-   width: 70%;
-   height:70%;
-   margin-left: 5%;
+ margin-top: -20%;
+ transform: scale(0.6);
+ padding: 0;
  }
- .inicio{
-   flex-direction: column;
- }
+    
+    
+    
+#pantalla-inicio{
+    flex-direction: column;
+}
+
  .inicio>h1{
     display: flex;
     justify-content: center;
