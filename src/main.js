@@ -1,5 +1,5 @@
 /* Manejo del DOM */
-//variables
+//Declarando variables
 const obtenerClick = document.getElementById("boton-ingresar");
 const capturarContraseña = document.getElementById("input-contraseña");
 const capturarUsuario = document.getElementById("input-usuario");

@@ -33,11 +33,11 @@ window.filtrarDebil = filtrarDebil;
 
 
 
-ordenadorAZ: () => {
-const nombres= POKEMON.pokemon;
-const listaAZ = [];
-for(let i = 0; i< nombres.length; i++)
-  listaAZ.push(POKEMON.pokemon[i].name);
+// ordenadorAZ: () => {
+// const nombres= POKEMON.pokemon;
+// const listaAZ = [];
+// for(let i = 0; i< nombres.length; i++)
+//   listaAZ.push(POKEMON.pokemon[i].name);
 
-  console.log(listaAZ.soft());
-};
+//   console.log(listaAZ.soft());
+// };
