@@ -132,6 +132,18 @@ debilidades.addEventListener('change', () => {
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
     console.log(debilidadesPoke);
+  } else if (seleccionar === 'Water') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Electric') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Ghost') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
   } else {
     debilidadesPoke = mostrarData;
   }
