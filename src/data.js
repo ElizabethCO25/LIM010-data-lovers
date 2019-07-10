@@ -5,31 +5,32 @@
 
 const dataPoker = () => {
   const vacio = []; //arreglo vacìo
-  for (let i = 0; i < POKEMON.pokemon.length; i++) {
+  for (let i = 0; i < allPokemon.length; i++) {
     vacio.push({
-      'img': POKEMON.pokemon[i].img,
-      'id': POKEMON.pokemon[i].id,
-      'name': POKEMON.pokemon[i].name,
-      'num': POKEMON.pokemon[i].num,
+      'img': allPokemon[i].img,
+      'id': allPokemon[i].id,
+      'name': allPokemon[i].name,
+      'num': allPokemon[i].num,
     });
   }
   return vacio;
 };
-window.dataPoker = dataPoker; //
 
-//Ordenar de la A-Z:
-/*console.log(pokemon.name.sort());
-const filtroAZ = () => {
-  const nombrePk = [];
-  const listaAZ = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-  for (let i = 0; i < listaAZ.length; i++) {
-    for (let x = 0; i < pokemon.length; x++) {
-      if (listaAZ[i] === pokemon[x].name[0]) {
-        nombrePk.push(pokemons[x]);
+const filtrarDebil = (data, debilidad) => {
+  let arrayDebilidad = [];
+  for (let i = 0; i < data.length; i++) {
+    for (let x = 0; x < data[i].weaknesses.length; x++) {
+      if (data[i].weaknesses[x] === debilidad) {
+        arrayDebilidad.push(data[i]);
       }
     }
   }
-  return nombrePk;
-};*/
+  return arrayDebilidad;
+};
+
+window.dataPoker = dataPoker;
+window.filtrarDebil = filtrarDebil;
+
+
 
 
