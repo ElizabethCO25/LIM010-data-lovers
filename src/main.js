@@ -66,7 +66,7 @@ clickOrdenar.addEventListener("click", () => {
 
 //mostrar pokemones
 const pokemonNuevo = dataPoker(); // constante con una funcion 
-const mostrarData = (pokemon) => { //paràmetro
+const mostrarData = (pokemon) => { //parámetro
   let muestra = ' ';
   for (let i = 0; i < pokemon.length; i++) {
     let llamar = `
@@ -119,6 +119,13 @@ contenedorPokecito.addEventListener('click', () => {
 // cerrando Modal 
 document.getElementById('close').addEventListener('click', () => {
   document.getElementById('my-modal').classList.add('ocultar');
+});
+
+//Pantalla 3:
+// Ordenando de la A-Z:
+const clickOrdenarAZ = document.getElementById("ordenar-az");
+clickOrdenarAZ.addEventListener("click", () => {
+  document.getElementById("orden-AZ").value = ordenadorAZ();
 });
 
 //debilidades pokemon 

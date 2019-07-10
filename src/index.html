@@ -24,7 +24,7 @@
           <img class="imagenMenu" src="../Imagenes/ordenar.png" alt="Flechas-sobre-opción-ordenar"> <a
             href="#">ORDENAR</a>
           <ul class="submenu">
-            <li id="ordenar-az"><a href="#">De A-Z</a></li>
+            <li><a id="ordenar-az" href="#">De A-Z</a></li>
             <li><a href="#">De Z-A</a></li>
             <li><a href="#">Spawn ascendente</a></li>
             <li><a href="#">Spawn descendente</a></li>
@@ -60,7 +60,7 @@
       </div>
     </div>
     <!-- Pantalla 2 (Inicio):-->
-    <div class="ocultar" id="pantalla-inicio">
+    <div id="pantalla-inicio" class="ocultar">
       <div class="inicio">
         <h1 class="titulo">TE DAMOS LA BIENVENIDA A POKEMONBEL!!</h1>
         <p class="texto-inicial">Usa el menú de navegación para acceder a más información sobre Pokémon en tu región.
@@ -72,11 +72,16 @@
         <img src="img/pokemones.png" alt="pokemones-y-ash-felices">
       </div>
     </div>
+
+
     <!-- Pantalla 3:-->
-    <div class="ocultar" id="pantalla-pokedex">
+    <div id="pantalla-pokedex" class="ocultar">
       <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
+      <div id="orden-AZ">
+      </div>
       <p class="atrapados filtro-atrapado" id="atrapados"></p>
       <p class="no-atrapados filtro-atrapado" id="No-atrapados"></p>
+
       <!--Listado de pokemones por debilidad-->
       <div id="lista-debilidades pantalla-filtrar">
         <select id="debilidades">
@@ -109,8 +114,13 @@
         </div>
       </div>
     </div>
+    
+
+
+
+
     <!-- Pantalla de Bloqueo:-->
-    <div id="pantalla-bloqueo" class="ocultar">
+    <div class="ocultar" id="pantalla-bloqueo">
       <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
       <img class="imagen-bloqueo" src="img/admiracion.jpg" alt="signo-de-admiración">
     </div>

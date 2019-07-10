@@ -5,9 +5,8 @@
 /*HEADER:*/
 /*Menú de Navegación:*/
 .navegacion{
-	background: rgb(14, 13, 13);
+	background: rgb(14, 13, 13); 
 }
-
 .navegacion ul{
 	list-style: none;
 }
@@ -76,7 +75,7 @@
 }
 
 .contenido{
-    background: #b5c0c2ad;
+    background: #171c1dad;
     height: 80vh;
     margin-top: 3%;
     margin-left: 35%;
@@ -166,14 +165,12 @@
 
 .imagen-inicio{
     padding: 40px;
-    
 }
 
 .inicio>h1{
     display: flex;
     justify-content: center;
     top:10%;
-    
 }
 .titulo{
     font-size: 40px;
@@ -185,7 +182,6 @@
     font-size: 20px;
     text-align: center;
     margin: 5%;
-    
 }
 
 @media screen and (max-width: 600px) {
@@ -199,18 +195,14 @@
 .usuario{
     margin-left: 5%
 }
- .imagen-inicio{
+.imagen-inicio{
  margin-top: -20%;
  transform: scale(0.6);
  padding: 0;
  }
-    
-    
-    
 #pantalla-inicio{
     flex-direction: column;
 }
-
  .inicio>h1{
     display: flex;
     justify-content: center;
@@ -222,7 +214,6 @@
    }
    .texto-inicial{
     font-size: 15px;
-    text-align: center;
     margin: 3%;
    }
 }
@@ -280,7 +271,7 @@
 }
 
     /* El Modal  */
-    .modal {
+    .modal{
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
