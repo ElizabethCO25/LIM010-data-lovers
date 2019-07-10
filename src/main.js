@@ -1,8 +1,9 @@
 /* Manejo del DOM */
-//Login:
+//variables
 const obtenerClick = document.getElementById("boton-ingresar");
 const capturarContraseña = document.getElementById("input-contraseña");
 const capturarUsuario = document.getElementById("input-usuario");
+const allPokemon = POKEMON.pokemon;
 let cuenta = 2;
 obtenerClick.addEventListener("click", () => {
   if (capturarContraseña.value === "1" && capturarUsuario.value === "1") {
@@ -54,7 +55,7 @@ clickOrdenar.addEventListener("click", () => {
   document.getElementById("pantalla-inicio").classList.add("ocultar");
   document.getElementById("header").classList.remove("ocultar");
 });
-// Botón FILTRAR:
+// Nav FILTRAR:
 const clickFiltrar = document.getElementById("filtrar");
 clickOrdenar.addEventListener("click", () => {
   document.getElementById("pantalla-pokedex").classList.remove("ocultar");
@@ -86,8 +87,8 @@ contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
 let contadorNoatrapado = 0;
 let contadorAtrapado = 0;
 //recorriendo todo el array
-for (let i = 0; i < POKEMON.pokemon.length; i++) {
-  if (POKEMON.pokemon[i].multipliers == null) {
+for (let i = 0; i < allPokemon.length; i++) {
+  if (allPokemon[i].multipliers == null) {
     contadorNoatrapado++
   } else {
     contadorAtrapado++
@@ -95,7 +96,7 @@ for (let i = 0; i < POKEMON.pokemon.length; i++) {
 }
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
 document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
-
+//Modal
 const contenedorPokecito = document.getElementById('contenedorPokemon');
 /* al contenedor le agrego un evento clik*/
 contenedorPokecito.addEventListener('click', () => {
@@ -107,15 +108,15 @@ contenedorPokecito.addEventListener('click', () => {
     document.getElementById('my-modal').classList.remove('ocultar');
     /* Insertar info de pokemon en Modal*/
     document.getElementById('caracteristicas').innerHTML = `
-<img class="imagenModal" src="${POKEMON.pokemon[pokecito].img}"/>
-<p> Nombre:  ${POKEMON.pokemon[pokecito].name}</p>
-<p>Peso: ${POKEMON.pokemon[pokecito].weight}</p> 
-<p>Altura: ${POKEMON.pokemon[pokecito].height}</p>    
-<p>Tipo: ${POKEMON.pokemon[pokecito].type}</p> `;
+<img class="imagenModal" src="${allPokemon[pokecito].img}"/>
+<p> Nombre:${allPokemon[pokecito].name}</p>
+<p>Peso: ${allPokemon[pokecito].weight}</p> 
+<p>Altura: ${allPokemon[pokecito].height}</p>    
+<p>Tipo: ${allPokemon[pokecito].type}</p> `;
   }
 });
 
-/* cerrarndo Modal */
+// cerrando Modal 
 document.getElementById('close').addEventListener('click', () => {
   document.getElementById('my-modal').classList.add('ocultar');
 });
@@ -126,4 +127,79 @@ const clickOrdenarAZ = document.getElementById("ordenar-az");
 clickOrdenarAZ.addEventListener("click", () => {
   document.getElementById("orden-AZ").value = ordenadorAZ();
 });
+
+//debilidades pokemon 
+const debilidades = document.getElementById('debilidades');
+let debilidadesPoke = [];
+console.log(debilidades);
+debilidades.addEventListener('change', () => {
+  let seleccionar = debilidades.value;
+  if (seleccionar === 'Steel') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+    console.log(debilidadesPoke);
+  } else if (seleccionar === 'Water') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Electric') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Ghost') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Fire') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Fairy') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Ice') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Grass') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Insect') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Fight') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Dark') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Psychic') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Rock') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Soil') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Poison') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Flying') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  }
+});
+
 

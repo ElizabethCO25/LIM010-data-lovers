@@ -34,24 +34,6 @@
           <img class="imagenMenu" src="../Imagenes/filtrar.png" alt="Filtr-sobre-opción-filtrar"> <a
             href="#">FILTRAR</a>
           <ul class="submenu">
-            <li><a href="#"><strong>TIPO</strong></a>
-              <ul>
-                <li><a href="#">Tierra</a></li>
-                <li><a href="#">Aire</a></li>
-                <li><a href="#">Agua</a></li>
-                <li><a href="#">Fuego</a></li>
-              </ul>
-            </li>
-            <li><a href="#"><strong>DEBILIDAD</strong></a>
-              <ul>
-                <li><a href="#">Tierra</a></li>
-                <li><a href="#">Aire</a></li>
-                <li><a href="#">Agua</a></li>
-                <li><a href="#">Fuego</a></li>
-                <li><a href="#">FILTRAR</a>
-                </li>
-              </ul>
-            </li>
           </ul>
         <li id="incubadora"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
             alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a>
@@ -60,25 +42,23 @@
           <a>LABORATORIA</a>
         </li>
       </ul>
-
     </nav>
   </header>
   <main>
     <!-- Pantalla 1 (Pantalla Login):-->
-    <section class="contenedor" id="pantalla-login">
+    <div class="contenedor" id="pantalla-login">
       <div class="contenido espaciado">
         <img class="imagen" src="img/imglogo.png" alt="logopokemonbel">
-        <label class="labels label1" required>Correo electrónico:</label>
+        <p class="labels label1">Correo electrónico:</p>
         <input class="inputs" maxlength="11" id="input-usuario">
-        <label class="labels label1">Contraseña</label> 
+        <p class="labels label1">Contraseña</p>
         <input class="inputs" type="password" maxlength="11" required id="input-contraseña">
         <a class="labels label2" href="http//...">¿Olvidaste tu contraseña?</a>
         <div id="incorrecto"></div>
         <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
         <p class="labels label3">¿No tienes una cuenta?<a href="http//...">Regístrate</a> </p>
       </div>
-    </section>
-
+    </div>
     <!-- Pantalla 2 (Inicio):-->
     <div id="pantalla-inicio" class="ocultar">
       <div class="inicio">
@@ -95,35 +75,59 @@
 
 
     <!-- Pantalla 3:-->
-    <div id="pantalla-pokedex"class="ocultar">
-    <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
-    <div id="orden-AZ">
-    </div>
-    <p class="atrapados filtro-atrapado" id="atrapados"></p>
-    <p class="no-atrapados filtro-atrapado" id="No-atrapados"></p>
-      <!-- <div id="contenedorPokemon"> -->
-    </div>
-    <!-- The Modal -->
-    <div id="my-modal" class="modal ocultar">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span id="close" class="close">&times;</span>
-        <div id="caracteristicas" class="caracteristicas"></div>
+    <div id="pantalla-pokedex" class="ocultar">
+      <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
+      <div id="orden-AZ">
+      </div>
+      <p class="atrapados filtro-atrapado" id="atrapados"></p>
+      <p class="no-atrapados filtro-atrapado" id="No-atrapados"></p>
+
+      <!--Listado de pokemones por debilidad-->
+      <div id="lista-debilidades pantalla-filtrar">
+        <select id="debilidades">
+          <option>Debilidades</option>
+          <option value="Steel">Acero</option>
+          <option value="Water">Agua</option>
+          <option value="Electric">Eléctrico</option>
+          <option value="Ghost">Fantasma</option>
+          <option value="Fire">Fuego</option>
+          <option value="Fairy">Hada</option>
+          <option value="Ice">Hielo</option>
+          <option value="Grass">Hierba</option>
+          <option value="Insect">Insecto</option>
+          <option value="Fight">Lucha</option>
+          <option value="Dark">Oscuro</option>
+          <option value="Psychic">Psíquico</option>
+          <option value="Rock">Rock</option>
+          <option value="Soil">Suelo</option>
+          <option value="Poison">Veneno</option>
+          <option value="Flying">Volador</option>
+        </select>
+      </div>
+      <div id="contenedorPokemon"></div>
+      <!-- The Modal -->
+      <div id="my-modal" class="modal ocultar">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span id="close" class="close">&times;</span>
+          <div id="caracteristicas" class="caracteristicas"></div>
+        </div>
       </div>
     </div>
-  </div>
+    
+
+
+
 
     <!-- Pantalla de Bloqueo:-->
-    <div class="ocultar" id="pantalla-bloqueo" >
+    <div class="ocultar" id="pantalla-bloqueo">
       <h1 class="pokemontriste"> "Lo sentimos agotaste tus intentos". </h1>
       <img class="imagen-bloqueo" src="img/admiracion.jpg" alt="signo-de-admiración">
     </div>
-
   </main>
   <footer class="footer">
     <p>Copyright © Elizabeth&Betsy 2019. Todos los derechos reservados.</p>
   </footer>
-
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>

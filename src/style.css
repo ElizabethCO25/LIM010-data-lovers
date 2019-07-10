@@ -232,6 +232,7 @@
     font-family: Cambria;
     font-size: 50%;
 }
+
 #contenedorPokemon{
     background: rgb(181, 233, 224);
     display: flex;
@@ -331,6 +332,6 @@
     padding: 7px;
     }
 
-.ocultar{
-    display: none;
-}
+    .ocultar{
+        display: none; 
+    }
