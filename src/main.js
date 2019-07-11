@@ -8,8 +8,8 @@ let cuenta = 2;
 obtenerClick.addEventListener("click", () => {
   if (capturarContraseña.value === "1" && capturarUsuario.value === "1") {
     document.getElementById("pantalla-inicio").classList.remove("ocultar");
-    document.getElementById("pantalla-login").classList.add("ocultar");
     document.getElementById("header").classList.remove("ocultar");
+    document.getElementById("pantalla-login").classList.add("ocultar");
     capturarContraseña.value = "";
     capturarUsuario.value = "";
   } else if (cuenta === 0) {
@@ -46,19 +46,29 @@ const clickPokedex = document.getElementById("pokedex");
 clickPokedex.addEventListener("click", () => {
   document.getElementById("pantalla-pokedex").classList.remove("ocultar");
   document.getElementById("pantalla-inicio").classList.add("ocultar");
+  document.getElementById("atrapados").classList.remove("ocultar");
+  document.getElementById("No-atrapados").classList.remove("ocultar");
   document.getElementById("header").classList.remove("ocultar");
 });
 // Botón ORDENAR:
-const clickOrdenar = document.getElementById("ordenar");
+const clickOrdenar = document.getElementById("orden");
 clickOrdenar.addEventListener("click", () => {
   document.getElementById("pantalla-pokedex").classList.remove("ocultar");
   document.getElementById("pantalla-inicio").classList.add("ocultar");
+  document.getElementById("atrapados").classList.add("ocultar");
+  document.getElementById("No-atrapados").classList.add("ocultar");
+  document.getElementById("lista-ordenamiento").classList.remove("ocultar");
+  document.getElementById("lista-debilidades").classList.add("ocultar");
   document.getElementById("header").classList.remove("ocultar");
 });
 // Nav FILTRAR:
 const clickFiltrar = document.getElementById("filtrar");
 clickOrdenar.addEventListener("click", () => {
   document.getElementById("pantalla-pokedex").classList.remove("ocultar");
+  document.getElementById("atrapados").classList.add("ocultar");
+  document.getElementById("No-atrapados").classList.add("ocultar");
+  document.getElementById("lista-ordenamiento").classList.add("ocultar");
+  document.getElementById("lista-debilidades").classList.remove("ocultar");
   document.getElementById("pantalla-inicio").classList.add("ocultar");
   document.getElementById("header").classList.remove("ocultar");
 });
@@ -96,6 +106,7 @@ for (let i = 0; i < allPokemon.length; i++) {
 }
 document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
 document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
+
 //Modal
 const contenedorPokecito = document.getElementById('contenedorPokemon');
 /* al contenedor le agrego un evento clik*/
@@ -123,10 +134,25 @@ document.getElementById('close').addEventListener('click', () => {
 
 //Pantalla 3:
 // Ordenando de la A-Z:
-const clickOrdenarAZ = document.getElementById("ordenar-az");
-clickOrdenarAZ.addEventListener("click", () => {
-  document.getElementById("orden-AZ").value = ordenadorAZ();
-});
+const ordenar = document.getElementById('ordenar');
+ordenar.addEventListener('change', () => {
+  let ordenador = ordenar.value;
+  let ordenadorPoke = [];
+  if (ordenador === 'ordenar-az'){
+    ordenadorPoke = ordenadorAZ(allPokemon, ordenador);
+  } else if (ordenador === 'ordenar-za'){
+    ordenadorPoke = ordenadorAZ(allPokemon, ordenador);
+  } else if (ordenador === 'asc'){
+    ordenadorPoke = ordenadorSpaws(allPokemon, ordenador);
+  } else if (ordenador === 'des'){
+    ordenadorPoke = ordenadorSpaws(allPokemon, ordenador);
+  } else {
+    contenedorPokemon.innerHTML = mostrarData(allPokemon);
+  }
+    contenedorPokemon.innerHTML = mostrarData(ordenadorPoke);
+}
+);
+
 
 //debilidades pokemon 
 const debilidades = document.getElementById('debilidades');

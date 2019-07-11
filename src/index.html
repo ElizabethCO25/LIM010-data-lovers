@@ -20,21 +20,13 @@
           <img class="imagenMenu" src="../Imagenes/PKBol.png" alt="Pokebola-sobre-opción-pokedex"> <a
             href="#">POKEDEX</a>
         </li>
-        <li id="ordenar">
+        <li id="orden">
           <img class="imagenMenu" src="../Imagenes/ordenar.png" alt="Flechas-sobre-opción-ordenar"> <a
             href="#">ORDENAR</a>
-          <ul class="submenu">
-            <li><a id="ordenar-az" href="#">De A-Z</a></li>
-            <li><a href="#">De Z-A</a></li>
-            <li><a href="#">Spawn ascendente</a></li>
-            <li><a href="#">Spawn descendente</a></li>
-          </ul>
         </li>
         <li id="filtrar">
           <img class="imagenMenu" src="../Imagenes/filtrar.png" alt="Filtr-sobre-opción-filtrar"> <a
             href="#">FILTRAR</a>
-          <ul class="submenu">
-          </ul>
         <li id="incubadora"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
             alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a>
         </li>
@@ -45,6 +37,7 @@
     </nav>
   </header>
   <main>
+
     <!-- Pantalla 1 (Pantalla Login):-->
     <div class="contenedor" id="pantalla-login">
       <div class="contenido espaciado">
@@ -59,8 +52,9 @@
         <p class="labels label3">¿No tienes una cuenta?<a href="http//...">Regístrate</a> </p>
       </div>
     </div>
+
     <!-- Pantalla 2 (Inicio):-->
-    <div id="pantalla-inicio" class="ocultar">
+    <div id="pantalla-inicio" class="ocultar pantalla-inicio">
       <div class="inicio">
         <h1 class="titulo">TE DAMOS LA BIENVENIDA A POKEMONBEL!!</h1>
         <p class="texto-inicial">Usa el menú de navegación para acceder a más información sobre Pokémon en tu región.
@@ -73,19 +67,18 @@
       </div>
     </div>
 
-
     <!-- Pantalla 3:-->
-    <div id="pantalla-pokedex" class="ocultar">
+    <div id="pantalla-pokedex" class="ocultar fondo-contenedor">
       <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
-      <div id="orden-AZ">
+      <div id="orden-Alfab">
       </div>
-      <p class="atrapados filtro-atrapado" id="atrapados"></p>
-      <p class="no-atrapados filtro-atrapado" id="No-atrapados"></p>
+      <p class="ocultar atrapados filtro-atrapado" id="atrapados"></p>
+      <p class="ocultar no-atrapados filtro-atrapado" id="No-atrapados"></p>
 
       <!--Listado de pokemones por debilidad-->
-      <div id="lista-debilidades pantalla-filtrar">
+      <div id="lista-debilidades" class="ocultar">
+        <p> Filtrar por: </p>
         <select id="debilidades">
-          <option>Debilidades</option>
           <option value="Steel">Acero</option>
           <option value="Water">Agua</option>
           <option value="Electric">Eléctrico</option>
@@ -104,20 +97,28 @@
           <option value="Flying">Volador</option>
         </select>
       </div>
+
+      <!--Listado de posibilidades de orden-->
+      <div id="lista-ordenamiento" class="ocultar">
+        <p> Ordenar por: </p>
+        <select id="ordenar">
+          <option value="ordenar-az">Alfabeto: De A-Z</option>
+          <option value="ordenar-za">Alfabeto: De Z-A</option>
+          <option value="asc">Spawns: Ascendente</option>
+          <option value="des">Spawns: Descendente</option>
+        </select>
+      </div>
       <div id="contenedorPokemon"></div>
-      <!-- The Modal -->
-      <div id="my-modal" class="modal ocultar">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span id="close" class="close">&times;</span>
-          <div id="caracteristicas" class="caracteristicas"></div>
-        </div>
+
+    <!-- The Modal -->
+    <div id="my-modal" class="modal ocultar">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span id="close" class="close">&times;</span>
+        <div id="caracteristicas" class="caracteristicas"></div>
       </div>
     </div>
-    
-
-
-
+  </div>
 
     <!-- Pantalla de Bloqueo:-->
     <div class="ocultar" id="pantalla-bloqueo">
