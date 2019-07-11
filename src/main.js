@@ -154,20 +154,87 @@ const ordenar = document.getElementById('ordenar');
 ordenar.addEventListener('change', () => {
   let ordenador = ordenar.value;
   let ordenadorPoke = [];
-  if (ordenador === 'ordenar-az'){
+  if (ordenador === 'ordenar-az') {
     ordenadorPoke = ordenadorAZ(allPokemon, ordenador);
-  } else if (ordenador === 'ordenar-za'){
+  } else if (ordenador === 'ordenar-za') {
     ordenadorPoke = ordenadorAZ(allPokemon, ordenador);
-  } else if (ordenador === 'asc'){
+  } else if (ordenador === 'asc') {
     ordenadorPoke = ordenadorSpaws(allPokemon, ordenador);
-  } else if (ordenador === 'des'){
+  } else if (ordenador === 'des') {
     ordenadorPoke = ordenadorSpaws(allPokemon, ordenador);
   } else {
     contenedorPokemon.innerHTML = mostrarData(allPokemon);
   }
-    contenedorPokemon.innerHTML = mostrarData(ordenadorPoke);
+  contenedorPokemon.innerHTML = mostrarData(ordenadorPoke);
 }
 );
+//filtrar tipos pokemon
+const tipos = document.getElementById('tipos');
+let tiposPoke = [];
+tipos.addEventListener('change', () => {
+  let seleccionar = tipos.value;
+  if (seleccionar === 'Grass') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }else if (seleccionar === 'Poison') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Fire') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Flying') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Water') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Bug') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Normal') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Electric') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Ground') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Fighting') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Psychic') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Ghost') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Rock') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Ice') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }if (seleccionar === 'Dragon') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
+  }
+})
 
 //Filtrar Debilidades pokemon 
 const debilidades = document.getElementById('debilidades');
@@ -175,48 +242,16 @@ let debilidadesPoke = [];
 console.log(debilidades);
 debilidades.addEventListener('change', () => {
   let seleccionar = debilidades.value;
-  if (seleccionar === 'Steel') {
+  if (seleccionar === 'Fire') {
     debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
     console.log(debilidadesPoke);
-  } else if (seleccionar === 'Water') {
-    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-  } else if (seleccionar === 'Electric') {
-    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-  } else if (seleccionar === 'Ghost') {
-    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-  } else if (seleccionar === 'Fire') {
-    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-  } else if (seleccionar === 'Fairy') {
-    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
   } else if (seleccionar === 'Ice') {
     debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-  } else if (seleccionar === 'Grass') {
-    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-  } else if (seleccionar === 'Insect') {
-    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-  } else if (seleccionar === 'Fight') {
-    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-  } else if (seleccionar === 'Dark') {
+  } else if (seleccionar === 'Flying') {
     debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
@@ -224,19 +259,55 @@ debilidades.addEventListener('change', () => {
     debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Water') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Ground') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
   } else if (seleccionar === 'Rock') {
     debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-  } else if (seleccionar === 'Soil') {
+  } else if (seleccionar === 'Electric') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Grass') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Ice') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Fighting') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Fairy') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Bug') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Ghost') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Dark') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+  } else if (seleccionar === 'Steel') {
     debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
   } else if (seleccionar === 'Poison') {
-    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-  } else if (seleccionar === 'Flying') {
     debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
@@ -251,13 +322,11 @@ calculoEgg.addEventListener('change', () => {
   console.log(seleccionar);
   if (seleccionar === '2 km') {
     eggPoke1 = eggPoke(allPokemon, seleccionar);
-    console.log(eggPoke1);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(eggPoke1);
     document.getElementById('porcentaje').innerHTML ='El porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
   }else if  (seleccionar === '5 km'){ 
     eggPoke1 = eggPoke(allPokemon, seleccionar);
-    console.log(eggPoke1);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(eggPoke1);
     document.getElementById('porcentaje').innerHTML ='El porcentaje de los pokemones  en 5km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';

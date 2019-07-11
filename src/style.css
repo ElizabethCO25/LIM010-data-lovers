@@ -319,6 +319,11 @@
       width: 50%;
       height: auto;
  }
+.debilidades-pokemon{
+    padding: 15px;
+    background-color: black;
+    color: #d3a9a9;
+}
     /*FOOTER:*/
  .footer {
     background-size: cover;
