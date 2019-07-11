@@ -217,14 +217,3 @@ calculoEgg.addEventListener('change', () => {
   }
   console.log(eggPoke);
 });
-    
-const debilidades = document.getElementById('debilidades');
-let debilidadesPoke = [];
-console.log(debilidades);
-debilidades.addEventListener('change', () => {
-  let seleccionar = debilidades.value;
-  if (seleccionar === 'Steel') {
-    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
-    console.log(debilidadesPoke);
