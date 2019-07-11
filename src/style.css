@@ -209,9 +209,7 @@
     justify-content: space-around;
     font-size: 21px;
 }
-.lista-ordenado{
 
-}
 .fondo-poke{
     background-color: rgb(300, 300, 300, .2);
     margin-top: 20px;
@@ -289,6 +287,11 @@
       width: 50%;
       height: auto;
  }
+.debilidades-pokemon{
+    padding: 15px;
+    background-color: black;
+    color: #d3a9a9;
+}
     /*FOOTER:*/
  .footer {
     background-size: cover;

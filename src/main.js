@@ -154,13 +154,13 @@ ordenar.addEventListener('change', () => {
 );
 //filtrar tipos pokemon
 const tipos = document.getElementById('tipos');
-let tiposPoke =[];
-tipos.addEventListener('change',()=>{
-  let seleccionar= tipos.value;
-  if(seleccionar=== 'Grass'){
-    tiposPoke = filtrarTipo(allPokemon,seleccionar);
-    contenedorPokemon.innerHTML =null;
-    contenedorPokemon.innerHTML =mostrarData(tiposPoke);
+let tiposPoke = [];
+tipos.addEventListener('change', () => {
+  let seleccionar = tipos.value;
+  if (seleccionar === 'Grass') {
+    tiposPoke = filtrarTipo(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
   }
 })
 
