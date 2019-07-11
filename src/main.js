@@ -48,6 +48,9 @@ clickPokedex.addEventListener("click", () => {
   document.getElementById("pantalla-inicio").classList.add("ocultar");
   document.getElementById("atrapados").classList.remove("ocultar");
   document.getElementById("No-atrapados").classList.remove("ocultar");
+  document.getElementById("lista-debilidades").classList.add("ocultar");
+  document.getElementById("lista-ordenamiento").classList.add("ocultar");
+  document.getElementById("lista-incubadora").classList.add("ocultar");
   document.getElementById("header").classList.remove("ocultar");
 });
 // Botón ORDENAR:
@@ -59,20 +62,33 @@ clickOrdenar.addEventListener("click", () => {
   document.getElementById("No-atrapados").classList.add("ocultar");
   document.getElementById("lista-ordenamiento").classList.remove("ocultar");
   document.getElementById("lista-debilidades").classList.add("ocultar");
+  document.getElementById("lista-incubadora").classList.add("ocultar");
   document.getElementById("header").classList.remove("ocultar");
 });
-// Nav FILTRAR:
+// Botón FILTRAR:
 const clickFiltrar = document.getElementById("filtrar");
-clickOrdenar.addEventListener("click", () => {
+clickFiltrar.addEventListener("click", () => {
   document.getElementById("pantalla-pokedex").classList.remove("ocultar");
   document.getElementById("atrapados").classList.add("ocultar");
   document.getElementById("No-atrapados").classList.add("ocultar");
   document.getElementById("lista-ordenamiento").classList.add("ocultar");
   document.getElementById("lista-debilidades").classList.remove("ocultar");
   document.getElementById("pantalla-inicio").classList.add("ocultar");
+  document.getElementById("lista-incubadora").classList.add("ocultar");
   document.getElementById("header").classList.remove("ocultar");
 });
-
+// Botón INCUBADORA:
+const clickIncubadora = document.getElementById("incubadora");
+clickIncubadora.addEventListener("click", () => {
+  document.getElementById("pantalla-pokedex").classList.remove("ocultar");
+  document.getElementById("atrapados").classList.add("ocultar");
+  document.getElementById("No-atrapados").classList.add("ocultar");
+  document.getElementById("lista-ordenamiento").classList.add("ocultar");
+  document.getElementById("lista-debilidades").classList.add("ocultar");
+  document.getElementById("pantalla-inicio").classList.add("ocultar");
+  document.getElementById("lista-incubadora").classList.remove("ocultar");
+  document.getElementById("header").classList.remove("ocultar");
+});
 
 //mostrar pokemones
 const pokemonNuevo = dataPoker(); // constante con una funcion 
@@ -238,19 +254,19 @@ calculoEgg.addEventListener('change', () => {
     console.log(eggPoke1);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-    document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+    document.getElementById('porcentaje').innerHTML ='El porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
   }else if  (seleccionar === '5 km'){ 
     eggPoke1 = eggPoke(allPokemon, seleccionar);
     console.log(eggPoke1);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-    document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+    document.getElementById('porcentaje').innerHTML ='El porcentaje de los pokemones  en 5km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
 
   }else if  (seleccionar === '10 km'){ 
       eggPoke1 = eggPoke(allPokemon, seleccionar);
       console.log(eggPoke1);
       contenedorPokemon.innerHTML = null;
       contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-      document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+      document.getElementById('porcentaje').innerHTML ='El porcentaje de los pokemones  en 10km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
   }
 });

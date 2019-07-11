@@ -191,7 +191,18 @@
     font-family: Cambria;
     font-size: 50%;
 }
-
+.opciones{
+    width: 100 %;
+    font-family: sans-serif;
+	margin: 2%;
+	color: #999;
+    padding: 1%;
+    border-radius: 4px;
+    border: 1px solid rgb(248, 125, 54)
+     
+  
+    
+}
 .debilidades-pokemon .tipos-pokemon{
     font-size: 20px;
     display: flex;
@@ -199,19 +210,15 @@
     padding: 15px;
     background-color: black;
     color: white;
-
 }
 #contenedorPokemon{
-    
     display: flex;
     flex-wrap: wrap; 
     text-align: center;
     justify-content: space-around;
     font-size: 21px;
 }
-.lista-ordenado{
 
-}
 .fondo-poke{
     background-color: rgb(300, 300, 300, .2);
     margin-top: 20px;
@@ -284,6 +291,29 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+.fondo-poke{
+    margin-top: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    border-radius: 28px;
+}
+.nombre-poke {
+    font-weight: bold;
+    font-family: Cambria;
+    font-size: 10px;
+    transition: height 0.2s ease-out;
+}
+.num-poke{
+    font-weight: bold;
+    font-family: Cambria;
+    font-size: 10px;
+    transition: height 0.2s ease-out;
+}
+};
+
     /*PANTALLA DE BLOQUEO:*/
 .imagen-bloqueo{
       width: 50%;
@@ -320,7 +350,7 @@
            height: 6%;
          }
        }
-       /*responsive pantalla.... */
+       /*responsive pantalla Inicio*/
        @media screen and (max-width: 600px) {
         .menu > li{
             transform: scale(0.6);
