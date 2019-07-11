@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
 }
+
 /*HEADER:*/
 /*Menú de Navegación:*/
 .navegacion{
 	background: rgb(14, 13, 13); 
 }
+
 .navegacion ul{
 	list-style: none;
 }
@@ -64,7 +66,6 @@
 .usuario{
     margin-left: 20%
 }
-
 
 /*PANTALLA 1:*/
 .contenedor{
@@ -132,23 +133,6 @@
     margin-bottom: 5%;
 }
 
-@media screen and (max-width: 600px) {
- .contenido{
-    background: #b5c0c2ad;
-    height: 80vh;
-    margin-top: 3%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;    
-  }
-  .contenedor{
-    margin-top: 3%;
-    margin:0;
-  }
-  .button{
-    height: 6%;
-  }
-}
 
 /*PANTALLA 2:*/
 .pantalla-inicio{
@@ -184,38 +168,9 @@
     margin: 5%;
 }
 
-@media screen and (max-width: 600px) {
-.menu > li{
-	transform: scale(0.6);
-}
-.imagenMenu{
-    margin-left:60%;
-    margin-top: 5%;
-}
-.usuario{
-    margin-left: 5%
-}
-.imagen-inicio{
- margin-top: -20%;
- transform: scale(0.6);
- padding: 0;
- }
-#pantalla-inicio{
-    flex-direction: column;
-}
- .inicio>h1{
-    display: flex;
-    justify-content: center;
-  }
-  .titulo{
-    font-size: 25px;
-    text-align: center;
-    margin: 2%;
-   }
-   .texto-inicial{
-    font-size: 15px;
-    margin: 3%;
-   }
+
+.ocultar{
+    display: none; 
 }
 
 /*Pantalla 3:*/
@@ -237,6 +192,15 @@
     font-size: 50%;
 }
 
+.debilidades-pokemon .tipos-pokemon{
+    font-size: 20px;
+    display: flex;
+    font-weight: bold;
+    padding: 15px;
+    background-color: black;
+    color: white;
+
+}
 #contenedorPokemon{
     
     display: flex;
@@ -278,7 +242,7 @@
 }
 
     /* El Modal  */
-    .modal{
+.modal{
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -287,10 +251,10 @@
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
-    }
+ }
   
      /* Contenido de modal */
-    .modal-content {
+.modal-content {
     background-color: black;
     margin: 15% auto;
     padding: 20px;
@@ -304,29 +268,29 @@
     font-size: 16px;
     justify-content: center;
     text-align: center;
-    }   
-    .imageModal{
+}   
+.imageModal{
       height: 80%;
       width: 80%;
-    }
+}
     /*cerrar modal */
-    .close {
+.close {
     display:flex;
     font-size: 35px;
-    }
-    .close:hover,
-    .close:focus {
+}
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-    }
+}
     /*PANTALLA DE BLOQUEO:*/
-    .imagen-bloqueo{
+.imagen-bloqueo{
       width: 50%;
       height: auto;
-    }
+ }
     /*FOOTER:*/
-    .footer {
+ .footer {
     background-size: cover;
     background-color: black;
     background-repeat:no-repeat;
@@ -337,8 +301,57 @@
     text-align: center;
     color:white;
     padding: 7px;
-    }
-
-    .ocultar{
-        display: none; 
-    }
+}
+    /*responsive login*/
+    @media screen and (max-width: 600px) {
+        .contenido{
+           background: #b5c0c2ad;
+           height: 80vh;
+           margin-top: 3%;
+           margin-left: 5%;
+           margin-right: 5%;
+           margin-bottom: 5%;    
+         }
+         .contenedor{
+           margin-top: 3%;
+           margin:0;
+         }
+         .button{
+           height: 6%;
+         }
+       }
+       /*responsive pantalla.... */
+       @media screen and (max-width: 600px) {
+        .menu > li{
+            transform: scale(0.6);
+        }
+        .imagenMenu{
+            margin-left:60%;
+            margin-top: 5%;
+        }
+        .usuario{
+            margin-left: 5%
+        }
+        .imagen-inicio{
+         margin-top: -20%;
+         transform: scale(0.6);
+         padding: 0;
+         }
+        #pantalla-inicio{
+            flex-direction: column;
+        }
+         .inicio>h1{
+            display: flex;
+            justify-content: center;
+          }
+          .titulo{
+            font-size: 25px;
+            text-align: center;
+            margin: 2%;
+           }
+           .texto-inicial{
+            font-size: 15px;
+            margin: 3%;
+           }
+        }
+        

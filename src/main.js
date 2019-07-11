@@ -1,5 +1,5 @@
 /* Manejo del DOM */
-//variables
+//Declarando variables
 const obtenerClick = document.getElementById("boton-ingresar");
 const capturarContraseña = document.getElementById("input-contraseña");
 const capturarUsuario = document.getElementById("input-usuario");
@@ -109,7 +109,7 @@ document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" +
 
 //Modal
 const contenedorPokecito = document.getElementById('contenedorPokemon');
-/* al contenedor le agrego un evento clik*/
+/* al contenedor le agrego un evento click*/
 contenedorPokecito.addEventListener('click', () => {
   const pokecito = event.target.parentElement.id - 1;
   console.log(pokecito);
@@ -153,8 +153,7 @@ ordenar.addEventListener('change', () => {
 }
 );
 
-
-//debilidades pokemon 
+//Filtrar Debilidades pokemon 
 const debilidades = document.getElementById('debilidades');
 let debilidadesPoke = [];
 console.log(debilidades);
@@ -228,4 +227,30 @@ debilidades.addEventListener('change', () => {
   }
 });
 
+const calculoEgg = document.getElementById('eclosion');
+let eggPoke1 = [];
+console.log(calculoEgg);
+calculoEgg.addEventListener('change', () => {
+  let seleccionar = calculoEgg.value;
+  console.log(seleccionar);
+  if (seleccionar === '2 km') {
+    eggPoke1 = eggPoke(allPokemon, seleccionar);
+    console.log(eggPoke1);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(eggPoke1);
+    document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+  }else if  (seleccionar === '5 km'){ 
+    eggPoke1 = eggPoke(allPokemon, seleccionar);
+    console.log(eggPoke1);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(eggPoke1);
+    document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
 
+  }else if  (seleccionar === '10 km'){ 
+      eggPoke1 = eggPoke(allPokemon, seleccionar);
+      console.log(eggPoke1);
+      contenedorPokemon.innerHTML = null;
+      contenedorPokemon.innerHTML = mostrarData(eggPoke1);
+      document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+  }
+});

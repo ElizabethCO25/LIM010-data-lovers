@@ -4,7 +4,7 @@
 // puedes ver como agregamos la función a nuestro objeto global window
 
 const dataPoker = () => {
-  const vacio = []; //arreglo vacìo
+  const vacio = [];
   for (let i = 0; i < allPokemon.length; i++) {
     vacio.push({
       'img': allPokemon[i].img,
@@ -70,10 +70,16 @@ const filtrarDebil = (data, debilidad) => {
   return arrayDebilidad;
 };
 
+const eggPoke = (data, eclosion)=>{
+  let arrayEgg=[];
+  arrayEgg= data.filter(poke=>(poke.egg===eclosion));
+return arrayEgg;
+}
 
-window.ordenadorAZ = ordenadorAZ;
 window.dataPoker = dataPoker;
+window.ordenadorAZ = ordenadorAZ;
 window.filtrarDebil = filtrarDebil;
+window.eggPoke = eggPoke;
 
 
 
