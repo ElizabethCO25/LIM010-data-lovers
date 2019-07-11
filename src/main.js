@@ -194,26 +194,31 @@ debilidades.addEventListener('change', () => {
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
   }
 });
-// porcentaje 
-// const calculoEgg = document.getElementById('eclosion');
-// calculoEgg.addEventListener('click', (event) => {
-//   let seleccionar = calculoEgg.value;
-
-//   document.getElementById('respuestas').innerHTML = (porcentajePoke(allPokemon, event.target.getAttribute('value')))});
-//   console.log(calculoEgg);
 
 const calculoEgg = document.getElementById('eclosion');
-let eggPoke = [];
+let eggPoke1 = [];
 console.log(calculoEgg);
 calculoEgg.addEventListener('change', () => {
   let seleccionar = calculoEgg.value;
   console.log(seleccionar);
   if (seleccionar === '2 km') {
-    eggPoke = porcentajePoke(allPokemon, seleccionar);
-    console.log(eggPoke);
+    eggPoke1 = eggPoke(allPokemon, seleccionar);
+    console.log(eggPoke1);
     contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(eggPoke);
-    document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en :' + eclosion + ' es: ' + ((eggPoke.length) / 151 * 100).toFixed(2).bold() + '%';
+    contenedorPokemon.innerHTML = mostrarData(eggPoke1);
+    document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+  }else if  (seleccionar === '5 km'){ 
+    eggPoke1 = eggPoke(allPokemon, seleccionar);
+    console.log(eggPoke1);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(eggPoke1);
+    document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+
+  }else if  (seleccionar === '10 km'){ 
+      eggPoke1 = eggPoke(allPokemon, seleccionar);
+      console.log(eggPoke1);
+      contenedorPokemon.innerHTML = null;
+      contenedorPokemon.innerHTML = mostrarData(eggPoke1);
+      document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
   }
-  console.log(eggPoke);
 });

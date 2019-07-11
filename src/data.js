@@ -27,23 +27,17 @@ const filtrarDebil = (data, debilidad) => {
   }
   return arrayDebilidad;
 };
-const porcentajePoke = (data, eclosion) => {
-  let arrayPorcentaje = [];
 
-  for (let i = 0; i < data.length; i++) {
-    for (let x = 0; x < data[i].egg.length; x++) {
-      if (data[i].egg[x] === eclosion) {
-        arrayPorcentaje.push(data[i].egg[x]);
-      }
-    }
-  }
-  return arrayPorcentaje;
-};
-
+const eggPoke = (data, eclosion)=>{
+  let arrayEgg=[];
+  arrayEgg= data.filter(poke=>(poke.egg===eclosion));
+return arrayEgg;
+}
 
 window.dataPoker = dataPoker;
 window.filtrarDebil = filtrarDebil;
-window.porcentajePoke = porcentajePoke;
+window.eggPoke = eggPoke;
+
 
 
 
