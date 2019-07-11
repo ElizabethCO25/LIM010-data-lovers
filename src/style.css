@@ -76,7 +76,7 @@
 }
 
 .contenido{
-    background: #171c1dad;
+    background: #b3b5b8ad;
     height: 80vh;
     margin-top: 3%;
     margin-left: 35%;
@@ -135,7 +135,7 @@
 
 
 /*PANTALLA 2:*/
-#pantalla-inicio{
+.pantalla-inicio{
     background-image: url(../Imagenes/fondoinicio.jpg);
     background-size: cover;
     color: white;
@@ -174,9 +174,13 @@
 }
 
 /*Pantalla 3:*/
+.fondo-contenedor{
+    background: rgb(181, 233, 224);
+}
 .filtro-atrapado{
     font-size: 20px;
     text-align: center;
+    
 }
 .centrar{
     text-align: center;
@@ -198,12 +202,15 @@
 
 }
 #contenedorPokemon{
-    background: rgb(181, 233, 224);
+    
     display: flex;
     flex-wrap: wrap; 
     text-align: center;
     justify-content: space-around;
     font-size: 21px;
+}
+.lista-ordenado{
+
 }
 .fondo-poke{
     background-color: rgb(300, 300, 300, .2);

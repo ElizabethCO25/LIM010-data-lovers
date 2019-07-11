@@ -16,6 +16,48 @@ const dataPoker = () => {
   return vacio;
 };
 
+//FUNCIÓN PARA ORDENAR ALFABETICAMENTE:
+const ordenadorAZ = (data, ordenNombre) => {
+  const arrayNombre = data.slice().sort((a,b) => {
+    if (a.name > b.name) {
+      return 1;
+    }
+      if (a.name > b.name) {
+        return -1;
+      }
+      return 0;
+  });
+  if (ordenNombre === 'ordenar-az'){
+    return arrayNombre;
+  }
+  if (ordenNombre === 'ordenar-za'){
+    return arrayNombre.reverse();
+  }
+  return 0;
+};
+
+//FUNCIÓN PARA ORDENAR POR SPAWNS:
+const ordenadorSpaws = (data, ordenNombre) => {
+  const arraySpawns = data.slice().sort((a,b) => {
+    if (a.avg_spawns > b.avg_spawns) {
+      return 1;
+    }
+      if (a.avg_spawns < b.avg_spawns) {
+        return -1;
+      }
+      return 0;
+  });
+  if (ordenNombre === 'asc'){
+    return arraySpawns;
+  }
+  if (ordenNombre === 'des'){
+    return arraySpawns.reverse();
+  }
+  return 0;
+};
+
+
+
 const filtrarDebil = (data, debilidad) => {
   let arrayDebilidad = [];
   for (let i = 0; i < data.length; i++) {
@@ -35,6 +77,7 @@ return arrayEgg;
 }
 
 window.dataPoker = dataPoker;
+window.ordenadorAZ = ordenadorAZ;
 window.filtrarDebil = filtrarDebil;
 window.eggPoke = eggPoke;
 
