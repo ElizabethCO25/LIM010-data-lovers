@@ -75,18 +75,6 @@
       <p class="ocultar atrapados filtro-atrapado" id="atrapados"></p>
       <p class="ocultar no-atrapados filtro-atrapado" id="No-atrapados"></p>
       <p id="porcentaje"></p>
-      <!--Incubadora-->
-      <div>
-        <select id="eclosion" class="incubadora-pokemon">
-          <option value="">Eclosion de huevos</option>
-          <option value="2 km">2km</option>
-          <option value="5 km">5km</option>
-          <option value="10 km">10km</option>
-        </select>
-      </div>
-      <div>
-        <div id="porcentaje"></div>
-      </div>
 
       <!--Listado de pokemones por tipos-->
       <div>
@@ -111,7 +99,8 @@
       </div>
       <!--Listado de pokemones por debilidad-->
       <div id="lista-debilidades">
-        <select id="debilidades" class="debilidades-pokemon">
+        <p> Debilidades: </p>
+        <select class="debilidades-pokemon opciones">
           <option>Debilidades</option>
           <option value="Fire">Fuego</option>
           <option value="Ice">Hielo</option>
@@ -138,16 +127,31 @@
       <!--Listado de posibilidades de orden-->
       <div id="lista-ordenamiento" class="ocultar">
         <p> Ordenar por: </p>
-        <select id="ordenar">
+        <select id="ordenar" class="opciones">
           <option value="ordenar-az">Alfabeto: De A-Z</option>
           <option value="ordenar-za">Alfabeto: De Z-A</option>
           <option value="asc">Spawns: Ascendente</option>
           <option value="des">Spawns: Descendente</option>
         </select>
       </div>
-      <div id="contenedorPokemon"></div>
+
+      <!--Incubadora-->
+      <div id="lista-incubadora" class="incubadora-pokemon">
+        <p> Eclosión de huevos: </p>
+        <select id="eclosion" class="opciones" >
+          <option value="2 km">2km</option>
+          <option value="5 km">5km</option>
+          <option value="10 km">10km</option>
+        </select>
+      </div>
+      <div>
+        <div id="porcentaje"></div>
+      </div>
+      <div id="contenedorPokemon" class="contenedorPoke" ></div>
+
 
       <!-- The Modal -->
+      
       <div id="my-modal" class="modal ocultar">
         <!-- Modal content -->
         <div class="modal-content">
