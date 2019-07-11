@@ -138,20 +138,31 @@ const ordenar = document.getElementById('ordenar');
 ordenar.addEventListener('change', () => {
   let ordenador = ordenar.value;
   let ordenadorPoke = [];
-  if (ordenador === 'ordenar-az'){
+  if (ordenador === 'ordenar-az') {
     ordenadorPoke = ordenadorAZ(allPokemon, ordenador);
-  } else if (ordenador === 'ordenar-za'){
+  } else if (ordenador === 'ordenar-za') {
     ordenadorPoke = ordenadorAZ(allPokemon, ordenador);
-  } else if (ordenador === 'asc'){
+  } else if (ordenador === 'asc') {
     ordenadorPoke = ordenadorSpaws(allPokemon, ordenador);
-  } else if (ordenador === 'des'){
+  } else if (ordenador === 'des') {
     ordenadorPoke = ordenadorSpaws(allPokemon, ordenador);
   } else {
     contenedorPokemon.innerHTML = mostrarData(allPokemon);
   }
-    contenedorPokemon.innerHTML = mostrarData(ordenadorPoke);
+  contenedorPokemon.innerHTML = mostrarData(ordenadorPoke);
 }
 );
+//filtrar tipos pokemon
+const tipos = document.getElementById('tipos');
+let tiposPoke =[];
+tipos.addEventListener('change',()=>{
+  let seleccionar= tipos.value;
+  if(seleccionar=== 'Grass'){
+    tiposPoke = filtrarTipo(allPokemon,seleccionar);
+    contenedorPokemon.innerHTML =null;
+    contenedorPokemon.innerHTML =mostrarData(tiposPoke);
+  }
+})
 
 //Filtrar Debilidades pokemon 
 const debilidades = document.getElementById('debilidades');
@@ -235,22 +246,19 @@ calculoEgg.addEventListener('change', () => {
   console.log(seleccionar);
   if (seleccionar === '2 km') {
     eggPoke1 = eggPoke(allPokemon, seleccionar);
-    console.log(eggPoke1);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-    document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
-  }else if  (seleccionar === '5 km'){ 
+    document.getElementById('porcentaje').innerHTML = 'el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+  } else if (seleccionar === '5 km') {
     eggPoke1 = eggPoke(allPokemon, seleccionar);
-    console.log(eggPoke1);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-    document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+    document.getElementById('porcentaje').innerHTML = 'el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
 
-  }else if  (seleccionar === '10 km'){ 
-      eggPoke1 = eggPoke(allPokemon, seleccionar);
-      console.log(eggPoke1);
-      contenedorPokemon.innerHTML = null;
-      contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-      document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+  } else if (seleccionar === '10 km') {
+    eggPoke1 = eggPoke(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(eggPoke1);
+    document.getElementById('porcentaje').innerHTML = 'el porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
   }
 });

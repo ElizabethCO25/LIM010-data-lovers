@@ -18,19 +18,19 @@ const dataPoker = () => {
 
 //FUNCIÓN PARA ORDENAR ALFABETICAMENTE:
 const ordenadorAZ = (data, ordenNombre) => {
-  const arrayNombre = data.slice().sort((a,b) => {
+  const arrayNombre = data.slice().sort((a, b) => {
     if (a.name > b.name) {
       return 1;
     }
-      if (a.name > b.name) {
-        return -1;
-      }
-      return 0;
+    if (a.name > b.name) {
+      return -1;
+    }
+    return 0;
   });
-  if (ordenNombre === 'ordenar-az'){
+  if (ordenNombre === 'ordenar-az') {
     return arrayNombre;
   }
-  if (ordenNombre === 'ordenar-za'){
+  if (ordenNombre === 'ordenar-za') {
     return arrayNombre.reverse();
   }
   return 0;
@@ -38,25 +38,35 @@ const ordenadorAZ = (data, ordenNombre) => {
 
 //FUNCIÓN PARA ORDENAR POR SPAWNS:
 const ordenadorSpaws = (data, ordenNombre) => {
-  const arraySpawns = data.slice().sort((a,b) => {
+  const arraySpawns = data.slice().sort((a, b) => {
     if (a.avg_spawns > b.avg_spawns) {
       return 1;
     }
-      if (a.avg_spawns < b.avg_spawns) {
-        return -1;
-      }
-      return 0;
+    if (a.avg_spawns < b.avg_spawns) {
+      return -1;
+    }
+    return 0;
   });
-  if (ordenNombre === 'asc'){
+  if (ordenNombre === 'asc') {
     return arraySpawns;
   }
-  if (ordenNombre === 'des'){
+  if (ordenNombre === 'des') {
     return arraySpawns.reverse();
   }
   return 0;
 };
 
-
+const filtrarTipo = (data, tipo) => {
+  let arrayTipos = [];
+  for (let i = 0; i < data.length; i++) {
+    for (let x = 0; x < data[i].type.length; x++) {
+      if (data[i].type[x] === tipo) {
+        arrayTipos.push(data[i]);
+      }
+    }
+  }
+  return arrayTipos;
+};
 
 const filtrarDebil = (data, debilidad) => {
   let arrayDebilidad = [];
@@ -70,14 +80,15 @@ const filtrarDebil = (data, debilidad) => {
   return arrayDebilidad;
 };
 
-const eggPoke = (data, eclosion)=>{
-  let arrayEgg=[];
-  arrayEgg= data.filter(poke=>(poke.egg===eclosion));
-return arrayEgg;
+const eggPoke = (data, eclosion) => {
+  let arrayEgg = [];
+  arrayEgg = data.filter(poke => (poke.egg === eclosion));
+  return arrayEgg;
 }
 
 window.dataPoker = dataPoker;
 window.ordenadorAZ = ordenadorAZ;
+window.filtrarTipo = filtrarTipo;
 window.filtrarDebil = filtrarDebil;
 window.eggPoke = eggPoke;
 
