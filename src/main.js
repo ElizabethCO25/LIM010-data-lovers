@@ -98,7 +98,7 @@ document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " +
 document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
 //Modal
 const contenedorPokecito = document.getElementById('contenedorPokemon');
-/* al contenedor le agrego un evento clik*/
+/* al contenedor le agrego un evento click*/
 contenedorPokecito.addEventListener('click', () => {
   const pokecito = event.target.parentElement.id - 1;
   console.log(pokecito);
@@ -121,14 +121,7 @@ document.getElementById('close').addEventListener('click', () => {
   document.getElementById('my-modal').classList.add('ocultar');
 });
 
-//Pantalla 3:
-// Ordenando de la A-Z:
-const clickOrdenarAZ = document.getElementById("ordenar-az");
-clickOrdenarAZ.addEventListener("click", () => {
-  document.getElementById("orden-AZ").value = ordenadorAZ();
-});
-
-//debilidades pokemon 
+//Filtrar Debilidades pokemon 
 const debilidades = document.getElementById('debilidades');
 let debilidadesPoke = [];
 console.log(debilidades);
@@ -201,5 +194,37 @@ debilidades.addEventListener('change', () => {
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
   }
 });
+// porcentaje 
+// const calculoEgg = document.getElementById('eclosion');
+// calculoEgg.addEventListener('click', (event) => {
+//   let seleccionar = calculoEgg.value;
 
+//   document.getElementById('respuestas').innerHTML = (porcentajePoke(allPokemon, event.target.getAttribute('value')))});
+//   console.log(calculoEgg);
 
+const calculoEgg = document.getElementById('eclosion');
+let eggPoke = [];
+console.log(calculoEgg);
+calculoEgg.addEventListener('change', () => {
+  let seleccionar = calculoEgg.value;
+  console.log(seleccionar);
+  if (seleccionar === '2 km') {
+    eggPoke = porcentajePoke(allPokemon, seleccionar);
+    console.log(eggPoke);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(eggPoke);
+    document.getElementById('porcentaje').innerHTML ='el porcentaje de los pokemones  en :' + eclosion + ' es: ' + ((eggPoke.length) / 151 * 100).toFixed(2).bold() + '%';
+  }
+  console.log(eggPoke);
+});
+    
+const debilidades = document.getElementById('debilidades');
+let debilidadesPoke = [];
+console.log(debilidades);
+debilidades.addEventListener('change', () => {
+  let seleccionar = debilidades.value;
+  if (seleccionar === 'Steel') {
+    debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
+    console.log(debilidadesPoke);

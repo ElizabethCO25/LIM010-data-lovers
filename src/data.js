@@ -4,7 +4,7 @@
 // puedes ver como agregamos la función a nuestro objeto global window
 
 const dataPoker = () => {
-  const vacio = []; //arreglo vacìo
+  const vacio = [];
   for (let i = 0; i < allPokemon.length; i++) {
     vacio.push({
       'img': allPokemon[i].img,
@@ -27,17 +27,24 @@ const filtrarDebil = (data, debilidad) => {
   }
   return arrayDebilidad;
 };
+const porcentajePoke = (data, eclosion) => {
+  let arrayPorcentaje = [];
+
+  for (let i = 0; i < data.length; i++) {
+    for (let x = 0; x < data[i].egg.length; x++) {
+      if (data[i].egg[x] === eclosion) {
+        arrayPorcentaje.push(data[i].egg[x]);
+      }
+    }
+  }
+  console.log(arrayPorcentaje);
+  return arrayPorcentaje;
+};
+
 
 window.dataPoker = dataPoker;
 window.filtrarDebil = filtrarDebil;
+window.porcentajePoke = porcentajePoke;
 
 
 
-// ordenadorAZ: () => {
-// const nombres= POKEMON.pokemon;
-// const listaAZ = [];
-// for(let i = 0; i< nombres.length; i++)
-//   listaAZ.push(POKEMON.pokemon[i].name);
-
-//   console.log(listaAZ.soft());
-// };

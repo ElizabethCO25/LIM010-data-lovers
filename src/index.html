@@ -33,8 +33,6 @@
         <li id="filtrar">
           <img class="imagenMenu" src="../Imagenes/filtrar.png" alt="Filtr-sobre-opción-filtrar"> <a
             href="#">FILTRAR</a>
-          <ul class="submenu">
-          </ul>
         <li id="incubadora"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
             alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a>
         </li>
@@ -76,14 +74,39 @@
 
     <!-- Pantalla 3:-->
     <div id="pantalla-pokedex" class="ocultar">
-      <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
+      <!-- Aquí se va mostrar imagen, nombre y número de pokemon
       <div id="orden-AZ">
-      </div>
+      </div> -->
       <p class="atrapados filtro-atrapado" id="atrapados"></p>
       <p class="no-atrapados filtro-atrapado" id="No-atrapados"></p>
+      <p id="porcentaje"></p>
+      <!--Incubadora-->
+      <div>
+          <select id="Eclosion" class="incubadora-pokemon"  id="">
+              <option value="">Eclosion de huevos</option>
+              <option value="2 km">2km</option>
+              <option value="5 km">5km</option>
+              <option value="10 km">10km</option>
+            </select>
 
+       
+      </div>
+      <div>
+        <div id="porcentaje">
+        </div>
+      </div>
+
+      <!-- <div>
+        <select id="huevos" class="incubadora-pokemon"  id="">
+          <option value="">Eclosion de huevos</option>
+          <option value="2km">2 km</option>
+          <option value="5km">5 km</option>
+          <option value="10km">10 km</option>
+        </select>
+
+      </div>  -->
       <!--Listado de pokemones por debilidad-->
-      <div   id="lista-debilidades pantalla-filtrar">
+      <div id="lista-debilidades pantalla-filtrar">
         <select id="debilidades" class="debilidades-pokemon">
           <option>Debilidades</option>
           <option value="Steel">Acero</option>
@@ -104,6 +127,7 @@
           <option value="Flying">Volador</option>
         </select>
       </div>
+
       <div id="contenedorPokemon"></div>
       <!-- The Modal -->
       <div id="my-modal" class="modal ocultar">
@@ -114,10 +138,6 @@
         </div>
       </div>
     </div>
-    
-
-
-
 
     <!-- Pantalla de Bloqueo:-->
     <div class="ocultar" id="pantalla-bloqueo">
