@@ -66,7 +66,7 @@ const filtrarTipo = (data, tipo) => {
 const filtrarDebil = (data, debilidad) => {
   let arrayDebilidad = [];
   for (let i = 0; i < data.length; i++) {
-    for (let x = 0; x < data[i].weaknesses.length; x++) {
+    for (let x = 0; x < data[i].weaknesses.length; x++) { rl
       if (data[i].weaknesses[x] === debilidad) {
         arrayDebilidad.push(data[i]);
       }
