@@ -1,27 +1,28 @@
-  /* Manejo del DOM */
-  //Declarando variables
-  const obtenerClick = document.getElementById("boton-ingresar");
-  const capturarContraseña = document.getElementById("input-contraseña");
-  const capturarUsuario = document.getElementById("input-usuario");
-  const allPokemon = POKEMON.pokemon;
-  let cuenta = 2;
-  obtenerClick.addEventListener("click", () => {
-    if (capturarContraseña.value === "1" && capturarUsuario.value === "1") {
-      document.getElementById("pantalla-inicio").classList.remove("ocultar");
-      document.getElementById("header").classList.remove("ocultar");
-      document.getElementById("pantalla-login").classList.add("ocultar");
-      capturarContraseña.value = "";
-      capturarUsuario.value = "";
-    } else if (cuenta === 0) {
-      document.getElementById("pantalla-bloqueo").classList.remove("ocultar");
-      document.getElementById("pantalla-login").classList.add("ocultar");
-      capturarContraseña.value = "";
-    } else {
-      document.getElementById("incorrecto").innerHTML = "Contraseña o usuario incorrecto,intenta otra vez";
-      capturarContraseña.value = "";
-      cuenta--;
-    }
-  });
+/* Manejo del DOM */
+//Declarando variables
+const obtenerClick = document.getElementById('boton-ingresar');
+const capturarContraseña = document.getElementById('input-contraseña');
+const capturarUsuario = document.getElementById('input-usuario');
+const allPokemon = POKEMON.pokemon;
+let cuenta = 2;
+//
+obtenerClick.addEventListener("click", () => {
+  if (capturarContraseña.value === "1" && capturarUsuario.value === "1") {
+    document.getElementById("pantalla-inicio").classList.remove("ocultar");
+    document.getElementById("header").classList.remove("ocultar");
+    document.getElementById("pantalla-login").classList.add("ocultar");
+    capturarContraseña.value = "";
+    capturarUsuario.value = "";
+  } else if (cuenta === 0) {
+    document.getElementById("pantalla-bloqueo").classList.remove("ocultar");
+    document.getElementById("pantalla-login").classList.add("ocultar");
+    capturarContraseña.value = "";
+  } else {
+    document.getElementById("incorrecto").innerHTML = "Contraseña o usuario incorrecto,intenta otra vez";
+    capturarContraseña.value = "";
+    cuenta--;
+  }
+});
 
 //Función ENTER:
 let enterIniciar = document.getElementById("input-contraseña");
@@ -109,7 +110,7 @@ const mostrarData = (pokemon) => { //parámetro
 }
 contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
 
-//Identificar pokemones No atrapados
+//Identificar pokemones No atrapados y Atrapados:
 let contadorNoatrapado = 0;
 let contadorAtrapado = 0;
 //recorriendo todo el array
@@ -128,18 +129,17 @@ const contenedorPokecito = document.getElementById('contenedorPokemon');
 /* al contenedor le agrego un evento click*/
 contenedorPokecito.addEventListener('click', () => {
   const pokecito = event.target.parentElement.id - 1;
-  console.log(pokecito);
-  /* Pongo condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
+/* Coloco condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
   if (event.target.parentElement.getAttribute('name') === 'pokemon') {
     /* Muestra modal*/
     document.getElementById('my-modal').classList.remove('ocultar');
-    /* Insertar info de pokemon en Modal*/
+    /* Insertar caracterìsticas  de pokemon en Modal*/
     document.getElementById('caracteristicas').innerHTML = `
-<img class="imagenModal" src="${allPokemon[pokecito].img}"/>
-<p> Nombre:${allPokemon[pokecito].name}</p>
-<p>Peso: ${allPokemon[pokecito].weight}</p> 
-<p>Altura: ${allPokemon[pokecito].height}</p>    
-<p>Tipo: ${allPokemon[pokecito].type}</p> `;
+      <img class="imagenModal" src="${allPokemon[pokecito].img}"/>
+      <p> Nombre:${allPokemon[pokecito].name}</p>
+      <p>Peso: ${allPokemon[pokecito].weight}</p> 
+      <p>Altura: ${allPokemon[pokecito].height}</p>    
+      <p>Tipo: ${allPokemon[pokecito].type}</p> `;
   }
 });
 
@@ -168,7 +168,7 @@ ordenar.addEventListener('change', () => {
   contenedorPokemon.innerHTML = mostrarData(ordenadorPoke);
 }
 );
-//filtrar tipos pokemon
+//filtrar tipos pokemon:
 const tipos = document.getElementById('tipos');
 let tiposPoke = [];
 tipos.addEventListener('change', () => {
@@ -177,59 +177,59 @@ tipos.addEventListener('change', () => {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }else if (seleccionar === 'Poison') {
+  } else if (seleccionar === 'Poison') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Fire') {
+  } if (seleccionar === 'Fire') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Flying') {
+  } if (seleccionar === 'Flying') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Water') {
+  } if (seleccionar === 'Water') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Bug') {
+  } if (seleccionar === 'Bug') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Normal') {
+  } if (seleccionar === 'Normal') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Electric') {
+  } if (seleccionar === 'Electric') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Ground') {
+  } if (seleccionar === 'Ground') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Fighting') {
+  } if (seleccionar === 'Fighting') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Psychic') {
+  } if (seleccionar === 'Psychic') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Ghost') {
+  } if (seleccionar === 'Ghost') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Rock') {
+  } if (seleccionar === 'Rock') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Ice') {
+  } if (seleccionar === 'Ice') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }if (seleccionar === 'Dragon') {
+  } if (seleccionar === 'Dragon') {
     tiposPoke = filtrarTipo(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(tiposPoke);
@@ -313,7 +313,7 @@ debilidades.addEventListener('change', () => {
     contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
   }
 });
-
+//Incubadora :
 const calculoEgg = document.getElementById('eclosion');
 let eggPoke1 = [];
 console.log(calculoEgg);
@@ -324,18 +324,17 @@ calculoEgg.addEventListener('change', () => {
     eggPoke1 = eggPoke(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-    document.getElementById('porcentaje').innerHTML ='El porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
-  }else if  (seleccionar === '5 km'){ 
+    document.getElementById('porcentaje').innerHTML = 'El porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+  } else if (seleccionar === '5 km') {
     eggPoke1 = eggPoke(allPokemon, seleccionar);
     contenedorPokemon.innerHTML = null;
     contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-    document.getElementById('porcentaje').innerHTML ='El porcentaje de los pokemones  en 5km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+    document.getElementById('porcentaje').innerHTML = 'El porcentaje de los pokemones  en 5km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
 
-  }else if  (seleccionar === '10 km'){ 
-      eggPoke1 = eggPoke(allPokemon, seleccionar);
-      console.log(eggPoke1);
-      contenedorPokemon.innerHTML = null;
-      contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-      document.getElementById('porcentaje').innerHTML ='El porcentaje de los pokemones  en 10km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
+  } else if (seleccionar === '10 km') {
+    eggPoke1 = eggPoke(allPokemon, seleccionar);
+    contenedorPokemon.innerHTML = null;
+    contenedorPokemon.innerHTML = mostrarData(eggPoke1);
+    document.getElementById('porcentaje').innerHTML = 'El porcentaje de los pokemones  en 10km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
   }
 });
