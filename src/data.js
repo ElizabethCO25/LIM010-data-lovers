@@ -1,8 +1,5 @@
 /* Manejo de data */
-
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
+//Funciòn para mostrar todos  pokemones:
 const dataPoker = () => {
   const vacio = [];
   for (let i = 0; i < allPokemon.length; i++) {
@@ -15,7 +12,6 @@ const dataPoker = () => {
   }
   return vacio;
 };
-
 //FUNCIÓN PARA ORDENAR ALFABETICAMENTE:
 const ordenadorAZ = (data, ordenNombre) => {
   const arrayNombre = data.slice().sort((a, b) => {
@@ -35,7 +31,6 @@ const ordenadorAZ = (data, ordenNombre) => {
   }
   return 0;
 };
-
 //FUNCIÓN PARA ORDENAR POR SPAWNS:
 const ordenadorSpaws = (data, ordenNombre) => {
   const arraySpawns = data.slice().sort((a, b) => {
@@ -55,7 +50,7 @@ const ordenadorSpaws = (data, ordenNombre) => {
   }
   return 0;
 };
-
+//Función para filtrar tipo de pokemones:
 const filtrarTipo = (data, tipo) => {
   let arrayTipos = [];
   for (let i = 0; i < data.length; i++) {
@@ -67,7 +62,7 @@ const filtrarTipo = (data, tipo) => {
   }
   return arrayTipos;
 };
-
+//Función para filtrar debilidades de pokemones:
 const filtrarDebil = (data, debilidad) => {
   let arrayDebilidad = [];
   for (let i = 0; i < data.length; i++) {
@@ -79,7 +74,7 @@ const filtrarDebil = (data, debilidad) => {
   }
   return arrayDebilidad;
 };
-
+//Función para mostrar eclosiòn de huevos por kilómetros , porcentajes:
 const eggPoke = (data, eclosion) => {
   let arrayEgg = [];
   arrayEgg = data.filter(poke => (poke.egg === eclosion));

@@ -4,7 +4,14 @@
 }
 
 /*HEADER:*/
+/* .header{
+    position: fixed;
+    width: 100%;
+} */
+
+
 /*Menú de Navegación:*/
+
 .navegacion{
 	background: rgb(14, 13, 13); 
 }
@@ -191,26 +198,8 @@
     font-family: Cambria;
     font-size: 50%;
 }
-.opciones{
-    width: 100 %;
-    font-family: sans-serif;
-	margin: 2%;
-	color: #999;
-    padding: 1%;
-    border-radius: 4px;
-    border: 1px solid rgb(248, 125, 54)
-     
-  
-    
-}
-.debilidades-pokemon .tipos-pokemon{
-    font-size: 20px;
-    display: flex;
-    font-weight: bold;
-    padding: 15px;
-    background-color: black;
-    color: white;
-}
+
+
 #contenedorPokemon{
     display: flex;
     flex-wrap: wrap; 
@@ -226,7 +215,7 @@
     width: auto;
     height: auto;
     border-radius: 28px;
-}
+} 
 .nombre-poke {
     font-weight: bold;
     font-family: Cambria;
@@ -245,8 +234,26 @@
     font-family: 'Times New Roman';
 }
 .zoom:hover{
-    background-color: rgb(226, 212, 199);
+    background-color: white;
 }
+/* .opciones-contenedor{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+} */
+.opciones{
+    width: auto;
+    background-color: black;
+    color: #d3a9a9;
+    font-family: sans-serif;
+	margin: 5px;
+    padding: 1%;
+    border-radius: 4px;
+    border: 1px solid rgb(248, 125, 54);
+    display: flex;
+    justify-content: center;
+}
+
 
     /* El Modal  */
 .modal{
@@ -259,6 +266,8 @@
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
  }
+ /*  */
+
   
      /* Contenido de modal */
 .modal-content {
@@ -266,14 +275,11 @@
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    height: 35%;
     width: 35%;
     color: white;
-    display: flex;
     border-radius: 17px;
     font-weight: bold;
     font-size: 16px;
-    justify-content: center;
     text-align: center;
 }   
 .imageModal{
@@ -282,12 +288,12 @@
 }
     /*cerrar modal */
 .close {
-    display:flex;
+    display: flex;
     font-size: 35px;
 }
 .close:hover,
 .close:focus {
-    color: black;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
@@ -306,7 +312,7 @@
     font-size: 10px;
     transition: height 0.2s ease-out;
 }
-.num-poke{
+.num-poke .nombre-poke{
     font-weight: bold;
     font-family: Cambria;
     font-size: 10px;
@@ -319,11 +325,7 @@
       width: 50%;
       height: auto;
  }
-.debilidades-pokemon{
-    padding: 15px;
-    background-color: black;
-    color: #d3a9a9;
-}
+
     /*FOOTER:*/
  .footer {
     background-size: cover;
@@ -390,3 +392,4 @@
            }
         }
         
+
