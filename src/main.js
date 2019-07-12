@@ -53,6 +53,7 @@ clickPokedex.addEventListener("click", () => {
   document.getElementById("lista-ordenamiento").classList.add("ocultar");
   document.getElementById("lista-incubadora").classList.add("ocultar");
   document.getElementById("header").classList.remove("ocultar");
+  document.getElementById("opciones-contenedor").classList.add("ocultar");
 });
 // Botón ORDENAR:
 const clickOrdenar = document.getElementById("orden");
@@ -65,6 +66,7 @@ clickOrdenar.addEventListener("click", () => {
   document.getElementById("lista-debilidades").classList.add("ocultar");
   document.getElementById("lista-incubadora").classList.add("ocultar");
   document.getElementById("header").classList.remove("ocultar");
+  document.getElementById("opciones-contenedor").classList.add("ocultar");
 });
 // Botón FILTRAR:
 const clickFiltrar = document.getElementById("filtrar");
@@ -74,6 +76,7 @@ clickFiltrar.addEventListener("click", () => {
   document.getElementById("No-atrapados").classList.add("ocultar");
   document.getElementById("lista-ordenamiento").classList.add("ocultar");
   document.getElementById("lista-debilidades").classList.remove("ocultar");
+  document.getElementById("opciones-contenedor").classList.remove("ocultar");
   document.getElementById("pantalla-inicio").classList.add("ocultar");
   document.getElementById("lista-incubadora").classList.add("ocultar");
   document.getElementById("header").classList.remove("ocultar");
@@ -89,6 +92,7 @@ clickIncubadora.addEventListener("click", () => {
   document.getElementById("pantalla-inicio").classList.add("ocultar");
   document.getElementById("lista-incubadora").classList.remove("ocultar");
   document.getElementById("header").classList.remove("ocultar");
+  document.getElementById("opciones-contenedor").classList.add("ocultar");
 });
 
 //mostrar pokemones
