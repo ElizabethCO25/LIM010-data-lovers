@@ -175,10 +175,15 @@ header nav ul li a:hover{
     height: auto;
     border-radius: 28px;
 } 
+
 .nombre-poke {
+    padding: 5px;
+    background-color:black;
+    color:white;
+    border-radius: 10px;
     font-weight: bold;
     font-family: Cambria;
-    font-size: 20px;
+    font-size: 18px;
     transition: height 0.2s ease-out;
 }
 .num-poke{
