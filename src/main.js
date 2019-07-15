@@ -4,6 +4,7 @@ const obtenerClick = document.getElementById('boton-ingresar');
 const capturarContraseña = document.getElementById('input-contraseña');
 const capturarUsuario = document.getElementById('input-usuario');
 const allPokemon = POKEMON.pokemon;
+
 let cuenta = 2;
 //
 obtenerClick.addEventListener("click", () => {
