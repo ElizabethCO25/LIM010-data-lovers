@@ -2,76 +2,35 @@
     margin: 0;
     padding: 0;
 }
-
-/*HEADER:*/
-/* .header{
-    position: fixed;
+header{
     width: 100%;
-} */
-
-
-/*Menú de Navegación:*/
-
-.navegacion{
-	background: rgb(14, 13, 13); 
 }
 
-.navegacion ul{
-	list-style: none;
+header nav{
+    width: 100%;
+    background:black;
 }
-.menu > li{
-	position: relative;
-	display: inline-block;
+.menu-bar{
+    display:none;
 }
-
-.menu > li > a{
-	display: block;
-	padding: 5px 30px;
-	color: #ffffff;
-	font-family: 'Open sans';
-	text-decoration: none;
+header nav ul {
+    overflow: hidden;
+    list-style: none;
 }
-
-.menu li a:hover{
-	color: #CE7D35;
-	transition: all .3s;
+header nav ul li{
+    float:left;
 }
-
-/* Submenu*/
-
-.submenu{
-	position: absolute;
-	background: #1b1b1adc;
-	width: 120%;
-	visibility: hidden;
-	transition: opacity 1.5s;
+header nav ul li a{
+    color:white;
+    padding:5px;
+    text-decoration: none;
+    display: block;
 }
-
-.submenu li a{
-	display: block;
-	padding: 110%;
-	color: #fff;
-	font-family: 'Open sans';
-	text-decoration: none;
+header nav ul li img{
+    margin-right: 10px;
 }
-
-.menu li{
-    width: 12%;
-    height: auto;
-}
-
-.menu li:hover .submenu{
-	visibility: visible;
-	opacity: 1;
-}
-
-.imagenMenu{
-    margin-left:25%;
-    margin-top: 5%;
-}
-
-.usuario{
-    margin-left: 20%
+header nav ul li a:hover{
+    background: #037E8C;
 }
 
 /*PANTALLA 1:*/
@@ -286,6 +245,12 @@
       height: 80%;
       width: 80%;
 }
+.nombrePokemodal{
+    padding: 5px;
+    background-color: rgb(200, 213, 236);
+    color: black;
+    border-radius: 15px;
+}
     /*cerrar modal */
 .close {
     display: flex;
@@ -356,40 +321,43 @@
          .button{
            height: 6%;
          }
-       }
-       /*responsive pantalla Inicio*/
-       @media screen and (max-width: 600px) {
-        .menu > li{
-            transform: scale(0.6);
-        }
-        .imagenMenu{
-            margin-left:60%;
-            margin-top: 5%;
-        }
-        .usuario{
-            margin-left: 5%
-        }
-        .imagen-inicio{
-         margin-top: -20%;
-         transform: scale(0.6);
-         padding: 0;
+       
+        /* responsive pantalla Inicio */
+         header nav{
+             width: 65%;
+             height: 70%;
+             margin:0;
+             position: fixed;
+             transform: translateX(-100%);
+             transition:all 0,3s;
          }
-        #pantalla-inicio{
-            flex-direction: column;
+         header nav ul li{
+             display:block;
+             float:none;
+             border-bottom: 1px solid rgba(255,255,255,.3);
+         }
+         .menu-bar{
+             display: block;
+             width: 100%;
+             background: black;
+         }
+         .menu-bar .boton-menu{
+             display: block;
+             padding: 20px;
+             background: black;
+             text-decoration: none;
+             color:white;
+             font-weight: bold;
+             font-size: 20px;
+         }
+         .menu-bar img{
+             float: right;
+             
+         }
+         .menucito:checked ~ .menu{
+             transform: translateX(0%);
+         }
+         
         }
-         .inicio>h1{
-            display: flex;
-            justify-content: center;
-          }
-          .titulo{
-            font-size: 25px;
-            text-align: center;
-            margin: 2%;
-           }
-           .texto-inicial{
-            font-size: 15px;
-            margin: 3%;
-           }
-        }
-        
+
 
