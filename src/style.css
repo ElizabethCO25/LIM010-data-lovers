@@ -106,7 +106,7 @@ header nav ul li a:hover{
     background-size: cover;
     color: white;
     display: flex;
-    height: 82vh;
+    height: 87vh;
 }
 
 .inicio{
@@ -291,19 +291,19 @@ header nav ul li a:hover{
 }
 
     /*PANTALLA DE BLOQUEO:*/
-    .bloqueo{
+    .bloqueo {
         background-image: url(../Imagenes/fondoBloqueo.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         display: flex;
         flex-direction: column;
-        height: 95vh;        
+        height: 95vh;
     }
     .mensaje-bloqueo{
-    margin: 20%;
-    font-size: 40px;
-    color: white;
+        margin: 20%;
+        font-size: 40px;
+        color: white;
     }
 
     /*FOOTER:*/
