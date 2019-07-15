@@ -58,15 +58,14 @@ const filtrarTipo = (data, tipo) => {
       if (data[i].type[x] === tipo) {
         arrayTipos.push(data[i]);
       }
-    }
-  }
+    }  }
   return arrayTipos;
 };
 //Función para filtrar debilidades de pokemones:
 const filtrarDebil = (data, debilidad) => {
   let arrayDebilidad = [];
   for (let i = 0; i < data.length; i++) {
-    for (let x = 0; x < data[i].weaknesses.length; x++) { rl
+    for (let x = 0; x < data[i].weaknesses.length; x++) { 
       if (data[i].weaknesses[x] === debilidad) {
         arrayDebilidad.push(data[i]);
       }

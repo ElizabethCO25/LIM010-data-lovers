@@ -17,9 +17,6 @@ header nav{
     background:black;
 }
 
-/* .menu-bar{
-    display:none;
-} */
 header nav ul {
     overflow: hidden;
     list-style: none;
@@ -57,7 +54,6 @@ header nav ul li a:hover{
     margin-bottom: 5%;
     
 }
-
 /*Objetos de la pantalla login*/
 .labels{
     margin-top: 5%;
@@ -105,8 +101,6 @@ header nav ul li a:hover{
     margin-left: 20%;
     margin-bottom: 5%;
 }
-
-
 /*PANTALLA 2:*/
 .pantalla-inicio{
     background-image: url(../Imagenes/fondoinicio.jpg);
@@ -137,7 +131,6 @@ header nav ul li a:hover{
     text-align: center;
     margin: 5%;
 }
-
 
 .ocultar{
     display: none; 
@@ -249,8 +242,6 @@ header nav ul li a:hover{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
  }
- /*  */
-
   
      /* Contenido de modal */
 .modal-content {
@@ -296,12 +287,8 @@ header nav ul li a:hover{
     border-radius: 28px;
     margin: 5px;
 }
-.nombre-poke {
-    font-weight: bold;
-    font-family: Cambria;
-    font-size: 10px;
-    transition: height 0.2s ease-out;
-}
+border-radius: 10px;
+
 .num-poke .nombre-poke{
     font-weight: bold;
     font-family: Cambria;
@@ -377,10 +364,10 @@ header nav ul li a:hover{
             margin: 3%;
            }
 
+    /*Responsive navegador */
         header label{
             display:block !important;
         }
-    
         .menucito{
             float: right;
         }
@@ -413,4 +400,9 @@ header nav ul li a:hover{
              font-weight: bold;
              font-size: 20px;
          }
+        }
+        /*contenedor pokemon*/
+        .nombre-poke {
+            border-radius: none;
+            font-size: 15px;
         }
