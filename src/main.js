@@ -173,73 +173,15 @@ ordenar.addEventListener('change', () => {
   contenedorPokemon.innerHTML = mostrarData(ordenadorPoke);
 }
 );
-//filtrar tipos pokemon:
+// //filtrar tipos pokemon:
 const tipos = document.getElementById('tipos');
+tipos.addEventListener('change', (event) => {
+const pintar = event.target.value;
 let tiposPoke = [];
-tipos.addEventListener('change', () => {
-  let seleccionar = tipos.value;
-  if (seleccionar === 'Grass') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } else if (seleccionar === 'Poison') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Fire') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Flying') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Water') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Bug') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Normal') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Electric') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Ground') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Fighting') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Psychic') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Ghost') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Rock') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Ice') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  } if (seleccionar === 'Dragon') {
-    tiposPoke = filtrarTipo(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(tiposPoke);
-  }
-})
+tiposPoke= filtrarTipo(allPokemon,pintar);
+contenedorPokemon.innerHTML= mostrarData(tiposPoke);
+});
+
 
 //Filtrar Debilidades pokemon 
 const debilidades = document.getElementById('debilidades');

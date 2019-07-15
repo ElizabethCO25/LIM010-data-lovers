@@ -85,7 +85,3 @@ window.ordenadorAZ = ordenadorAZ;
 window.filtrarTipo = filtrarTipo;
 window.filtrarDebil = filtrarDebil;
 window.eggPoke = eggPoke;
-
-
-
-

@@ -135,7 +135,6 @@ header nav ul li a:hover{
 .ocultar{
     display: none; 
 }
-
 /*Pantalla 3:*/
 .fondo-contenedor{
     /* background: rgb(181, 233, 224); 
@@ -202,11 +201,6 @@ header nav ul li a:hover{
 .zoom:hover{
     background-color: white;
 }
-/* .opciones-contenedor{
-    display:flex;
-    text-align: center;
-    justify-content: center;
-} */
 .opciones{
     width: auto;
     background-color: black;
@@ -219,10 +213,9 @@ header nav ul li a:hover{
     display: flex;
     justify-content: center;
 }
-
 .centrar-objeto{
     margin-left: auto;
-  margin-right: auto;
+    margin-right: auto;
 }
 
 .contenedor-opciones{
@@ -255,6 +248,7 @@ header nav ul li a:hover{
     font-weight: bold;
     font-size: 16px;
     text-align: center;
+    height: 280px;
 }   
 .imageModal{
       height: 80%;
@@ -262,9 +256,8 @@ header nav ul li a:hover{
 }
 .nombrePokemodal{
     padding: 5px;
-    background-color: rgb(200, 213, 236);
+    background-color: #eb8b32fa;
     color: black;
-    border-radius: 15px;
 }
     /*cerrar modal */
 .close {
