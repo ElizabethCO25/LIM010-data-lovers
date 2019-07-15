@@ -126,8 +126,8 @@ for (let i = 0; i < allPokemon.length; i++) {
     contadorAtrapado++
   }
 }
-document.getElementById('atrapados').innerHTML = "Pokemones Atrapados :" + " " + contadorAtrapado;
-document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados :" + " " + contadorNoatrapado;
+document.getElementById('atrapados').innerHTML =  "Pokemones Atrapados" + " " + contadorAtrapado;
+document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados" + " " + contadorNoatrapado;
 
 //Modal
 const contenedorPokecito = document.getElementById('contenedorPokemon');
