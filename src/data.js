@@ -35,7 +35,7 @@ const ordenadorAZ = (data, ordenNombre) => {
 const ordenadorSpaws = (data, ordenNombre) => {
   const arraySpawns = data.slice().sort((a, b) => {
     if (a.avg_spawns > b.avg_spawns) {
-      return 1;
+      return 1;  
     }
     if (a.avg_spawns < b.avg_spawns) {
       return -1;

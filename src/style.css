@@ -288,16 +288,26 @@ header nav ul li a:hover{
     font-size: 10px;
     transition: height 0.2s ease-out;
 }
-};
+}
 
     /*PANTALLA DE BLOQUEO:*/
-.imagen-bloqueo{
-      width: 50%;
-      height: auto;
- }
+    .bloqueo{
+        background-image: url(../Imagenes/fondoBloqueo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        height: 95vh;        
+    }
+    .mensaje-bloqueo{
+    margin: 20%;
+    font-size: 40px;
+    color: white;
+    }
 
     /*FOOTER:*/
- .footer {
+    .footer {
     background-size: cover;
     background-color: black;
     background-repeat:no-repeat;
@@ -307,7 +317,7 @@ header nav ul li a:hover{
     height: 100%;
     text-align: center;
     color:white;
-    padding: 7px;
+    padding: 2px;
 }
     /*responsive login*/
     @media screen and (max-width: 600px) {
