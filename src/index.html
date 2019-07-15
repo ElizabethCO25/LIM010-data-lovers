@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
@@ -11,30 +10,32 @@
 
 <body>
   <header id="header" class="ocultar header">
+    <div class="menu-bar"> 
+      <a href="#" class="boton-menu"><img class="menucito" src="...Imagenes/Usuario.png">MENU</a>
+    </div>
     <!-- Menú de navegación:-->
-    
     <nav class="navegacion" id="navegacion">
       <ul class="menu">
         <li id="inicio">
-          <img class="imagenMenu" src="../Imagenes/home.png" alt="Casa-sobre-opción-inicio"><a href="#">INICIO</a>
+          <a href="#"><img class="imagenMenu" src="../Imagenes/home.png" alt="Casa-sobre-opción-inicio">INICIO</a>
         </li>
         <li id="pokedex">
-          <img class="imagenMenu" src="../Imagenes/PKBol.png" alt="Pokebola-sobre-opción-pokedex"> <a
-            href="#">POKEDEX</a>
+          <a href="#"><img class="imagenMenu" src="../Imagenes/PKBol.png"
+              alt="Pokebola-sobre-opción-pokedex">POKEDEX</a>
         </li>
         <li id="orden">
-          <img class="imagenMenu" src="../Imagenes/ordenar.png" alt="Flechas-sobre-opción-ordenar"> <a
-            href="#">ORDENAR</a>
+          <a href="#"><img class="imagenMenu" src="../Imagenes/ordenar.png"
+              alt="Flechas-sobre-opción-ordenar">ORDENAR</a>
         </li>
         <li id="filtrar">
-          <img class="imagenMenu" src="../Imagenes/filtrar.png" alt="Filtr-sobre-opción-filtrar"> <a
-            href="#">FILTRAR</a>
-        <li id="incubadora"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
-            alt="Incubadora-pokemon-sobre-opción-incubadora"> <a href="#">INCUBADORA</a>
+          <a href="#"><img class="imagenMenu" src="../Imagenes/filtrar.png" alt="Filtr-sobre-opción-filtrar">
+            FILTRAR</a>
+        <li id="incubadora"><a href="#"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
+              alt="Incubadora-pokemon-sobre-opción-incubadora">INCUBADORA</a>
         </li>
-        <li class="usuario"> <img class="imagenMenu" src="../Imagenes/Usuario.png" alt="Imagen-de-usuario">
-          <a>LABORATORIA</a>
-        </li>
+        <!-- <li class="usuario">
+          <a> <img class="imagenMenu" src="../Imagenes/Usuario.png" alt="Imagen-de-usuario">LABORATORIA</a>
+        </li> -->
       </ul>
     </nav>
   </header>
@@ -80,7 +81,7 @@
 
       <!--Listado de pokemones por tipos-->
       <div id="opciones-contenedor">
-          <p> Tipos: </p>
+        <p> Tipos: </p>
         <select id="tipos" class="opciones">
           <option>selecciona un tipo ...</option>
           <option value="Grass">Hierba</option>

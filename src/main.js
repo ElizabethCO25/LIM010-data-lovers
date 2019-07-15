@@ -105,8 +105,8 @@ const mostrarData = (pokemon) => { //parámetro
     <div name='pokemon' id="${pokemon[i].id}">
       <article class= "fondo-poke zoom" >
         <img  src ="${pokemon[i].img}"/>
+        <p class ="nombre-poke">${pokemon[i].name}</p>
         <p class = "num-poke">${pokemon[i].num}</p>   
-        <p class = "nombre-poke">${pokemon[i].name}</p>
       </article>
     </div>`;
     muestra += llamar;
@@ -141,7 +141,7 @@ contenedorPokecito.addEventListener('click', () => {
     /* Insertar caracterìsticas  de pokemon en Modal*/
     document.getElementById('caracteristicas').innerHTML = `
       <img class="imagenModal" src="${allPokemon[pokecito].img}"/>
-      <p> Nombre:${allPokemon[pokecito].name}</p>
+      <p class="nombrePokemodal"> Nombre:${allPokemon[pokecito].name}</p>
       <p>Peso: ${allPokemon[pokecito].weight}</p> 
       <p>Altura: ${allPokemon[pokecito].height}</p>    
       <p>Tipo: ${allPokemon[pokecito].type}</p> `;
