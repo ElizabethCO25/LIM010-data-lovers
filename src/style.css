@@ -141,7 +141,12 @@ header nav ul li a:hover{
 
 /*Pantalla 3:*/
 .fondo-contenedor{
-    background: rgb(181, 233, 224);
+    /* background: rgb(181, 233, 224); */
+    background-color: #4ABDAC ;
+    background-image: url(../Imagenes/fondoPrueba.jpg);    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .filtro-atrapado{
     font-size: 20px;
@@ -178,7 +183,7 @@ header nav ul li a:hover{
 
 .nombre-poke {
     padding: 5px;
-    background-color:black;
+    background-color:#eb8b32fa;
     color:white;
     border-radius: 10px;
     font-weight: bold;
