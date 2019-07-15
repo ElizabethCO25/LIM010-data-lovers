@@ -330,7 +330,7 @@ border-radius: 10px;
     @media screen and (max-width: 600px) {
         .contenido{
            background: #b5c0c2ad;
-           height: 80vh;
+           height: 85vh;
            margin-top: 3%;
            margin-left: 5%;
            margin-right: 5%;
@@ -347,21 +347,20 @@ border-radius: 10px;
 
         /* responsive pantalla Inicio */
         .imagen-inicio{
-         margin-top: -20%;
          transform: scale(0.6);
          padding: 0;
          }
         #pantalla-inicio{
             flex-direction: column;
         }
-          .titulo{
+          .titulo{ 
             font-size: 25px;
             text-align: center;
-            margin: 2%;
+            margin: 3%;
            }
            .texto-inicial{
             font-size: 15px;
-            margin: 3%;
+            margin: 2%;
            }
 
     /*Responsive navegador */
@@ -370,7 +369,8 @@ border-radius: 10px;
         }
         .menucito{
             float: right;
-        }
+        } 
+     
         #boton-menu:checked  ~.navegacion{
             transform:translateX(0%); 
         }
@@ -403,6 +403,6 @@ border-radius: 10px;
         }
         /*contenedor pokemon*/
         .nombre-poke {
-            border-radius: none;
+            border-radius: 0px;
             font-size: 15px;
         }
