@@ -126,7 +126,7 @@ for (let i = 0; i < allPokemon.length; i++) {
     contadorAtrapado++
   }
 }
-document.getElementById('atrapados').innerHTML =  "Pokemones Atrapados" + " " + contadorAtrapado;
+document.getElementById('atrapados').innerHTML = "Pokemones Atrapados" + " " + contadorAtrapado;
 document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados" + " " + contadorNoatrapado;
 
 //Modal
@@ -134,7 +134,7 @@ const contenedorPokecito = document.getElementById('contenedorPokemon');
 /* al contenedor le agrego un evento click*/
 contenedorPokecito.addEventListener('click', () => {
   const pokecito = event.target.parentElement.id - 1;
-/* Coloco condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
+  /* Coloco condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
   if (event.target.parentElement.getAttribute('name') === 'pokemon') {
     /* Muestra modal*/
     document.getElementById('my-modal').classList.remove('ocultar');
@@ -176,44 +176,29 @@ ordenar.addEventListener('change', () => {
 // //filtrar tipos pokemon:
 const tipos = document.getElementById('tipos');
 tipos.addEventListener('change', (event) => {
-const seleccionar = event.target.value;
-let tiposPoke = [];
-tiposPoke= filtrarTipo(allPokemon,seleccionar);
-contenedorPokemon.innerHTML= mostrarData(tiposPoke);
+  const seleccionar = event.target.value;
+  let tiposPoke = [];
+  tiposPoke = filtrarTipo(allPokemon, seleccionar);
+  console.log(tiposPoke);
+  contenedorPokemon.innerHTML = mostrarData(tiposPoke);
 });
 
 
 //Filtrar Debilidades pokemon 
 const debilidades = document.getElementById('debilidades');
-debilidades.addEventListener('change',(event)=>{
-  const seleccionar =event.target.value;
-  let debilidadesPoke =[];
-  debilidadesPoke = filtrarDebil(allPokemon,seleccionar);
-  contenedorPokemon.innerHTML= mostrarData(debilidadesPoke);
+debilidades.addEventListener('change', (event) => {
+  let seleccionar = event.target.value;
+  let debilidadesPoke = [];
+  debilidadesPoke = filtrarDebil(allPokemon, seleccionar);
+  contenedorPokemon.innerHTML = mostrarData(debilidadesPoke);
 });
 
 //Incubadora :
-const calculoEgg = document.getElementById('eclosion');
-let eggPoke1 = [];
-console.log(calculoEgg);
-calculoEgg.addEventListener('change', () => {
-  let seleccionar = calculoEgg.value;
-  console.log(seleccionar);
-  if (seleccionar === '2 km') {
-    eggPoke1 = eggPoke(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-    document.getElementById('porcentaje').innerHTML = 'El porcentaje de los pokemones  en 2km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
-  } else if (seleccionar === '5 km') {
-    eggPoke1 = eggPoke(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-    document.getElementById('porcentaje').innerHTML = 'El porcentaje de los pokemones  en 5km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
-
-  } else if (seleccionar === '10 km') {
-    eggPoke1 = eggPoke(allPokemon, seleccionar);
-    contenedorPokemon.innerHTML = null;
-    contenedorPokemon.innerHTML = mostrarData(eggPoke1);
-    document.getElementById('porcentaje').innerHTML = 'El porcentaje de los pokemones  en 10km es: ' + ((eggPoke1.length) / 151 * 100).toFixed(2).bold() + '%';
-  }
-});
+  const calculoEgg =document.getElementById('eclosion');
+  calculoEgg.addEventListener('change',(event)=>{
+    let seleccionar  = event.target.value;
+    let huevosPoke =[];
+    huevosPoke= eggPoke(allPokemon,seleccionar);
+    contenedorPokemon.innerHTML =mostrarData(huevosPoke);
+    document.getElementById('porcentaje').innerHTML = 'El porcentaje de los pokemones  en  es: ' + ((huevosPoke.length) / 151 * 100).toFixed(2).bold() + '%';
+  });
