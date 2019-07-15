@@ -5,14 +5,21 @@
 header{
     width: 100%;
 }
+.header label {
+    display:none;
+}
 
+#boton-menu{
+    display:none;
+}
 header nav{
     width: 100%;
     background:black;
 }
-.menu-bar{
+
+/* .menu-bar{
     display:none;
-}
+} */
 header nav ul {
     overflow: hidden;
     list-style: none;
@@ -138,9 +145,9 @@ header nav ul li a:hover{
 
 /*Pantalla 3:*/
 .fondo-contenedor{
-    /* background: rgb(181, 233, 224); */
-    background-color: #4ABDAC ;
-    background-image: url(../Imagenes/fondoPrueba.jpg);    
+    /* background: rgb(181, 233, 224); 
+    background-color: #4ABDAC ; */
+    background-image: url(../Imagenes/fondoPrueba.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -287,6 +294,7 @@ header nav ul li a:hover{
     width: auto;
     height: auto;
     border-radius: 28px;
+    margin: 5px;
 }
 .nombre-poke {
     font-weight: bold;
@@ -351,10 +359,6 @@ header nav ul li a:hover{
        
 
         /* responsive pantalla Inicio */
-        .imagenMenu{
-            margin-left:60%;
-            margin-top: 5%;
-        }
         .imagen-inicio{
          margin-top: -20%;
          transform: scale(0.6);
@@ -373,13 +377,22 @@ header nav ul li a:hover{
             margin: 3%;
            }
 
-        header nav{
-             width: 65%;
-             height: 70%;
-             margin:0;
-             position: fixed;
+        header label{
+            display:block !important;
+        }
+    
+        .menucito{
+            float: right;
+        }
+        #boton-menu:checked  ~.navegacion{
+            transform:translateX(0%); 
+        }
+         header nav{
+             position:absolute;
+             width: 100%;
+             transition:all 0.3s;
              transform: translateX(-100%);
-             transition:all 0,3s;
+        
          }
          header nav ul li{
              display:block;
@@ -400,14 +413,4 @@ header nav ul li a:hover{
              font-weight: bold;
              font-size: 20px;
          }
-         .menu-bar img{
-             float: right;
-             
-         }
-         .menucito:checked ~ .menu{
-             transform: translateX(0%);
-         }
-         
         }
-
-
