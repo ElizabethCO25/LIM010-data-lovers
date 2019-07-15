@@ -343,7 +343,7 @@ header nav ul li a:hover{
     @media screen and (max-width: 600px) {
         .contenido{
            background: #b5c0c2ad;
-           height: 80vh;
+           height: 85vh;
            margin-top: 3%;
            margin-left: 5%;
            margin-right: 5%;
@@ -360,30 +360,30 @@ header nav ul li a:hover{
 
         /* responsive pantalla Inicio */
         .imagen-inicio{
-         margin-top: -20%;
          transform: scale(0.6);
          padding: 0;
          }
         #pantalla-inicio{
             flex-direction: column;
         }
-          .titulo{
+          .titulo{ 
             font-size: 25px;
             text-align: center;
-            margin: 2%;
+            margin: 3%;
            }
            .texto-inicial{
             font-size: 15px;
-            margin: 3%;
+            margin: 2%;
            }
-
+       
         header label{
             display:block !important;
         }
-    
-        .menucito{
+        
+         /* .menucito{
             float: right;
-        }
+        } */
+     
         #boton-menu:checked  ~.navegacion{
             transform:translateX(0%); 
         }
