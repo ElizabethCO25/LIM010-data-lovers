@@ -107,10 +107,7 @@ header nav ul li a:hover{
     color: white;
     display: flex;
     height: 87vh;
-}
-
-.inicio{
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .imagen-inicio{
@@ -148,11 +145,12 @@ header nav ul li a:hover{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-.filtro-atrapado{
-    font-size: 20px;
+.texto-opciones{
+    font-size: 30px;
     text-align: center;
-    
+    text-shadow: 2px 2px 2px rgb(255, 148, 25);
 }
+
 .centrar{
     text-align: center;
 	display: flex;
@@ -162,7 +160,6 @@ header nav ul li a:hover{
     font-family: Cambria;
     font-size: 50%;
 }
-
 
 #contenedorPokemon{
     display: flex;
@@ -223,6 +220,16 @@ header nav ul li a:hover{
     justify-content: center;
 }
 
+.centrar-objeto{
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.contenedor-opciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
     /* El Modal  */
 .modal{
@@ -342,8 +349,31 @@ header nav ul li a:hover{
            height: 6%;
          }
        
+
         /* responsive pantalla Inicio */
-         header nav{
+        .imagenMenu{
+            margin-left:60%;
+            margin-top: 5%;
+        }
+        .imagen-inicio{
+         margin-top: -20%;
+         transform: scale(0.6);
+         padding: 0;
+         }
+        #pantalla-inicio{
+            flex-direction: column;
+        }
+          .titulo{
+            font-size: 25px;
+            text-align: center;
+            margin: 2%;
+           }
+           .texto-inicial{
+            font-size: 15px;
+            margin: 3%;
+           }
+
+        header nav{
              width: 65%;
              height: 70%;
              margin:0;

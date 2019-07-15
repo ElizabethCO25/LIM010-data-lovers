@@ -10,7 +10,7 @@
 
 <body>
   <header id="header" class="ocultar header">
-    <div class="menu-bar"> 
+    <div class="menu-bar">
       <a href="#" class="boton-menu"><img class="menucito" src="...Imagenes/Usuario.png">MENU</a>
     </div>
     <!-- Menú de navegación:-->
@@ -58,7 +58,7 @@
 
     <!-- Pantalla 2 (Inicio):-->
     <div id="pantalla-inicio" class="ocultar pantalla-inicio">
-      <div class="inicio">
+      <div>
         <h1 class="titulo">TE DAMOS LA BIENVENIDA A POKEMONBEL!!</h1>
         <p class="texto-inicial">Usa el menú de navegación para acceder a más información sobre Pokémon en tu región.
         </p>
@@ -71,64 +71,64 @@
     </div>
 
     <!-- Pantalla 3:-->
-    <div id="pantalla-pokedex" class="ocultar fondo-contenedor">
+    <div id="pantalla-pokedex" class="ocultar fondo-contenedor texto-opciones">
       <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
       <div id="orden-Alfab">
       </div>
-      <p class="ocultar atrapados filtro-atrapado" id="atrapados"></p>
-      <p class="ocultar no-atrapados filtro-atrapado" id="No-atrapados"></p>
+      <p class="ocultar atrapados" id="atrapados"> </p>
+      <p class="ocultar no-atrapados" id="No-atrapados"> </p>
       <p id="porcentaje"></p>
 
-      <!--Listado de pokemones por tipos-->
-      <div id="opciones-contenedor">
-        <p> Tipos: </p>
-        <select id="tipos" class="opciones">
-          <option>selecciona un tipo ...</option>
-          <option value="Grass">Hierba</option>
-          <option value="Poison">Veneno</option>
-          <option value="Fire">Fuego</option>
-          <option value="Flying">Volador</option>
-          <option value="Water">Agua</option>
-          <option value="Bug">Insecto</option>
-          <option value="Normal">Normal</option>
-          <option value="Electric">Electrico</option>
-          <option value="Ground">Suelo</option>
-          <option value="Fighting">Lucha</option>
-          <option value="Psychic">Psíquico</option>
-          <option value="Ghost">Fantasma</option>
-          <option value="Rock">Roca</option>
-          <option value="Ice">Hielo</option>
-          <option value="Dragon">Dragon</option>
-        </select>
-      </div>
-      <!--Listado de pokemones por debilidad-->
-      <div id="lista-debilidades">
-        <p> Debilidades: </p>
-        <select id="debilidades" class="opciones">
-          <option>Seleccion una opción...</option>
-          <option value="Fire">Fuego</option>
-          <option value="Ice">Hielo</option>
-          <option value="Flying">Volador</option>
-          <option value="Psychic">Psíquico</option>
-          <option value="Water">Agua</option>
-          <option value="Ground">Suelo</option>
-          <option value="Rock">Rock</option>
-          <option value="Electric">Electrico</option>
-          <option value="Grass">Hierba</option>
-          <option value="Ice">Hielo</option>
-          <option value="Fighting">Lucha</option>
-          <option value="Fairy">Hada</option>
-          <option value="Bug">Insecto</option>
-          <option value="Ghost">Fantasma</option>
-          <option value="Dark">Oscuro</option>
-          <option value="Steel">Acero</option>
-          <option value="Poison">Veneno</option>
-        </select>
+      <div class="contenedor-opciones">
+        <!--Listado de pokemones por tipos-->
+        <div id="opciones-contenedor">
+          <p class="texto-opciones"> Tipos: </p>
+          <select id="tipos" class="opciones centrar-objeto">
+            <option value="Grass">Hierba</option>
+            <option value="Poison">Veneno</option>
+            <option value="Fire">Fuego</option>
+            <option value="Flying">Volador</option>
+            <option value="Water">Agua</option>
+            <option value="Bug">Insecto</option>
+            <option value="Normal">Normal</option>
+            <option value="Electric">Electrico</option>
+            <option value="Ground">Suelo</option>
+            <option value="Fighting">Lucha</option>
+            <option value="Psychic">Psíquico</option>
+            <option value="Ghost">Fantasma</option>
+            <option value="Rock">Roca</option>
+            <option value="Ice">Hielo</option>
+            <option value="Dragon">Dragon</option>
+          </select>
+        </div>
+        <!--Listado de pokemones por debilidad-->
+        <div id="lista-debilidades">
+          <p class="texto-opciones"> Debilidades: </p>
+          <select id="debilidades" class="opciones centrar-objeto">
+            <option value="Fire">Fuego</option>
+            <option value="Ice">Hielo</option>
+            <option value="Flying">Volador</option>
+            <option value="Psychic">Psíquico</option>
+            <option value="Water">Agua</option>
+            <option value="Ground">Suelo</option>
+            <option value="Rock">Rock</option>
+            <option value="Electric">Electrico</option>
+            <option value="Grass">Hierba</option>
+            <option value="Ice">Hielo</option>
+            <option value="Fighting">Lucha</option>
+            <option value="Fairy">Hada</option>
+            <option value="Bug">Insecto</option>
+            <option value="Ghost">Fantasma</option>
+            <option value="Dark">Oscuro</option>
+            <option value="Steel">Acero</option>
+            <option value="Poison">Veneno</option>
+          </select>
+        </div>
       </div>
       <!--Listado de posibilidades de orden-->
       <div id="lista-ordenamiento" class="ocultar">
-        <p> Ordenar por: </p>
-        <select id="ordenar" class="opciones">
+        <p class="texto-opciones"> Ordenar por: </p>
+        <select id="ordenar" class="opciones centrar-objeto">
           <option value="ordenar-az">Alfabeto: De A-Z</option>
           <option value="ordenar-za">Alfabeto: De Z-A</option>
           <option value="asc">Spawns: Ascendente</option>
@@ -137,8 +137,8 @@
       </div>
       <!--Incubadora-->
       <div id="lista-incubadora">
-        <p> Eclosión de huevos: </p>
-        <select id="eclosion" class="incubadora-pokemon opciones">
+        <p class="texto-opciones"> Eclosión de huevos: </p>
+        <select id="eclosion" class="incubadora-pokemon opciones centrar-objeto">
           <option value="2 km">2km</option>
           <option value="5 km">5km</option>
           <option value="10 km">10km</option>
@@ -160,9 +160,9 @@
 
     <!-- Pantalla de Bloqueo:-->
     <div class="ocultar" id="pantalla-bloqueo">
-    <div class="bloqueo label3">
-      <h1 class="mensaje-bloqueo"> "Lo sentimos agotaste tus intentos" </h1>
-    </div>  
+      <div class="bloqueo label3">
+        <h1 class="mensaje-bloqueo"> "Lo sentimos agotaste tus intentos" </h1>
+      </div>
     </div>
 
   </main>
@@ -170,7 +170,7 @@
   <footer class="footer">
     <p>Copyright © Elizabeth&Betsy 2019. Todos los derechos reservados.</p>
   </footer>
-  
+
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
