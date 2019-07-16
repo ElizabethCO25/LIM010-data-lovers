@@ -362,6 +362,8 @@ border-radius: 10px;
         }
         .menucito{
             float: right;
+            width: 25px;
+            height: 25px;
         } 
      
         #boton-menu:checked  ~.navegacion{

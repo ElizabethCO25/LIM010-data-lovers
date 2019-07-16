@@ -116,6 +116,8 @@ const mostrarData = (pokemon) => { //parámetro
 contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
 
 //Identificar pokemones No atrapados y Atrapados:
+const misAtrapados = document.getElementById('atrapados');
+const noAtrapados = document.getElementById('No-atrapados');
 let contadorNoatrapado = 0;
 let contadorAtrapado = 0;
 //recorriendo todo el array
@@ -126,8 +128,8 @@ for (let i = 0; i < allPokemon.length; i++) {
     contadorAtrapado++
   }
 }
-document.getElementById('atrapados').innerHTML = "Pokemones Atrapados" + " " + contadorAtrapado;
-document.getElementById('No-atrapados').innerHTML = "Pokemones No Atrapados" + " " + contadorNoatrapado;
+misAtrapados.innerHTML = "Pokemones Atrapados" + " " + contadorAtrapado;
+noAtrapados.innerHTML = "Pokemones No Atrapados" + " " + contadorNoatrapado;
 
 //Modal
 const contenedorPokecito = document.getElementById('contenedorPokemon');
@@ -183,7 +185,6 @@ tipos.addEventListener('change', (event) => {
   contenedorPokemon.innerHTML = mostrarData(tiposPoke);
 });
 
-
 //Filtrar Debilidades pokemon 
 const debilidades = document.getElementById('debilidades');
 debilidades.addEventListener('change', (event) => {
@@ -194,11 +195,11 @@ debilidades.addEventListener('change', (event) => {
 });
 
 //Incubadora :
-  const calculoEgg =document.getElementById('eclosion');
-  calculoEgg.addEventListener('change',(event)=>{
-    let seleccionar  = event.target.value;
-    let huevosPoke =[];
-    huevosPoke= eggPoke(allPokemon,seleccionar);
-    contenedorPokemon.innerHTML =mostrarData(huevosPoke);
-    document.getElementById('porcentaje').innerHTML = 'El porcentaje de los pokemones  en  es: ' + ((huevosPoke.length) / 151 * 100).toFixed(2).bold() + '%';
-  });
+const calculoEgg = document.getElementById('eclosion');
+calculoEgg.addEventListener('change', (event) => {
+  let seleccionar = event.target.value;
+  let huevosPoke = [];
+  huevosPoke = eggPoke(allPokemon, seleccionar);
+  contenedorPokemon.innerHTML = mostrarData(huevosPoke);
+  document.getElementById('porcentaje').innerHTML = `El porcentaje de los pokemones es:${((huevosPoke.length) / 151 * 100).toFixed(2).bold()} %`
+});
