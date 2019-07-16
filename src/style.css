@@ -357,6 +357,9 @@ border-radius: 10px;
            }
 
     /*Responsive navegador */
+        label{
+            padding: 10px;
+        }
         header label{
             display:block !important;
         }
