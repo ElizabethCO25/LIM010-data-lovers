@@ -19,7 +19,7 @@ obtenerClick.addEventListener("click", () => {
     document.getElementById("pantalla-login").classList.add("ocultar");
     capturarContraseña.value = "";
   } else {
-    document.getElementById("incorrecto").innerHTML = "Contraseña o usuario incorrecto,intenta otra vez";
+    document.getElementById('incorrecto').innerHTML = `Contraseña o usuario incorrecto,intenta otra vez`;
     capturarContraseña.value = "";
     cuenta--;
   }
@@ -102,12 +102,10 @@ const mostrarData = (pokemon) => { //parámetro
   let muestra = ' ';
   for (let i = 0; i < pokemon.length; i++) {
     let llamar = `
-    <div name='pokemon' id="${pokemon[i].id}">
-      <article class= "fondo-poke zoom" >
+    <div name='pokemon' class= "fondo-poke zoom"  id="${pokemon[i].id}">
         <img  src ="${pokemon[i].img}"/>
         <p class ="nombre-poke">${pokemon[i].name}</p>
         <p class = "num-poke">${pokemon[i].num}</p>   
-      </article>
     </div>`;
     muestra += llamar;
   }
@@ -128,15 +126,15 @@ for (let i = 0; i < allPokemon.length; i++) {
     contadorAtrapado++
   }
 }
-misAtrapados.innerHTML = "Pokemones Atrapados" + " " + contadorAtrapado;
-noAtrapados.innerHTML = "Pokemones No Atrapados" + " " + contadorNoatrapado;
+misAtrapados.innerHTML = `Pokemones Atrapados: ${contadorAtrapado}`;
+noAtrapados.innerHTML = `Pokemones No Atrapados: ${contadorNoatrapado}`;
 
 //Modal
 const contenedorPokecito = document.getElementById('contenedorPokemon');
 /* al contenedor le agrego un evento click*/
 contenedorPokecito.addEventListener('click', () => {
   const pokecito = event.target.parentElement.id - 1;
-  /* Coloco condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
+/* Coloco condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
   if (event.target.parentElement.getAttribute('name') === 'pokemon') {
     /* Muestra modal*/
     document.getElementById('my-modal').classList.remove('ocultar');
@@ -181,7 +179,6 @@ tipos.addEventListener('change', (event) => {
   const seleccionar = event.target.value;
   let tiposPoke = [];
   tiposPoke = filtrarTipo(allPokemon, seleccionar);
-  console.log(tiposPoke);
   contenedorPokemon.innerHTML = mostrarData(tiposPoke);
 });
 
