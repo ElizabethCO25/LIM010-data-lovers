@@ -354,6 +354,12 @@ border-radius: 10px;
             font-size: 15px;
             margin: 2%;
            }
+           .texto-opciones{
+            font-size: 22px;
+            text-align: center;
+            text-shadow: 2px 2px 2px rgb(255, 148, 25);
+}
+
 
     /*Responsive navegador */
         label{
