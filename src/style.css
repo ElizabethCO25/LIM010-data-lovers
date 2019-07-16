@@ -191,6 +191,7 @@ header nav ul li a:hover{
     font-family: Cambria;
     font-size: 20px;
     transition: height 0.2s ease-out;
+    border-bottom: 1px solid #fff;
 }
 
 .name{
@@ -248,6 +249,7 @@ header nav ul li a:hover{
     font-size: 16px;
     text-align: center;
     height: 280px;
+    border-bottom: 5px solid #fff;
 }   
 .imageModal{
       height: 80%;
@@ -357,7 +359,7 @@ border-radius: 10px;
            .texto-opciones{
             font-size: 22px;
             text-align: center;
-            text-shadow: 2px 2px 2px rgb(255, 148, 25);
+    
 }
 
 
@@ -404,6 +406,7 @@ border-radius: 10px;
              font-size: 20px;
          }
           /*contenedor pokemon*/
+        
         .nombre-poke {
             border-radius: 0px;
             font-size: 15px;
@@ -412,6 +415,7 @@ border-radius: 10px;
         .modal-content{
             width: 158px;
             height: 252px;
+         
         }
       
         }
