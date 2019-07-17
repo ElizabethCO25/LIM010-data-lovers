@@ -162,7 +162,7 @@ header nav ul li a:hover{
     font-size: 50%;
 }
 
-#contenedorPokemon{
+#contenedor-pokemon{
     display: flex;
     flex-wrap: wrap; 
     text-align: center;
