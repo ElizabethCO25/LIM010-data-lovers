@@ -101,6 +101,7 @@ header nav ul li a:hover{
     margin-left: 20%;
     margin-bottom: 5%;
 }
+
 /*PANTALLA 2:*/
 .pantalla-inicio{
     background-image: url(../Imagenes/fondoinicio.jpg);
@@ -135,6 +136,7 @@ header nav ul li a:hover{
 .ocultar{
     display: none; 
 }
+
 /*Pantalla 3:*/
 .fondo-contenedor{
     /* background: rgb(181, 233, 224); 
@@ -147,6 +149,7 @@ header nav ul li a:hover{
 .texto-opciones{
     font-size: 30px;
     text-align: center;
+    text-shadow: 1px 1px 1px rgb(255, 148, 25);
 }
 
 .centrar{
@@ -168,7 +171,8 @@ header nav ul li a:hover{
 }
 
 .fondo-poke{
-    background-color: rgb(300, 300, 300, .2);
+    /*background-color: rgb(300, 300, 300, .2);*/
+    background-color: rgba(80,80,80,.60);
     margin-top: 20px;
     padding: 25px;
     width: auto;
@@ -186,11 +190,13 @@ header nav ul li a:hover{
     font-size: 18px;
     transition: height 0.2s ease-out;
 }
+
 .num-poke{
     font-weight: bold;
     font-family: Cambria;
     font-size: 20px;
     transition: height 0.2s ease-out;
+    color: white;
     border-bottom: 1px solid #fff;
 }
 
@@ -203,6 +209,7 @@ header nav ul li a:hover{
 }
 .opciones{
     width: auto;
+    height: 50%;
     background-color: black;
     color: #d3a9a9;
     font-family: sans-serif;
@@ -242,7 +249,7 @@ header nav ul li a:hover{
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 35%;
+    width: 20%;
     color: white;
     border-radius: 17px;
     font-weight: bold;
@@ -359,14 +366,10 @@ border-radius: 10px;
            .texto-opciones{
             font-size: 22px;
             text-align: center;
-    
 }
 
 
     /*Responsive navegador */
-        label{
-            padding: 10px;
-        }
         header label{
             display:block !important;
         }
@@ -405,18 +408,14 @@ border-radius: 10px;
              font-weight: bold;
              font-size: 20px;
          }
-          /*contenedor pokemon*/
-        
+         .modal-content {
+        width: 50%;
+        }   
+        }
+        /*contenedor pokemon*/
         .nombre-poke {
             border-radius: 0px;
             font-size: 15px;
         }
-        /* contenido modal*/
-        .modal-content{
-            width: 158px;
-            height: 252px;
-         
-        }
-      
-        }
        
+        
