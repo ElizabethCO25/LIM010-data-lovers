@@ -19,7 +19,7 @@ const ordenadorAZ = (data, ordenNombre) => {
     if (aa.name > bb.name) {
       return 1;
     }
-    if (aa.name > bb.name) {
+    if (aa.name < bb.name) {
       return -1;
     }
     return 0;
@@ -76,7 +76,7 @@ const filtrarDebil = (data, debilidad) => {
   }
   return arrayDebilidad;
 };
-// Función para mostrar eclosiòn de huevos por kilómetros , porcentajes:
+// Función para mostrar eclosiòn de huevos por kilómetros y porcentajes:
 const eggPoke = (data, eclosion) => {
   let arrayEgg = [];
   arrayEgg = data.filter(poke => (poke.egg === eclosion));
@@ -85,6 +85,7 @@ const eggPoke = (data, eclosion) => {
 
 window.dataPoker = dataPoker;
 window.ordenadorAZ = ordenadorAZ;
+window.ordenadorSpaws = ordenadorSpaws;
 window.filtrarTipo = filtrarTipo;
 window.filtrarDebil = filtrarDebil;
 window.eggPoke = eggPoke;
