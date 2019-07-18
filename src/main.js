@@ -154,7 +154,7 @@ document.getElementById('close').addEventListener('click', () => {
 });
 
 //Pantalla 3:
-// Ordenando de la A-Z:
+// Ordenando la data:
 const ordenar = document.getElementById('ordenar');
 ordenar.addEventListener('change', () => {
   let ordenador = ordenar.value;
