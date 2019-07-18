@@ -1,13 +1,13 @@
 /* Manejo de data */
 // Funciòn para mostrar todos  pokemones:
-const dataPoker = () => {
+const dataPoker = (data) => {
   const vacio = [];
-  for (let i = 0; i < allPokemon.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     vacio.push({
-      'img': allPokemon[i].img,
-      'id': allPokemon[i].id,
-      'name': allPokemon[i].name,
-      'num': allPokemon[i].num,
+      'img': data[i].img,
+      'id': data[i].id,
+      'name': data[i].name,
+      'num': data[i].num,
     });
   }
   return vacio;

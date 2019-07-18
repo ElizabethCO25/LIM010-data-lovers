@@ -127,6 +127,16 @@ const dataDeprueba = [{
     'name': 'Charizard'
   }]
 }];
+// Mostrar todos los pokemones
+describe(dataPoker, () =>{
+  it('debería ser una función', () => {
+    expect(typeof dataPoker).toEqual('function');
+  });
+  it('mostrar todos los pokemones', () => {
+    expect(Array.isArray(dataPoker(dataDeprueba))).toEqual(true);
+  });
+});
+
 // Ordenar alfabéticamente
 describe(ordenadorAZ, () =>{
   it('debería ser una función', () => {
