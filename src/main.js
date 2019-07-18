@@ -50,11 +50,12 @@ clickPokedex.addEventListener('click', () => {
   document.getElementById('pantalla-pokedex').classList.remove('ocultar');
   document.getElementById('pantalla-inicio').classList.add('ocultar');
   document.getElementById('atrapados').classList.remove('ocultar');
-  document.getElementById('No-atrapados').classList.remove('ocultar');
+  document.getElementById('no-atrapados').classList.remove('ocultar');
   document.getElementById('lista-debilidades').classList.add('ocultar');
   document.getElementById('lista-ordenamiento').classList.add('ocultar');
   document.getElementById('lista-incubadora').classList.add('ocultar');
   document.getElementById('header').classList.remove('ocultar');
+  document.getElementById('porcentaje').classList.add('ocultar');
   document.getElementById('opciones-contenedor').classList.add('ocultar');
 });
 // Botón ORDENAR:
@@ -63,11 +64,12 @@ clickOrdenar.addEventListener('click', () => {
   document.getElementById('pantalla-pokedex').classList.remove('ocultar');
   document.getElementById('pantalla-inicio').classList.add('ocultar');
   document.getElementById('atrapados').classList.add('ocultar');
-  document.getElementById('No-atrapados').classList.add('ocultar');
+  document.getElementById('no-atrapados').classList.add('ocultar');
   document.getElementById('lista-ordenamiento').classList.remove('ocultar');
   document.getElementById('lista-debilidades').classList.add('ocultar');
   document.getElementById('lista-incubadora').classList.add('ocultar');
   document.getElementById('header').classList.remove('ocultar');
+  document.getElementById('porcentaje').classList.add('ocultar');
   document.getElementById('opciones-contenedor').classList.add('ocultar');
 });
 // Botón FILTRAR:
@@ -75,12 +77,13 @@ const clickFiltrar = document.getElementById('filtrar');
 clickFiltrar.addEventListener('click', () => {
   document.getElementById('pantalla-pokedex').classList.remove('ocultar');
   document.getElementById('atrapados').classList.add('ocultar');
-  document.getElementById('No-atrapados').classList.add('ocultar');
+  document.getElementById('no-atrapados').classList.add('ocultar');
   document.getElementById('lista-ordenamiento').classList.add('ocultar');
   document.getElementById('lista-debilidades').classList.remove('ocultar');
   document.getElementById('opciones-contenedor').classList.remove('ocultar');
   document.getElementById('pantalla-inicio').classList.add('ocultar');
   document.getElementById('lista-incubadora').classList.add('ocultar');
+  document.getElementById('porcentaje').classList.add('ocultar');
   document.getElementById('header').classList.remove('ocultar');
 });
 // Botón INCUBADORA:
@@ -88,12 +91,13 @@ const clickIncubadora = document.getElementById('incubadora');
 clickIncubadora.addEventListener('click', () => {
   document.getElementById('pantalla-pokedex').classList.remove('ocultar');
   document.getElementById('atrapados').classList.add('ocultar');
-  document.getElementById('No-atrapados').classList.add('ocultar');
+  document.getElementById('no-atrapados').classList.add('ocultar');
   document.getElementById('lista-ordenamiento').classList.add('ocultar');
   document.getElementById('lista-debilidades').classList.add('ocultar');
   document.getElementById('pantalla-inicio').classList.add('ocultar');
   document.getElementById('lista-incubadora').classList.remove('ocultar');
   document.getElementById('header').classList.remove('ocultar');
+  document.getElementById('porcentaje').classList.remove('ocultar');
   document.getElementById('opciones-contenedor').classList.add('ocultar');
 });
 
@@ -133,7 +137,7 @@ noAtrapados.innerHTML = `Pokemones No Atrapados: ${contadorNoatrapado}`;
 // Modal
 
 /* al contenedor le agrego un evento click*/
-contenedorPokecito.addEventListener('click', () => {
+contenedorPokemon.addEventListener('click', () => {
   const pokecito = event.target.parentElement.id - 1;
   /* Coloco condicional que si el atributo name  del padre de ese elemento es pokemon, muestra modal e inserta datos del pokemon*/
   if (event.target.parentElement.getAttribute('name') === 'pokemon') {
@@ -155,7 +159,7 @@ document.getElementById('close').addEventListener('click', () => {
 });
 
 // Pantalla 3:
-// Ordenando de la A-Z:
+// Ordenando la data:
 const ordenar = document.getElementById('ordenar');
 ordenar.addEventListener('change', () => {
   let ordenador = ordenar.value;

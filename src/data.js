@@ -12,6 +12,7 @@ const dataPoker = () => {
   }
   return vacio;
 };
+
 // FUNCIÓN PARA ORDENAR ALFABETICAMENTE:
 const ordenadorAZ = (data, ordenNombre) => {
   const arrayNombre = data.slice().sort((aa, bb) => {
@@ -35,7 +36,7 @@ const ordenadorAZ = (data, ordenNombre) => {
 const ordenadorSpaws = (data, ordenNombre) => {
   const arraySpawns = data.slice().sort((aa, bb) => {
     if (aa.avg_spawns > bb.avg_spawns) {
-      return 1;  
+      return 1;
     }
     if (aa.avg_spawns < bb.avg_spawns) {
       return -1;
@@ -50,6 +51,7 @@ const ordenadorSpaws = (data, ordenNombre) => {
   }
   return 0;
 };
+
 // Función para filtrar tipo de pokemones:
 const filtrarTipo = (data, tipo) => {
   let arrayTipos = [];
