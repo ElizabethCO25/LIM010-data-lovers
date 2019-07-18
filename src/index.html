@@ -12,30 +12,28 @@
   <header id="header" class="ocultar header">
     <div class="menu-bar">
       <input type="checkbox" id="boton-menu">
-      <label for="boton-menu"><img class="menucito" src="../Imagenes/menucito.png">MENU</label>
+      <label for="boton-menu"><img class="menucito" src="../Imagenes/menucito.png" alt="menu">MENU</label>
       <!-- Menú de navegación:-->
       <nav class="navegacion" id="navegacion">
         <ul class="menu">
           <li id="inicio">
-            <a href="#"><img class="imagenMenu" src="../Imagenes/home.png" alt="Casa-sobre-opción-inicio">INICIO</a>
+            <a href="#"><img  src="../Imagenes/home.png" alt="Casa-sobre-opción-inicio">INICIO</a>
           </li>
           <li id="pokedex">
-            <a href="#"><img class="imagenMenu" src="../Imagenes/PKBol.png"
+            <a href="#"><img src="../Imagenes/PKBol.png"
                 alt="Pokebola-sobre-opción-pokedex">POKEDEX</a>
           </li>
           <li id="orden">
-            <a href="#"><img class="imagenMenu" src="../Imagenes/ordenar.png"
+            <a href="#"><img  src="../Imagenes/ordenar.png"
                 alt="Flechas-sobre-opción-ordenar">ORDENAR</a>
           </li>
           <li id="filtrar">
-            <a href="#"><img class="imagenMenu" src="../Imagenes/filtrar.png" alt="Filtr-sobre-opción-filtrar">
+            <a href="#"><img  src="../Imagenes/filtrar.png" alt="Filtr-sobre-opción-filtrar">
               FILTRAR</a>
-          <li id="incubadora"><a href="#"> <img class="imagenMenu" src="../Imagenes/incubadora.png"
+            </li>
+          <li id="incubadora"><a href="#"> <img  src="../Imagenes/incubadora.png"
                 alt="Incubadora-pokemon-sobre-opción-incubadora">INCUBADORA</a>
           </li>
-          <!-- <li class="usuario">
-          <a> <img class="imagenMenu" src="../Imagenes/Usuario.png" alt="Imagen-de-usuario">LABORATORIA</a>
-        </li> -->
         </ul>
       </nav>
     </div>
@@ -49,7 +47,7 @@
         <p class="labels label1">Correo electrónico:</p>
         <input class="inputs" maxlength="11" id="input-usuario">
         <p class="labels label1">Contraseña</p>
-        <input class="inputs" type="password" maxlength="11" required id="input-contraseña">
+        <input class="inputs" type="password" maxlength="11" id="input-contrasena">
         <a class="labels label2" href="http//...">¿Olvidaste tu contraseña?</a>
         <div id="incorrecto"></div>
         <button type="button" class="button" id="boton-ingresar"> INGRESA </button>
@@ -74,12 +72,8 @@
     <!-- Pantalla 3:-->
     <div id="pantalla-pokedex" class="ocultar fondo-contenedor texto-opciones">
       <!--Aquí se va mostrar imagen, nombre y número de pokemon -->
-      <div> 
-      </div>
       <p class="ocultar atrapados" id="atrapados"> </p>
-      <p class="ocultar no-atrapados" id="No-atrapados"> </p>
-    
-
+      <p class="ocultar no-atrapados" id="no-atrapados"> </p>
       <div class="contenedor-opciones">
         <!--Listado de pokemones por tipos-->
         <div id="opciones-contenedor">
@@ -148,7 +142,7 @@
       <div>
         <div id="porcentaje"></div>
       </div>
-      <div id="contenedorPokemon"></div>
+      <div id="contenedor-pokemon"></div>
       <!-- El Modal -->
       <div id="my-modal" class="modal ocultar">
         <!-- contendido -->

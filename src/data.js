@@ -1,5 +1,5 @@
 /* Manejo de data */
-//Funciòn para mostrar todos  pokemones:
+// Funciòn para mostrar todos  pokemones:
 const dataPoker = () => {
   const vacio = [];
   for (let i = 0; i < allPokemon.length; i++) {
@@ -12,13 +12,14 @@ const dataPoker = () => {
   }
   return vacio;
 };
-//FUNCIÓN PARA ORDENAR ALFABETICAMENTE:
+
+// FUNCIÓN PARA ORDENAR ALFABETICAMENTE:
 const ordenadorAZ = (data, ordenNombre) => {
-  const arrayNombre = data.slice().sort((a, b) => {
-    if (a.name > b.name) {
+  const arrayNombre = data.slice().sort((aa, bb) => {
+    if (aa.name > bb.name) {
       return 1;
     }
-    if (a.name > b.name) {
+    if (aa.name > bb.name) {
       return -1;
     }
     return 0;
@@ -31,13 +32,13 @@ const ordenadorAZ = (data, ordenNombre) => {
   }
   return 0;
 };
-//FUNCIÓN PARA ORDENAR POR SPAWNS:
+// FUNCIÓN PARA ORDENAR POR SPAWNS:
 const ordenadorSpaws = (data, ordenNombre) => {
-  const arraySpawns = data.slice().sort((a, b) => {
-    if (a.avg_spawns > b.avg_spawns) {
-      return 1;  
+  const arraySpawns = data.slice().sort((aa, bb) => {
+    if (aa.avg_spawns > bb.avg_spawns) {
+      return 1;
     }
-    if (a.avg_spawns < b.avg_spawns) {
+    if (aa.avg_spawns < bb.avg_spawns) {
       return -1;
     }
     return 0;
@@ -50,7 +51,8 @@ const ordenadorSpaws = (data, ordenNombre) => {
   }
   return 0;
 };
-//Función para filtrar tipo de pokemones:
+
+// Función para filtrar tipo de pokemones:
 const filtrarTipo = (data, tipo) => {
   let arrayTipos = [];
   for (let i = 0; i < data.length; i++) {
@@ -58,10 +60,11 @@ const filtrarTipo = (data, tipo) => {
       if (data[i].type[x] === tipo) {
         arrayTipos.push(data[i]);
       }
-    }  }
+    }  
+  }
   return arrayTipos;
 };
-//Función para filtrar debilidades de pokemones:
+// Función para filtrar debilidades de pokemones:
 const filtrarDebil = (data, debilidad) => {
   let arrayDebilidad = [];
   for (let i = 0; i < data.length; i++) {
@@ -73,12 +76,12 @@ const filtrarDebil = (data, debilidad) => {
   }
   return arrayDebilidad;
 };
-//Función para mostrar eclosiòn de huevos por kilómetros , porcentajes:
+// Función para mostrar eclosiòn de huevos por kilómetros , porcentajes:
 const eggPoke = (data, eclosion) => {
   let arrayEgg = [];
   arrayEgg = data.filter(poke => (poke.egg === eclosion));
   return arrayEgg;
-}
+};
 
 window.dataPoker = dataPoker;
 window.ordenadorAZ = ordenadorAZ;

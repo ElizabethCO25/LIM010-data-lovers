@@ -162,7 +162,7 @@ header nav ul li a:hover{
     font-size: 50%;
 }
 
-#contenedorPokemon{
+#contenedor-pokemon{
     display: flex;
     flex-wrap: wrap; 
     text-align: center;
@@ -191,6 +191,9 @@ header nav ul li a:hover{
     transition: height 0.2s ease-out;
 }
 
+.num-poke:hover{
+    color:#eb8b32fa;
+}
 .num-poke{
     font-weight: bold;
     font-family: Cambria;
@@ -288,8 +291,6 @@ header nav ul li a:hover{
     border-radius: 28px;
     margin: 5px;
 }
-
-
 .num-poke .nombre-poke{
     font-weight: bold;
     font-family: Cambria;
@@ -372,13 +373,13 @@ header nav ul li a:hover{
     /*Responsive navegador */
         header label{
             display:block !important;
+            padding: 6px;
         }
         .menucito{
             /*float: right;*/
             width: 25px;
             height: 25px;
         } 
-     
         #boton-menu:checked  ~.navegacion{
             transform:translateX(0%); 
         }
