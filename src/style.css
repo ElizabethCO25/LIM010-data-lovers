@@ -376,7 +376,7 @@ header nav ul li a:hover{
             padding: 6px;
         }
         .menucito{
-            float: right;
+            /*float: right;*/
             width: 25px;
             height: 25px;
         } 
@@ -419,4 +419,7 @@ header nav ul li a:hover{
             font-size: 15px;
         }
        
+        .bloqueo {
+            background-image: url(../Imagenes/fondoBloqueoPeq.png);
+        }
         
