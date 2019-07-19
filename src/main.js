@@ -3,9 +3,8 @@
 const obtenerClick = document.getElementById('boton-ingresar');
 const capturarContraseña = document.getElementById('input-contrasena');
 const capturarUsuario = document.getElementById('input-usuario');
-const allPokemon = POKEMON.pokemon;
+const allPokemon = dataPoker(POKEMON.pokemon);
 const contenedorPokemon = document.getElementById('contenedor-pokemon');
-
 let cuenta = 2;
 //
 obtenerClick.addEventListener('click', () => {
@@ -102,7 +101,7 @@ clickIncubadora.addEventListener('click', () => {
 });
 
 // mostrar pokemones
-const pokemonNuevo = dataPoker(); // constante con una funcion 
+// const pokemonNuevo = dataPoker(allPokemon); // constante con una funcion 
 const mostrarData = (pokemon) => { // parámetro
   let muestra = ' ';
   for (let i = 0; i < pokemon.length; i++) {
@@ -116,7 +115,7 @@ const mostrarData = (pokemon) => { // parámetro
   }
   return muestra;
 };
-contenedorPokemon.innerHTML = mostrarData(pokemonNuevo);
+contenedorPokemon.innerHTML = mostrarData(allPokemon);
 
 // Identificar pokemones No atrapados y Atrapados:
 const misAtrapados = document.getElementById('atrapados');
@@ -149,7 +148,9 @@ contenedorPokemon.addEventListener('click', () => {
       <p class='nombrePokemodal'> Nombre:${allPokemon[pokecito].name}</p>
       <p>Peso: ${allPokemon[pokecito].weight}</p> 
       <p>Altura: ${allPokemon[pokecito].height}</p>    
-      <p>Tipo: ${allPokemon[pokecito].type}</p> `;
+      <p>Tipo: ${allPokemon[pokecito].type}</p> 
+      <p>Huevos: ${allPokemon[pokecito].egg}</p>
+      `;
   }
 });
 

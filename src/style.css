@@ -145,6 +145,8 @@ header nav ul li a:hover{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    min-height: -webkit-fill-available;
+   
 }
 .texto-opciones{
     font-size: 30px;
@@ -233,6 +235,7 @@ header nav ul li a:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 
     /* El Modal  */

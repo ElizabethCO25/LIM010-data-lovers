@@ -1,13 +1,21 @@
 /* Manejo de data */
 // Funciòn para mostrar todos  pokemones:
-const dataPoker = () => {
+const dataPoker = (data) => {
   const vacio = [];
-  for (let i = 0; i < allPokemon.length; i++) {
+  for (let i = 0; i < data.length; i++) {
     vacio.push({
-      'img': allPokemon[i].img,
-      'id': allPokemon[i].id,
-      'name': allPokemon[i].name,
-      'num': allPokemon[i].num,
+      'img': data[i].img,
+      'id': data[i].id,
+      'name': data[i].name,
+      'num': data[i].num,
+      'type': data[i].type,
+      'weaknesses': data[i].weaknesses,
+      'multipliers': data[i].multipliers,
+      'egg': data[i].egg,
+      'avg_spawns': data[i].avg_spawns,
+      'weight': data[i].weight,
+      'height': data[i].height,
+      'egg': data[i].egg,
     });
   }
   return vacio;
@@ -19,10 +27,9 @@ const ordenadorAZ = (data, ordenNombre) => {
     if (aa.name > bb.name) {
       return 1;
     }
-    if (aa.name > bb.name) {
+    if (aa.name < bb.name) {
       return -1;
     }
-    return 0;
   });
   if (ordenNombre === 'ordenar-az') {
     return arrayNombre;
@@ -30,7 +37,6 @@ const ordenadorAZ = (data, ordenNombre) => {
   if (ordenNombre === 'ordenar-za') {
     return arrayNombre.reverse();
   }
-  return 0;
 };
 // FUNCIÓN PARA ORDENAR POR SPAWNS:
 const ordenadorSpaws = (data, ordenNombre) => {
@@ -41,7 +47,6 @@ const ordenadorSpaws = (data, ordenNombre) => {
     if (aa.avg_spawns < bb.avg_spawns) {
       return -1;
     }
-    return 0;
   });
   if (ordenNombre === 'asc') {
     return arraySpawns;
@@ -49,9 +54,7 @@ const ordenadorSpaws = (data, ordenNombre) => {
   if (ordenNombre === 'des') {
     return arraySpawns.reverse();
   }
-  return 0;
 };
-
 // Función para filtrar tipo de pokemones:
 const filtrarTipo = (data, tipo) => {
   let arrayTipos = [];
@@ -60,7 +63,7 @@ const filtrarTipo = (data, tipo) => {
       if (data[i].type[x] === tipo) {
         arrayTipos.push(data[i]);
       }
-    }  
+    }
   }
   return arrayTipos;
 };
@@ -68,7 +71,7 @@ const filtrarTipo = (data, tipo) => {
 const filtrarDebil = (data, debilidad) => {
   let arrayDebilidad = [];
   for (let i = 0; i < data.length; i++) {
-    for (let x = 0; x < data[i].weaknesses.length; x++) { 
+    for (let x = 0; x < data[i].weaknesses.length; x++) {
       if (data[i].weaknesses[x] === debilidad) {
         arrayDebilidad.push(data[i]);
       }
@@ -76,7 +79,7 @@ const filtrarDebil = (data, debilidad) => {
   }
   return arrayDebilidad;
 };
-// Función para mostrar eclosiòn de huevos por kilómetros , porcentajes:
+// Función para mostrar eclosiòn de huevos por kilómetros y porcentajes:
 const eggPoke = (data, eclosion) => {
   let arrayEgg = [];
   arrayEgg = data.filter(poke => (poke.egg === eclosion));
@@ -85,6 +88,7 @@ const eggPoke = (data, eclosion) => {
 
 window.dataPoker = dataPoker;
 window.ordenadorAZ = ordenadorAZ;
+window.ordenadorSpaws = ordenadorSpaws;
 window.filtrarTipo = filtrarTipo;
 window.filtrarDebil = filtrarDebil;
 window.eggPoke = eggPoke;
