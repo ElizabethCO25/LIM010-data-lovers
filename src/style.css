@@ -416,7 +416,7 @@ header nav ul li a:hover{
          .modal-content {
         width: 50%;
         }   
-        }
+        
         /*contenedor pokemon*/
         .nombre-poke {
             border-radius: 0px;
@@ -427,3 +427,4 @@ header nav ul li a:hover{
             background-image: url(../Imagenes/fondoBloqueoPeq.png);
         }
         
+    }
