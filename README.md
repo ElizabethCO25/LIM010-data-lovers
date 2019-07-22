@@ -47,6 +47,23 @@ El usuario  puede acceder a información útil según sus necesidad:Visualizar p
 
 ### PROTOTIPO 
 ### - Foto del primer prototipo de baja fidelidad Mobile:
+-Login
+![WhatsApp Image 2019-07-22 at 12 11 47 (1)](https://user-images.githubusercontent.com/51205175/61652330-492baf80-ac7d-11e9-92be-e02b0d1a5bc0.jpeg)
+
+-Pantalla de Bloqueo
+![WhatsApp Image 2019-07-22 at 12 38 38](https://user-images.githubusercontent.com/51205175/61652539-c6572480-ac7d-11e9-8be3-c03fe985c18e.jpeg)
+
+-Inicio
+![WhatsApp Image 2019-07-22 at 12 07 24](https://user-images.githubusercontent.com/51205175/61652613-f9011d00-ac7d-11e9-983c-ca9d3134b787.jpeg)
+
+-Pokedex
+![WhatsApp Image 2019-07-22 at 12 13 00](https://user-images.githubusercontent.com/51205175/61652643-0c13ed00-ac7e-11e9-9c50-b42edf41013e.jpeg)
+
+-Ordenar
+![WhatsApp Image 2019-07-22 at 12 13 00 (1)](https://user-images.githubusercontent.com/51205175/61652692-28b02500-ac7e-11e9-91fb-53ee25a5945b.jpeg)
+
+-Filtrar
+
 
     
 ### - Foto del primer prototipo de baja fidelidad Desktop:
@@ -84,7 +101,87 @@ En el primer feedback sobre el prototipo en papel hubo cambios en la pantalla po
 - Distinguir en footer de la pantalla pokedex.
 
 En el segundo feedback prototipo en figma nos sugirieron cambiar 
+
 ### - Imagen de prototipo en Figma - Mobile:
+Login 
+
+![image](https://user-images.githubusercontent.com/51205175/61650601-b0476500-ac79-11e9-897e-82bfba048b68.png)
+
+Pantalla de Bloqueo
+
+![image](https://user-images.githubusercontent.com/51205175/61651684-01f0ef00-ac7c-11e9-9fba-291a13add48d.png)
+
+
+Mostrando Menù
+
+![image](https://user-images.githubusercontent.com/51205175/61651254-1d0f2f00-ac7b-11e9-9eb1-4a61916088a1.png)
+
+Inicio
+
+![image](https://user-images.githubusercontent.com/51205175/61651193-fc46d980-ac7a-11e9-97ba-8ac510b5c626.png)
+
+
+Pokedex
+
+![image](https://user-images.githubusercontent.com/51205175/61651448-85f6a700-ac7b-11e9-8fb4-f609ca1c304f.png)
+
+
+Mostrando Modal
+
+![image](https://user-images.githubusercontent.com/51205175/61651374-61023400-ac7b-11e9-9730-bfd1e390b0a6.png)
+
+Ordenar
+
+
+![image](https://user-images.githubusercontent.com/51205175/61651551-b5a5af00-ac7b-11e9-95df-1f8b38331c11.png)
+
+Filtrar
+
+
+![image](https://user-images.githubusercontent.com/51205175/61651604-d110ba00-ac7b-11e9-8e92-5b8a44a71422.png)
+
+Incubadora
+
+
+![image](https://user-images.githubusercontent.com/51205175/61651638-e84fa780-ac7b-11e9-9fa7-b8de3a45bbf0.png)
+
+
+
 
 ### - Imagen de prototipo  en Figma - Desktop:
+
+Login
+
+![image](https://user-images.githubusercontent.com/51205175/61650543-9017a600-ac79-11e9-8b93-350a09bbac2c.png)
+
+Bloqueo
+
+![image](https://user-images.githubusercontent.com/51205175/61651814-467c8a80-ac7c-11e9-900b-80044b0f623f.png)
+
+
+Inicio
+
+![image](https://user-images.githubusercontent.com/51205175/61650657-d0772400-ac79-11e9-8b4a-da37f988d3d5.png)
+
+Pokedex
+
+![image](https://user-images.githubusercontent.com/51205175/61651109-cefa2b80-ac7a-11e9-88eb-5a342268f48f.png)
+
+Pokedex con modal
+![image](https://user-images.githubusercontent.com/51205175/61650775-0a482a80-ac7a-11e9-81cb-997c78151119.png)
+
+Ordenar
+
+![image](https://user-images.githubusercontent.com/51205175/61650885-56936a80-ac7a-11e9-80e8-a6ad383b6fef.png)
+
+Filtrar
+
+![image](https://user-images.githubusercontent.com/51205175/61650914-6d39c180-ac7a-11e9-9d37-34e06f2b27b6.png)
+
+Incubadora
+
+![image](https://user-images.githubusercontent.com/51205175/61651017-9d816000-ac7a-11e9-93a2-18510048c0b3.png)
+
+
+
 
