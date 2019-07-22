@@ -8,7 +8,7 @@ const contenedorPokemon = document.getElementById('contenedor-pokemon');
 let cuenta = 2;
 //
 obtenerClick.addEventListener('click', () => {
-  if (capturarContraseña.value === '1' && capturarUsuario.value === '1') {
+  if (capturarContraseña.value === 'LABORATORIA' && capturarUsuario.value === 'LABORATORIA') {
     document.getElementById('pantalla-inicio').classList.remove('ocultar');
     document.getElementById('header').classList.remove('ocultar');
     document.getElementById('pantalla-login').classList.add('ocultar');
