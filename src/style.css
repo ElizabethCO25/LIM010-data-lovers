@@ -311,7 +311,7 @@ header nav ul li a:hover{
         background-attachment: fixed;
         display: flex;
         flex-direction: column;
-        height: 95vh;
+        height: 96vh;
     }
     .mensaje-bloqueo{
         margin: 20%;
@@ -372,8 +372,6 @@ header nav ul li a:hover{
             font-size: 22px;
             text-align: center;
 }
-
-
     /*Responsive navegador */
         header label{
             display:block !important;
@@ -415,15 +413,14 @@ header nav ul li a:hover{
          }
          .modal-content {
         width: 50%;
-        }   
         }
         /*contenedor pokemon*/
         .nombre-poke {
             border-radius: 0px;
             font-size: 15px;
         }
-       
         .bloqueo {
             background-image: url(../Imagenes/fondoBloqueoPeq.png);
         }
+}
         
