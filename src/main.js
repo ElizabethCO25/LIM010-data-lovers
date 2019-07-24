@@ -8,7 +8,7 @@ const contenedorPokemon = document.getElementById('contenedor-pokemon');
 let cuenta = 2;
 //
 obtenerClick.addEventListener('click', () => {
-  if (capturarContraseña.value === '1' && capturarUsuario.value === '1') {
+  if (capturarContraseña.value === 'LABORATORIA' && capturarUsuario.value === 'LABORATORIA') {
     document.getElementById('pantalla-inicio').classList.remove('ocultar');
     document.getElementById('header').classList.remove('ocultar');
     document.getElementById('pantalla-login').classList.add('ocultar');
@@ -29,7 +29,6 @@ obtenerClick.addEventListener('click', () => {
 let enterIniciar = document.getElementById('input-contrasena');
 enterIniciar.addEventListener('keyup', (event) => {
   if (event.keyCode === 13) {
-    event.preventDefault();
     document.getElementById('boton-ingresar').click();
   }
 });

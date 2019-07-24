@@ -1,9 +1,9 @@
 /* Manejo de data */
 // Funciòn para mostrar todos  pokemones:
 const dataPoker = (data) => {
-  const vacio = [];
+  const dataNueva = [];
   for (let i = 0; i < data.length; i++) {
-    vacio.push({
+    dataNueva.push({
       'img': data[i].img,
       'id': data[i].id,
       'name': data[i].name,
@@ -18,7 +18,7 @@ const dataPoker = (data) => {
       'egg': data[i].egg,
     });
   }
-  return vacio;
+  return dataNueva;
 };
 
 // FUNCIÓN PARA ORDENAR ALFABETICAMENTE:
