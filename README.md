@@ -4,40 +4,42 @@
 
 - [Título del proyecto:](##Título-del-proyecto:)
 - [Resumen:](##Resumen:)
-- [Investigación UX :](##Investigación-UX)
-  - [Usuarios:](#Usuarios:)
-  - [Objetivos:](#Objetivos:)
-  - [¿Còmo el producto soluciona las necesidades de éstos usuarios?:](#¿Còmo-el-producto-soluciona-las-necesidades-de-éstos-usuarios?:)
-  - [Foto del primer prototipo de baja fidelidad Mobile:](#Foto-del-primer-prototipo-de-baja-fidelidad-Mobile:)
-  - [Foto del primer prototipo de baja fidelidad Desktop:](#Foto-del-primer-prototipo-de-baja-fidelidad-Desktop:)
-  - [Resumen de feedback:](#Resumen-de-feedback:)
-  - [Imagen de prototipo en Figma Mobile:](#Imagen-de-prototipo-en-Figma-Mobile:)
-  - [Imagen de prototipo en Figma Desktop:](#Imagen-de-prototipo-en-Figma-Desktop:)
+- [Objetivos:](##Objetivos:)
+- [Investigación UX:](##Investigación-UX:)
+  - [1) Descubrimiento e investigación (Research):](###1-Descubrimiento-e-investigación-(Research):)
+  - [2) Síntesis y definición:](###2-Síntesis-y-definición:)
+  - [3) Ideación:](###3-Ideación:)
+  - [4) Prototipado:](###4-Prototipado:)
+     - [PROTOTIPO DE BAJA FIDELIDAD - VERSIÓN MOBILE:](####PROTOTIPO-DE-BAJA-FIDELIDAD---VERSIÓN-MOBILE:)
+     - [PROTOTIPO DE BAJA FIDELIDAD - VERSIÓN DESKTOP:](####PROTOTIPO-DE-BAJA-FIDELIDAD---VERSIÓN-DESKTOP:)
+     - [PROTOTIPO DE ALTA FIDELIDAD - VERSIÓN MOBILE:](####PROTOTIPO-DE-ALTA-FIDELIDAD---VERSIÓN-MOBILE:)
+    - [PROTOTIPO DE ALTA FIDELIDAD - VERSIÓN DESKTOP:](####PROTOTIPO-DE-ALTA-FIDELIDAD---VERSIÓN-DESKTOP:)
+  - [5) User Testing:](###5-User-Testing:)
+
 
 ## Título del proyecto:
  POKEMONBEL
+ 
 ## Resumen:
 PókemonBel es una herramienta web dirigida a usuarios que desean manipular y visualizar la data de sus pokemon. 
 Cada usuario tendrá una cuenta personal con usuario y clave asignado. Para efectos de diseño del presente trabajo, estos serán:
 - USUARIO: LABORATORIA 
 - CONTRASEÑA: LABORATORIA
 
-## Imagen final del proyecto:
+## - Objetivos:
+El objetivo de la herramienta web es permitir a los usuarios almacenar la data de sus pokemon, de tal forma que les permita acceso directo y ordenado a la misma, información útil y la posibilidad de visualizar de forma rápida los filtros necesarios según su necesidad. Además de darles la posibilidad de interactuar con mayor comodidad entre la cantidad de pokemones disponibles en el juego.
 
-![image](https://user-images.githubusercontent.com/51205175/61650657-d0772400-ac79-11e9-8b4a-da37f988d3d5.png)
-
-
-## <b> Investigación UX </b> 
+## Investigación UX:
 Para el desarrollo de la investigación UX, me apoyé de las 5 fases del proceso de diseño de experiencia de usuario:
 
-### <b> 1) Descubrimiento e investigación (Research):</b>
+### 1) Descubrimiento e investigación (Research):
 #### Investigación Contextual:
 Se observa que los usuarios son personas de género indistinto, con edades de entre 13 y 40 años y con conocimiento intermedio del uso de tecnologías y aplicaciones móviles.  Quienes juegan Pókemon Go con mucha frecuencia.
 En la observación del contexto de estos usuarios se resaltan las siguientes actividades: Logueo constante en la aplicación y uso de la misma por un promedio de 2 horas al día (en suma). Estos usuarios usan el app de forma constante al encontrarse en zonas reconocidas como pokeparadas o gimnasios pokemon, las cuales suelen ser centros comerciales o estalecimientos, donde pueden cazar diversas especies de pokemon, realizar combates con otros maestros pokemon o adquirir pokebolas y accesorios que les son útiles en el desarrollo del juego.
 
-✓ En éste punto se realizaron entrevistas a 3 usuarios de diferentes edades. (Archivo digital de entrevista realizada:___________________ ). De éstas entrevistas se obtuvo una idea más clara y concisa del perfil y necesidades de nuestros usuarios.
+✓ En éste punto se realizaron entrevistas a 3 usuarios de diferentes edades. (Archivo digital de entrevista realizada: https://drive.google.com/drive/folders/11ztplsycDBON0fzXqdGahNXjN_wcUOI_?usp=sharing ). De éstas entrevistas se obtuvo una idea más clara y concisa del perfil y necesidades de nuestros usuarios.
   
-### <b> 2) Síntesis y definición:</b>
+### 2) Síntesis y definición:
 En la etapa de Investigación Contextual se reconció de forma clara el perfil común de un usuario, además de sus necesidades. En este punto se usará los datos coleccionados para idear el desarrollo de la herramienta web.
 #### Entendimiento de necesidades y requerimientos (Historias de Usuario):
 ##### - Historia de usuario 1 
@@ -53,7 +55,7 @@ Como usuaria quiero poder elegir un pokemon para ver sus características más r
 ##### - Historia de usuario 6
 Como usuaria quiero poder ordenar a los pokemon por orden alfabético (A-Z y Z-A) y según frecuencia de aparición (spawn) de manera ascendente o descendente para poder ubicarlos fácilmente y saber cuáles son los más difíciles de atrapar.
 
-### <b> 3) Ideación:</b>
+### 3) Ideación:
 En este punto se sabe que el foco es la cantidad en vez de la calidad, por lo que se idearon y maquetaron varias posibles propuestas para cada funcionalidad a implementar. A continuación se mostrarán principalmente los bocetos de aquellas pantallas de las cuales recibimos feedback que nos indicaba mejorar / cambiar la interfaz.
 
 ##### - Bocetos de ideación para las funcionalidad:
@@ -61,7 +63,7 @@ En este punto se sabe que el foco es la cantidad en vez de la calidad, por lo qu
 La primera pantalla maquetada fue la de inicio, puesto que la de login ya estaba preestablecida para el proyecto. 
 En ésta pantalla se consideró un espacio en la parte izquierda para mostrar la imagen y datos del usuario. Además de un menú de fijo que mostrara las opciones entre las que podría elegir el usuario.
 
-   XXXXXXX IMAGEN XXXXXXXX
+   ![WhatsApp Image 2019-07-31 at 11 33 43 AM](https://user-images.githubusercontent.com/51203238/62237062-eb424a80-b395-11e9-928b-47c3bfacce13.jpeg)
 
    ✓ <b>Luego de feedback:</b> Reconocimos que la interfaz ideada no era muy amigable y entendible para el usuario, que no quedaba muy claro lo que mostraría cada una de las opciones en el menú. Que el menú estático ocupaba mucho espacio.
 
@@ -69,7 +71,8 @@ En ésta pantalla se consideró un espacio en la parte izquierda para mostrar la
 - <b>PANTALLA DE INICIO - LUEGO DEL 1ER FEEDBACK:</b>
 Para ésta edición se planteo incluir un menpu de tipo hamburguesa que permitiese la selección de cada una de las opción de navegación, sin ocupar demasiado espacio dentro de la pantalla.
 
-  XXXXXXX IMAGEN XXXXXXXX
+  ![WhatsApp Image 2019-07-31 at 11 33 43 AM (1)](https://user-images.githubusercontent.com/51203238/62237167-1f1d7000-b396-11e9-8acc-f88217bb59c3.jpeg)
+
 
   ✓ <b>Luego de feedback:</b> Se notó que el menú de tipo hamburguesa tampoco era el adecuado debido a que no permitía mostrar visiblemente el acceso entre una y otra opción, inclusibe en algunas oportunidades algunos usuarios no notaban el logo del menú y no les era posible ir hacia otra opción además hacía falta implementar un header y un footer para darle estatus y seriedad a la interfaz. Además se nos sugirió que implementásemos un header y footer fijo, con la finalidad de darle estatus e información a nuestra interfaz.
 
@@ -91,7 +94,7 @@ En ésta pantalla se cambió el menú de tipo hamburguesa por uno de navegación
   El feedback para ésta pantalla nos indicaba que la imagen en el centro era demasiado invasiva y algo desagradable porque alertaba de forma 'poco amigable' que no podía seguir.
 
 
-### <b> 4) Prototipado:</b>
+### 4) Prototipado:
 En éste punto procedimos a unir insights adquiridas en el proceso de Ideación y los feedbacks para lograr obtener una interfaz adecuada y y amigable para el tipo de usuario.
 
 #### - PROTOTIPO DE BAJA FIDELIDAD - VERSIÓN MOBILE:
@@ -124,7 +127,7 @@ En éste punto procedimos a unir insights adquiridas en el proceso de Ideación 
   ![image](https://user-images.githubusercontent.com/51205175/61664272-0b885000-ac98-11e9-8742-98fff20b8e96.png)
 
 
-### - PROTOTIPO DE BAJA FIDELIDAD - VERSIÓN DESKTOP:
+#### - PROTOTIPO DE BAJA FIDELIDAD - VERSIÓN DESKTOP:
  ##### . Pantalla de login:
 
  ![WhatsApp Image 2019-07-22 at 11 39 26](https://user-images.githubusercontent.com/51205175/61649196-9b1d0700-ac76-11e9-8e84-343a453c9f39.jpeg)
@@ -190,7 +193,7 @@ En éste punto procedimos a unir insights adquiridas en el proceso de Ideación 
 ![mobile 7](https://user-images.githubusercontent.com/51203238/61664049-96b51600-ac97-11e9-908b-122f79f98990.PNG)
 
 
-### - PROTOTIPO DE ALTA FIDELIDAD - VERSIÓN DESKTOP:
+#### - PROTOTIPO DE ALTA FIDELIDAD - VERSIÓN DESKTOP:
 
 ##### . Pantalla de Login:
 
@@ -250,41 +253,14 @@ En un siguiente feedback del prototipo en figma nos sugirieron cambiar el color 
 
 
 
-### <b> 5) User Testing:</b>
+### 5) User Testing:
 Para ésta fase del proceso de Desarrollo del diseño, se realizaron pruebas de usabilidad a usuarios finales. A los cuales se les asignó una "Lista de tareas" que debían llevar a cabo en la interfaz de la web, sin que se le diera mayores indicaciones de uso. Además se les realizó una lista de preguntas con la finalidad de obtener feedback y asegurarnos que nuestra interfaz cumplía con las reglas de usabilidad necesarias según nuestro tipo de usuario.
 
-  ✓ De las pruebas de usabilidad realizadas a los usuarios se obtuvieron, a modo de archivo digitales, grabaciones de audio, los cuales se pueden ontener en el siguiente link: ___________________)
+  ✓ De las pruebas de usabilidad realizadas a los usuarios se obtuvieron, a modo de archivo digitales, grabaciones de audio, los cuales se pueden ontener en el siguiente link: https://drive.google.com/drive/folders/1WS7TPIvu-c8ZdSIeFVWUToKAtMpyKHQK?usp=sharing )
 
 De acuerdo al Testing con los usuarios en mensión, nuestra aplicación web cumple con los estandares de usabilidad y es de architectura amigable, porque navegar en la interfaz es sencillo y preciso, además de que muestra la data que el usuario desea obtener, mas no información irrelevante.
 
 Otra de las finalidad del testing con usuario, fue comprobar que si se habían priorizado las funcionalidades requeridas, lo cual, según feedback, fue favorable.
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-### - Objetivos:
-Permite al usuario encontrar información útil  para usar en el juego Pokemonl , visualiza de forma ràpida los filtros necesarios según su necesidad.
- *necesidad de almacenar la data de sus niveles alcanzados y/o pókemon de forma accesible y concisa. 
-  
-### - ¿Cómo el producto soluciona las necesidades de éstos usuarios?:
-El usuario  puede acceder a información útil según sus necesidad:Visualizar pokemones,características , filtrar por tipos, debilidades, eclosiòn de huevos por km recorridos. 
-
-
-### PROTOTIPO 
-
-
-
 
 
 
